@@ -1,17 +1,19 @@
-import React from 'react';
-import navpath from '../../data/navigation';
-
+import navList from '../../data/navigation';
+// transition-all duration-100 ease-in-out
 const Navigation = () => {
   return (
     <div
-      className="flex items-center justify-between
-				grow max-w-md"
+      className="flex items-center justify-around
+				w-7/12 h-full"
     >
-      {navpath.map((nav) => (
+      {navList.map((nav) => (
         <a
-          className="h-7 min-h-fit
-						transition-all duration-100 ease-in-out
-						hover:border-b-2 border-solid border-slate-200"
+          className="block w-full h-full
+					flex items-center justify-center
+					hover:shadow-[0_10px_20px_2px_rgba(0,0,0,0.55)]
+					transition-all duration-300 ease-in-out
+					rounded-lg"
+
           key={nav.name}
           href={nav.path}
         >

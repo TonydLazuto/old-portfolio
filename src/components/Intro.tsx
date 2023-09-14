@@ -5,7 +5,7 @@ const Intro = () => {
     <div
       className="bg-shade0 
 			flex flex-row justify-center
-			 pt-10 md:flex-row md:justify-start
+			 pt-24 md:flex-row md:justify-start
 			border-solid border-2 border-green-500"
     >
       <div
