@@ -19,7 +19,7 @@ export default [
 	},
 	{
 		title: "Developper Portfolio",
-		imgUrl: "https://via.placeholder.com/150", 
+		imgUrl: "https://via.placeholder.com/150",
 		stack: ["React", "Typescript", "Tailwind", "Vite"],
 		link: "",
 	}
