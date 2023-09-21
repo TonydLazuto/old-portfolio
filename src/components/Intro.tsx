@@ -23,9 +23,7 @@ const Intro = () => {
 				translate-y-10
 				animate-topToBottomDelay">
           Salut je suis un développeur full-stack,
-          <br />
           intéressé par la résolution de problèmes dans l'IT
-          <br />
           j'aime lié l'experience utilisateur à une solide architecture
         </p>
       </div>
