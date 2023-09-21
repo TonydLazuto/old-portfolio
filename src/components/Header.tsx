@@ -7,7 +7,7 @@ const Header = () => {
       className="fixed top-0 w-10/12 h-24 flex items-center
 			justify-between border-b-2
 			border-solid border-slate-700 bg-slate-700 z-10
-			text-slate-100 text-3xl"
+			text-slate-100 text-2xl"
     >
       <Navigation />
       <SocialsMedia />
