@@ -3,8 +3,10 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 const SocialsMedia = () => {
 	return (
-		<div className='flex justify-around items-center
-				w-32 h-full'>
+		<div className='relative bottom-12 right-8
+		flex justify-around items-center
+				w-24 flex-col md:flex-row
+				border-solid border-2 border-purple-700'>
 			 <a href="https://github.com/TonydLazuto"
 			 	className='block w-full h-3/5
 					flex items-center justify-center

@@ -1,9 +1,15 @@
 export default [
 	{
+		year: '2023',
+		title: "Développeur",
+		duration: "6 months",
+		details: 'Stage chez Acensi en tant que développeur full-stack.'
+	},
+	{
 		year: '2020',
-		title: "Developper",
+		title: "Architecte en Technologie du Numérique (Formation)",
 		duration: "3 years",
-		details: 'Architecte en Technologie du Numérique'
+		details: 'Architecte en Technologie du Numérique à l\'école 42.'
 	},
 	{
 		year: '2016',
@@ -11,7 +17,7 @@ export default [
 		duration: "4 years",
 		details: "Analyse de la complétude d'un dossier cartographique. \
 							Mise à jour de plans 2D comportant les schémas électriques unifilaires sur la zone de travaux (logiciel de CAO MicroStation, équivalent d'AutoCAD). \
-							Requêtes sur une BDD interne à l'entreprise"
+							Requêtes sur une BDD interne à l'entreprise."
 	},
 	{
 		year: '2015',
@@ -19,12 +25,12 @@ export default [
 		duration: "3 months",
 		details: "Accueil et accompagnement du client. \
 							Répondre aux besoins du client afin d'établir une relation de qualité. \
-							Hiérarchiser les tâches en travaillant en équipe"
+							Hiérarchiser les tâches en travaillant en équipe."
 	},
 	{
 		year: '2013',
 		title: "BTS SIO option SLAM",
 		duration: "2 years",
-		details: 'Candidat libre Académie de Créteil'
+		details: 'Candidat libre Académie de Créteil.'
 	}
 ]

@@ -1,6 +1,6 @@
 export default [
 	{
-		title: "ft_irc: Develop an IRC server in C++",
+		title: "Irc: Develop an IRC server in C++",
 		imgUrl: "https://via.placeholder.com/150", 
 		stack: ["C++98"],
 		link: "",
@@ -12,13 +12,13 @@ export default [
 		link: "",
 	},
 	{
-		title: "ft_transcendence",
+		title: "Transcendence",
 		imgUrl: "/assets/Transcendence-project.jpeg", 
-		stack: ["React", "Typescript", "Nest (Express)", "PostgreSQL", "typeORM", "Websockets", "API REST"],
+		stack: ["React", "Typescript", "Nest (Express)", "PostgreSQL", "TypeORM", "Websockets", "API REST"],
 		link: "",
 	},
 	{
-		title: "Developper Portfolio",
+		title: "Portfolio",
 		imgUrl: "https://via.placeholder.com/150",
 		stack: ["React", "Typescript", "Tailwind", "Vite"],
 		link: "",
