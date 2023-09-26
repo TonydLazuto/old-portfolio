@@ -2,6 +2,12 @@ export default [
 	{
 		year: '2023',
 		title: "Développeur",
+		duration: "still",
+		details: 'Développeur full-stack.'
+	},
+	{
+		year: '2023',
+		title: "Développeur",
 		duration: "6 months",
 		details: 'Stage chez Acensi en tant que développeur full-stack.'
 	},
@@ -19,18 +25,4 @@ export default [
 							Mise à jour de plans 2D comportant les schémas électriques unifilaires sur la zone de travaux (logiciel de CAO MicroStation, équivalent d'AutoCAD). \
 							Requêtes sur une BDD interne à l'entreprise."
 	},
-	{
-		year: '2015',
-		title: "Serveur restauration",
-		duration: "3 months",
-		details: "Accueil et accompagnement du client. \
-							Répondre aux besoins du client afin d'établir une relation de qualité. \
-							Hiérarchiser les tâches en travaillant en équipe."
-	},
-	{
-		year: '2013',
-		title: "BTS SIO option SLAM",
-		duration: "2 years",
-		details: 'Candidat libre Académie de Créteil.'
-	}
 ]

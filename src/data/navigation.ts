@@ -11,9 +11,5 @@ export default [
 	{
 		name: 'Stack',
 		path: '#stack',
-	},
-	{
-		name: 'Contact',
-		path: '#contact',
 	}
 ]

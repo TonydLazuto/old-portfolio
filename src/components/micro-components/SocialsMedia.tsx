@@ -3,20 +3,21 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 const SocialsMedia = () => {
 	return (
-		<div className='relative bottom-12 right-8
-		flex justify-around items-center
-				w-24 flex-col md:flex-row
-				border-solid border-2 border-purple-700'>
+		<div className='flex justify-around items-center
+				w-24 mt-4 flex-col md:flex-row'>
 			 <a href="https://github.com/TonydLazuto"
 			 	className='block w-full h-3/5
 					flex items-center justify-center
+					text-gray-100
 					hover:text-gray-400
 					transition-all duration-500 ease-in-out
 					rounded-lg'>
 				<GitHubIcon fontSize='large' />
 				</a>
-			 <a href="https://www.linkedin.com/in/anthony-d%C3%A9ros%C3%A9-957110124/" className='block w-full h-3/5
+			 <a href="https://www.linkedin.com/in/anthony-d%C3%A9ros%C3%A9-957110124/"
+			 	className='block w-full h-3/5
 					flex items-center justify-center
+					text-gray-100
 					hover:text-gray-400
 					transition-all duration-500 ease-in-out
 					rounded-lg'>

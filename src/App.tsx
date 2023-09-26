@@ -7,8 +7,8 @@ import Navigation from './components/Navigation'
 
 function App() {
   return (
-		<div className='bg-slate-500 h-full'>
-			<div className="h-full bg-slate-300
+		<div className='bg-slate-200 h-full'>
+			<div className="h-full
 			shadow-2xl shadow-black">
 				<Navigation />
 				<Header />
