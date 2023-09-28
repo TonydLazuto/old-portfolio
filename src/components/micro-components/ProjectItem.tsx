@@ -11,7 +11,8 @@ const ProjectItem = (project: Project) => {
 	const { title, imgUrl, stack, link } = project;
 
 	return (
-		<div className='border-2 border-stone-900 rounded-md overflow-hidden'>
+		<div className='border-2 border-slate-600
+			rounded-md overflow-hidden drop-shadow-3xl'>
 				<img
 					src={imgUrl}
 					alt="project"

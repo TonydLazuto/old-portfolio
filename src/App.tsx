@@ -7,9 +7,9 @@ import Navigation from './components/Navigation'
 
 function App() {
   return (
-		<div className='bg-slate-200 h-full'>
+		<div className='bg-shade2 h-full'>
 			<div className="h-full
-			shadow-2xl shadow-black">
+				shadow-2xl shadow-black">
 				<Navigation />
 				<Header />
 				<Timeline />

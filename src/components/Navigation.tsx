@@ -1,5 +1,5 @@
 import navList from '../data/navigation';
-// transition-all duration-100 ease-in-out
+
 const Navigation = () => {
   return (
     <div
@@ -10,7 +10,7 @@ const Navigation = () => {
         -translate-x-1/2
         w-3/12 h-12
         flex items-center justify-around
-        shadow-[0_10px_20px_2px_rgba(0,0,0,0.35)]
+        drop-shadow-3xl
         rounded-3xl z-20
         text-slate-200 text-sm"
         // md:text-2xl md:h-24
