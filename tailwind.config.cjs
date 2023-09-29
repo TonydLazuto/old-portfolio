@@ -30,10 +30,14 @@ module.exports = {
 			leftToRight: {
 				'0%': { transform: 'translateX(-300px)' },
 				'100%': { transform: 'translateX(0)' },
+			},
+			fadeIn: {
+				'0%': { opacity: 0 },
+				'100%': { opacity: 1 }
 			}
 		},
 		animation: {
-			header: 'topToBottom 800ms ease-in-out forwards',
+			header: 'topToBottom 800ms ease-in-out forwards, fadeIn 1s',
 			headerDelay: 'topToBottom 0.3s ease-in-out forwards',
 			headerDelay2: 'topToBottom 0.6s ease-in-out forwards',
 			headerDelay3: 'topToBottom 0.8s ease-in-out forwards',

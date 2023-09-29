@@ -1,3 +1,4 @@
+import { Box } from '@mui/material'
 import React from 'react'
 
 export interface Project {
@@ -11,29 +12,29 @@ const ProjectItem = (project: Project) => {
 	const { title, imgUrl, stack, link } = project;
 
 	return (
-		<div className='border-2 border-slate-600
-			rounded-md overflow-hidden drop-shadow-3xl'>
+		<Box className='rounded-md overflow drop-shadow-3xl'>
 				<img
 					src={imgUrl}
 					alt="project"
-					className="w-full h-36 md:h-48 object-cover cursor-pointer"
+					className="w-full h-36
+						md:h-48 object-cover cursor-pointer"
 				/>
-				<div className='p-2'>
+				<Box className='p-2'>
 					<h3 className='text-lg md:text-xl
 						mb-2 md:mb-3 font-semibold'>
 							{title}
 					</h3>
-					<p className='flex flex-wrap gap-2
+					<Box className='flex flex-wrap gap-2
 						flex-row items-center justify-start text-xs md:text-sm'>
-						{stack.map((item: string) => (
-							<span className='inline-block px-2 py-1
+						{stack.map((item) => (
+							<span key={item} className='inline-block px-2 py-1
 								font-semi-bold border-2 border-stone-900 rounded-md'>
 								{item}
 							</span>
 						))}
-					</p>
-				</div>
-		</div>
+					</Box>
+				</Box>
+		</Box>
 	)
 }
 

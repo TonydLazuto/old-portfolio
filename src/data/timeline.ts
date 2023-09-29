@@ -1,6 +1,6 @@
 export default [
 	{
-		year: '2023',
+		year: 'since 2023',
 		title: "Développeur",
 		duration: "still",
 		details: 'Développeur full-stack.'

@@ -1,3 +1,4 @@
+import { Box } from '@mui/material'
 import React from 'react'
 
 export interface Timeline {
@@ -13,16 +14,13 @@ const TimelineItem = (timeline: Timeline) => {
 
 	return (
 		<ol className='flex flex-col md:flex-row
-				animate-timeline
-				bg-shade2 drop-shadow-3xl pt-4 mb-4 rounded-lg'>
+				border-l border-slate-300 relative'>
 			<li className='mb-4 ml-4'>
-				<div className='absolute w-4 h-4 bg-slate-300
-					rounded-full mt-1 -left-7 border-white
-					animate-timelineDelay3' />
-				<p className='flex flex-wrap gap-4 flex-row
+				<div className='absolute w-3 h-3 bg-slate-300
+					rounded-full mt-2 -left-1.5 border-white' />
+				<Box className='flex flex-wrap gap-4 flex-row
 					items-center justify-start
-					text-xs md:text-sm
-					animate-timelineDelay'>
+					text-xs md:text-sm'>
 						<span className='inline-block px-2 py-1 font-semibold
 							text-white bg-stone-900 rounded-md'>
 							{year}
@@ -35,12 +33,11 @@ const TimelineItem = (timeline: Timeline) => {
 							text-stone-400'>
 							{duration}
 						</div>
-				</p>
-				<p className='my-2 text-base font-normal
-					text-stone-500
-					animate-timelineDelay2'>
+				</Box>
+				<Box className='my-2 text-base font-normal
+					text-stone-500'>
 					{details}
-				</p>
+				</Box>
 			</li>
 		</ol>
 	)
