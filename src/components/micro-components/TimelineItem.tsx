@@ -1,5 +1,5 @@
 import { Box } from '@mui/material'
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 export interface Timeline {
 	key: string
@@ -9,13 +9,34 @@ export interface Timeline {
 	details: string
 }
 
+//TODO: define useref() Type
+//TODO: add animation to className
 const TimelineItem = (timeline: Timeline) => {
 	const { year, title, duration, details } = timeline;
 
+	const myRef = useRef<JSX.Element>();
+	const [timelineIsVisible, setTimelineIsVisible] = useState<boolean>();
+
+	console.log(timelineIsVisible);
+	useEffect(() => {
+		const observer = new IntersectionObserver((entries) => {
+			const entry = entries[0];
+			// only observe the first time
+			if (entry.isIntersecting) observer.unobserve(entry.target);
+			setTimelineIsVisible(entry.isIntersecting);
+		},
+		{
+			threshold: 1
+		})
+		observer.observe(myRef.current);
+	}, []);
+
 	return (
-		<ol className='flex flex-col md:flex-row
+		<Box
+			ref={myRef}
+			className='flex flex-col md:flex-row
 				border-l border-slate-300 relative'>
-			<li className='mb-4 ml-4'>
+			<Box className='mb-4 ml-4'>
 				<div className='absolute w-3 h-3 bg-slate-300
 					rounded-full mt-2 -left-1.5 border-white' />
 				<Box className='flex flex-wrap gap-4 flex-row
@@ -34,12 +55,12 @@ const TimelineItem = (timeline: Timeline) => {
 							{duration}
 						</div>
 				</Box>
-				<Box className='my-2 text-base font-normal
+				<div className='my-2 text-base font-normal
 					text-stone-500'>
 					{details}
-				</Box>
-			</li>
-		</ol>
+				</div>
+			</Box>
+		</Box>
 	)
 }
 
