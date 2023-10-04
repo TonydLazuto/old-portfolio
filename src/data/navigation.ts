@@ -1,5 +1,9 @@
 export default [
 	{
+		name: 'Intro',
+		path: '#intro',
+	},
+	{
 		name: 'Timeline',
 		path: '#timeline',
 	},

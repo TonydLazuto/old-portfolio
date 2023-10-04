@@ -4,7 +4,7 @@ import SocialsMedia from './micro-components/SocialsMedia';
 //border-solid border-2 border-green-500
 const Header = () => {
   return (
-    <div className='bg-shade0 -mt-8 pt-32
+    <div id='intro' className='bg-shade0 -mt-8 pt-32
     w-screen h-screen'>
       <div
         className="h-4/5 w-11/12 mt-8 m-auto
