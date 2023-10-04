@@ -15,7 +15,16 @@ const TimelineItem = (timeline: Timeline) => {
 	const { year, title, duration, details } = timeline;
 
 	const myRef = useRef<JSX.Element>();
-	const [timelineIsVisible, setTimelineIsVisible] = useState<boolean>();
+	const [timelineIsVisible, setTimelineIsVisible] = useState(false);
+	const [animation, setAnimation] = useState('');
+	const [opacity, setOpacity] = useState('opacity-0');
+
+	useEffect(() => {
+		if (timelineIsVisible) {
+			setAnimation('animate-timeline');
+			setOpacity('opacity-1');
+		}
+	}, [timelineIsVisible])
 
 	console.log(timelineIsVisible);
 	useEffect(() => {
@@ -34,8 +43,9 @@ const TimelineItem = (timeline: Timeline) => {
 	return (
 		<Box
 			ref={myRef}
-			className='flex flex-col md:flex-row
-				border-l border-slate-300 relative'>
+			className={`flex flex-col md:flex-row
+				border-l border-slate-300 relative
+				${opacity} ${animation}`}>
 			<Box className='mb-4 ml-4'>
 				<div className='absolute w-3 h-3 bg-slate-300
 					rounded-full mt-2 -left-1.5 border-white' />
