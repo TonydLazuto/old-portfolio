@@ -1,11 +1,22 @@
-import React from 'react'
+import stacks from '../data/stack';
 
 const Stack = () => {
 	return (
 		<div
 			id='stack'
-			className='flex items-center bg-shade3'>
-			Stack
+			className='bg-shade3 flex flex-col items-center
+				justify-center w-screen
+				py-4'>
+			<div className='flex justify-center flex-wrap
+				items-center w-1/2'>
+				{stacks.map((stack) => (
+					<img
+						src={stack.src}
+						alt={stack.alt}
+						className='w-10 h-10 mx-1'
+					/>
+				))}
+			</div>
 		</div>
 	)
 }

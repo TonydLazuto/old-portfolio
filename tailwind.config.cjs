@@ -43,9 +43,6 @@ module.exports = {
 			headerDelay3: 'topToBottom 0.8s ease-in-out forwards',
 			headerDelay4: 'topToBottom 1s ease-in-out forwards',
 			timeline: 'leftToRight 400ms ease-in-out forwards, fadeIn 1s',
-			timelineDelay: 'leftToRight 1.2s ease-in-out forwards',
-			timelineDelay2: 'leftToRight 1.4s ease-in-out forwards',
-			timelineDelay3: 'leftToRight 1.5s ease-in-out forwards',
 			project: 'topToBottom2 800ms ease-in-out forwards',
 		},
 		dropShadow: {
