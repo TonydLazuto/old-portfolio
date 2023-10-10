@@ -6,9 +6,11 @@ const Projects = ({}) => {
 	return (
 		<div
 			id='projects'
-			className='flex flex-col md:flex-row items-center
-			justify-center m-auto w-10/12'>
-			<div className='grid grid-cols-1
+			className='bg-gradient-to-t from-indigo-500 to-blue-200
+			flex flex-col md:flex-row items-center
+			justify-center
+			m-auto px-20 h-[calc(100vh_-_10rem)]'>
+			<div className='h-fit grid grid-cols-1
 				md:grid-cols-2 lg:grid-cols-3 gap-4'>
 				{projects.map((project) => (
 					<ProjectItem

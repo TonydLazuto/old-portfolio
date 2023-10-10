@@ -4,10 +4,15 @@ module.exports = {
 	darkMode: 'class',
   theme: {
     extend: {
+		height: {
+			'128': '32rem',
+		  },
 		colors: {
 			'shade0': '#1A1E38',
 			'shade1' : '#7489F4',
-			'shade2' :'#F8F8FF',
+			
+
+			'shade2' :'linear-gradient(to top, rgba(248, 248, 255, 1.0), rgba(230, 230, 250, 1.0))',
 			'shade3' :'#F1F1E6',
 			'shade4' : '#C0C0F2',
 			'white' : '#FFFFFF',
@@ -42,7 +47,7 @@ module.exports = {
 			headerDelay2: 'topToBottom 0.6s ease-in-out forwards',
 			headerDelay3: 'topToBottom 0.8s ease-in-out forwards',
 			headerDelay4: 'topToBottom 1s ease-in-out forwards',
-			timeline: 'leftToRight 400ms ease-in-out forwards, fadeIn 1s',
+			timeline: 'leftToRight 800ms ease-in-out forwards, fadeIn 1s',
 			project: 'topToBottom2 800ms ease-in-out forwards',
 		},
 		dropShadow: {

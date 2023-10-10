@@ -1,15 +1,17 @@
 import timeline from '../data/timeline';
 import TimelineItem from './micro-components/TimelineItem';
 import { Box } from '@mui/material';
+// bg-shade2 drop-shadow-3xl p-4 mb-4 rounded-lg
+// scroll-mt-28
 
 const Timeline = () => {
 	return (
 		<Box
 			id='timeline'
-			className='flex flex-col md:flex-row justify-center
-			w-10/12 m-auto my-20
-			bg-shade2 drop-shadow-3xl p-4 mb-4 rounded-lg
-			scroll-mt-28'>
+			className='pt-16
+			flex flex-col md:flex-row justify-center
+			w-2/5 h-[calc(100vh_-_10rem)]
+			m-auto'>
 			<Box
 				className='w-full md:7/12'
 			>

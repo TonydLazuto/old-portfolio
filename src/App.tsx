@@ -5,9 +5,11 @@ import Stack from './components/Stack'
 import Timeline from './components/Timeline'
 import Navigation from './components/Navigation'
 
+// linear-gradient(to top, rgba(1, 12, 68, 1.0), rgba(1, 42, 92, 1.0))
+
 function App() {
   return (
-		<div className='bg-shade2 h-full'>
+		<div className='bg-shade2 h-max'>
 			<div className="h-full
 				shadow-2xl shadow-black">
 				<Navigation />
