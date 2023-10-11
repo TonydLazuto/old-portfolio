@@ -4,7 +4,7 @@ const Stack = () => {
 	return (
 		<div
 			id='stack'
-			className='bg-shade3 flex flex-col items-center
+			className='flex flex-col items-center
 				justify-center w-screen h-[calc(100vh_-_30rem)]
 				py-4'>
 			<div className='flex justify-center flex-wrap

@@ -16,7 +16,7 @@ const ProjectItem = (project: Project) => {
 					src={imgUrl}
 					alt="project"
 					className="w-full h-36
-						md:max-h-48 object-cover cursor-pointer"
+						md:h-48 object-cover cursor-pointer"
 				/>
 				<Box className='p-2'>
 					<h3 className='text-lg md:text-xl

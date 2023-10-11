@@ -9,9 +9,8 @@ import Navigation from './components/Navigation'
 
 function App() {
   return (
-		<div className='bg-shade2 h-max'>
-			<div className="h-full
-				shadow-2xl shadow-black">
+		<div className='bg-gradient-to-tl from-shade3 to-white h-max'>
+			<div className="h-full shadow-2xl shadow-black">
 				<Navigation />
 				<Header />
 				<Timeline />

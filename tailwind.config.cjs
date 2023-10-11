@@ -10,12 +10,9 @@ module.exports = {
 		colors: {
 			'shade0': '#1A1E38',
 			'shade1' : '#7489F4',
-			
-
-			'shade2' :'linear-gradient(to top, rgba(248, 248, 255, 1.0), rgba(230, 230, 250, 1.0))',
+			'shade2' :'#F8F8FF',
 			'shade3' :'#F1F1E6',
-			'shade4' : '#C0C0F2',
-			'white' : '#FFFFFF',
+			'shade4' : '#C0C0F2'
 		},
 		backgroundImage: {
 			'intro-bg': "url('/img/intro-bg.png')",

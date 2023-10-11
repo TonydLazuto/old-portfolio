@@ -11,7 +11,8 @@ const Timeline = () => {
 			className='pt-16
 			flex flex-col md:flex-row justify-center
 			w-2/5 h-[calc(100vh_-_10rem)]
-			m-auto'>
+			m-auto
+			scroll-mt-24'>
 			<Box
 				className='w-full md:7/12'
 			>

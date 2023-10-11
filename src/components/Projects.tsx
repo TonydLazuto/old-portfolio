@@ -6,10 +6,12 @@ const Projects = ({}) => {
 	return (
 		<div
 			id='projects'
-			className='bg-gradient-to-t from-indigo-500 to-blue-200
-			flex flex-col md:flex-row items-center
+			className='flex flex-col md:flex-row items-center
 			justify-center
-			m-auto px-20 h-[calc(100vh_-_10rem)]'>
+			m-auto mx-20 h-[calc(100vh_-_5rem)]
+			scroll-mt-12
+			dropshadow
+			'>
 			<div className='h-fit grid grid-cols-1
 				md:grid-cols-2 lg:grid-cols-3 gap-4'>
 				{projects.map((project) => (
