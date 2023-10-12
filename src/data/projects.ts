@@ -1,13 +1,13 @@
 export default [
 	{
 		title: "Irc: Develop an IRC server in C++",
-		imgUrl: "https://via.placeholder.com/150", 
+		imgUrl: "/assets/irssi.png", 
 		stack: ["C++98"],
 		link: "",
 	},
 	{
 		title: "Inception: Set up a small infrastructure composed of different services under specific rules",
-		imgUrl: "https://via.placeholder.com/150", 
+		imgUrl: "/assets/inception.png", 
 		stack: ["Docker", "Docker-compose", "Nginx", "Wordpress", "Mariadb"],
 		link: "",
 	},
