@@ -1,5 +1,5 @@
 import { Box } from '@mui/material'
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 import useObserver from '../../hooks/useObserver'
 
 export interface Project {
@@ -18,17 +18,14 @@ const ProjectItem = (project: Project) => {
 		obsRef
 	});
 
-
-
 	return (
 		<Box ref={obsRef} className={`rounded-md overflow drop-shadow-3xl
-		${opacity} ${animation}`}>
+		${opacity} ${animation} w-96 h-fit mb-4`}>
 			<img
 				src={imgUrl}
 				alt="project"
-				className="w-full h-36
-							object-cover cursor-pointer
-							md:h-72"
+				className="w-full h-72
+							object-cover cursor-pointer"
 			/>
 			<Box className='p-2'>
 				<h3 className='text-lg md:text-xl

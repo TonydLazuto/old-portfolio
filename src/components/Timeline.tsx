@@ -8,9 +8,10 @@ const Timeline = () => {
 	return (
 		<Box
 			id='timeline'
-			className='pt-16
+			className='mt-24
 			flex flex-col md:flex-row justify-center
-			w-2/5 h-[calc(100vh_-_10rem)]
+			w-2/5 
+			h-screen md:h-[calc(100vh_-_10rem)]
 			m-auto
 			scroll-mt-24'>
 			<Box

@@ -8,12 +8,14 @@ const Projects = ({}) => {
 			id='projects'
 			className='flex flex-col md:flex-row items-center
 			justify-center
-			m-auto mx-20 h-[calc(100vh_-_5rem)]
-			scroll-mt-12
-			dropshadow
+			m-auto mx-20
+			min-h-fit h-screen md:h-[calc(100vh_-_5rem)]
+			scroll-mt-12 mt-24
 			'>
-			<div className='h-fit grid grid-cols-1
-				md:grid-cols-2 lg:grid-cols-3 gap-4'>
+			<div className='w-screen flex
+				flex-col md:flex-row
+				items-start
+				justify-evenly flex-wrap'>
 				{projects.map((project) => (
 					<ProjectItem
 						key={project.title}
