@@ -15,9 +15,9 @@ const useObserver = (props : UseObserver) => {
     if (elementVisibility) {
       setAnimation(animationProps);
       setOpacity('opacity-1');
-    }
+          }
     else {
-      setAnimation('');
+            setAnimation('');
       setOpacity('opacity-0');
     }
   }, [elementVisibility])
@@ -30,6 +30,7 @@ const useObserver = (props : UseObserver) => {
       setElementVisibility(entry.isIntersecting);
     },
     {
+      rootMargin: '3%',
       threshold: 1
     })
     if(obsRef.current) observer.observe(obsRef.current);
