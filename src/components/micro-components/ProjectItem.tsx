@@ -1,5 +1,6 @@
 import { Box } from '@mui/material'
 import { useEffect, useRef, useState } from 'react'
+import useObserver from '../../hooks/useObserver'
 
 export interface Project {
 	key: string
@@ -10,35 +11,17 @@ export interface Project {
 }
 const ProjectItem = (project: Project) => {
 	const { title, imgUrl, stack, link } = project;
+	const obsRef = useRef<HTMLDivElement>(null);
 
-	const myRef = useRef<JSX.Element>();
-	const [timelineIsVisible, setTimelineIsVisible] = useState(false);
-	const [animation, setAnimation] = useState('');
-	const [opacity, setOpacity] = useState('opacity-0');
+	const [animation, opacity] = useObserver({
+		animationProps: 'animate-bottomToTop',
+		obsRef
+	});
 
-	useEffect(() => {
-		if (timelineIsVisible) {
-			setAnimation('animate-project');
-			setOpacity('opacity-1');
-		}
-	}, [timelineIsVisible])
 
-	console.log(timelineIsVisible);
-	useEffect(() => {
-		const observer = new IntersectionObserver((entries) => {
-			const entry = entries[0];
-			// only observe the first time
-			if (entry.isIntersecting) observer.unobserve(entry.target);
-			setTimelineIsVisible(entry.isIntersecting);
-		},
-			{
-				threshold: 1
-			})
-		observer.observe(myRef.current);
-	}, []);
 
 	return (
-		<Box ref={myRef} className={`rounded-md overflow drop-shadow-3xl
+		<Box ref={obsRef} className={`rounded-md overflow drop-shadow-3xl
 		${opacity} ${animation}`}>
 			<img
 				src={imgUrl}

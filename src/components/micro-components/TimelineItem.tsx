@@ -1,5 +1,6 @@
 import { Box } from '@mui/material'
 import React, { useEffect, useRef, useState } from 'react'
+import useObserver from '../../hooks/useObserver'
 
 export interface Timeline {
 	key: string
@@ -9,40 +10,18 @@ export interface Timeline {
 	details: string
 }
 
-//TODO: define useref() Type
-//TODO: add animation to className
 const TimelineItem = (timeline: Timeline) => {
 	const { year, title, duration, details } = timeline;
+	const obsRef = useRef<HTMLDivElement>(null);
 
-	const myRef = useRef<JSX.Element>();
-	const [timelineIsVisible, setTimelineIsVisible] = useState(false);
-	const [animation, setAnimation] = useState('');
-	const [opacity, setOpacity] = useState('opacity-0');
-
-	useEffect(() => {
-		if (timelineIsVisible) {
-			setAnimation('animate-timeline');
-			setOpacity('opacity-1');
-		}
-	}, [timelineIsVisible])
-
-	console.log(timelineIsVisible);
-	useEffect(() => {
-		const observer = new IntersectionObserver((entries) => {
-			const entry = entries[0];
-			// only observe the first time
-			if (entry.isIntersecting) observer.unobserve(entry.target);
-			setTimelineIsVisible(entry.isIntersecting);
-		},
-		{
-			threshold: 1
-		})
-		observer.observe(myRef.current);
-	}, []);
+	const [animation, opacity] = useObserver({
+		animationProps: 'animate-leftToRight',
+		obsRef
+	});
 
 	return (
 		<Box
-			ref={myRef}
+			ref={obsRef}
 			className={`flex flex-col md:flex-row
 				border-l border-slate-300 relative
 				${opacity} ${animation}`}>

@@ -25,8 +25,8 @@ module.exports = {
 				'0%': { transform: 'translateY(-300px)' },
 				'100%': { transform: 'translateY(0)' },
 			},
-			topToBottom2: {
-				'0%': { transform: 'translateY(-100px)' },
+			bottomToTop: {
+				'0%': { transform: 'translateY(100px)' },
 				'100%': { transform: 'translateY(0)' },
 			},
 			leftToRight: {
@@ -44,8 +44,8 @@ module.exports = {
 			headerDelay2: 'topToBottom 0.6s ease-in-out forwards',
 			headerDelay3: 'topToBottom 0.8s ease-in-out forwards',
 			headerDelay4: 'topToBottom 1s ease-in-out forwards',
-			timeline: 'leftToRight 800ms ease-in-out forwards, fadeIn 1s',
-			project: 'topToBottom2 800ms ease-in-out forwards, fadeIn 1s',
+			leftToRight: 'leftToRight 1s ease-in-out forwards, fadeIn 1s',
+			bottomToTop: 'bottomToTop 1s ease-in-out forwards, fadeIn 1s',
 		},
 		dropShadow: {
 			'3xl': '0 10px 20px rgba(0,0,0,0.35)',
