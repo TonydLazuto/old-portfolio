@@ -1,4 +1,4 @@
-import { Button } from '@mui/material';
+import { Button, Link } from '@mui/material';
 import SocialsMedia from './micro-components/SocialsMedia';
 
 //border-solid border-2 border-green-500
@@ -33,7 +33,7 @@ const Header = () => {
           <Button
             variant="outlined"
             className='w-1/3 animate-headerDelay3'>
-            Contactez-moi
+            <Link href="#contact">Contactez-moi</Link>
           </Button>
           <SocialsMedia />
           <div className='w-16 h-4 mt-4

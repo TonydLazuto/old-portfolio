@@ -16,18 +16,17 @@ const useObserver = (props : UseObserver) => {
       setAnimation(animationProps);
       setOpacity('opacity-1');
     }
-    // else {
-    //   console.log('Element is not visible', animationProps);
-    //   setAnimation('');
-    //   setOpacity('');
-    // }
+    else {
+      setAnimation('');
+      setOpacity('opacity-0');
+    }
   }, [elementVisibility])
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
       // only observe the first time
-      if (entry.isIntersecting) observer.unobserve(entry.target);
+      // if (entry.isIntersecting) observer.unobserve(entry.target);
       setElementVisibility(entry.isIntersecting);
     },
     {
