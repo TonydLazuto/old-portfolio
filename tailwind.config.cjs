@@ -32,7 +32,11 @@ module.exports = {
 			},
 			fadeIn: {
 				'0%': { opacity: 0 },
-				'100%': { opacity: 1 }
+				'100%': { opacity: 0.6 }
+			},
+			arrowPop : {
+				'0%': { transform: 'translateY(3rem)' },
+				'100%': { transform: 'translateX(0)' },
 			}
 		},
 		animation: {
@@ -43,6 +47,8 @@ module.exports = {
 			headerDelay4: 'topToBottom 1s ease-in-out forwards',
 			leftToRight: 'leftToRight 1s ease-in-out forwards, fadeIn 1s',
 			bottomToTop: 'bottomToTop 1s ease-in-out forwards, fadeIn 1s',
+			arrowPop: 'arrowPop 1s ease-in-out forwards, fadeIn 1s',
+			// arrowHidden: 'arrowHidden 1s ease-in-out forwards',
 		},
 		dropShadow: {
 			'3xl': '0 10px 20px rgba(0,0,0,0.35)',

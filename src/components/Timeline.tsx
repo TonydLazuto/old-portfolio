@@ -10,7 +10,7 @@ const Timeline = () => {
 			id='timeline'
 			className='mt-24
 			flex flex-col md:flex-row justify-center
-			w-2/5 
+			w-2/5
 			h-screen md:h-[calc(100vh_-_10rem)]
 			m-auto
 			scroll-mt-24'>

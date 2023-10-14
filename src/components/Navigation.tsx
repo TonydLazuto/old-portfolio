@@ -13,7 +13,6 @@ const Navigation = () => {
         drop-shadow-3xl
         rounded-3xl z-20
         text-slate-200 text-sm"
-        // md:text-2xl md:h-24
     >
       {navList.map((nav) => (
         <a

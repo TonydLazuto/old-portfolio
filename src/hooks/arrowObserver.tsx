@@ -1,0 +1,42 @@
+import React, { RefObject, useEffect, useRef, useState } from 'react'
+
+export interface ArrowObserver {
+  obsRef: React.RefObject<HTMLDivElement>
+}
+
+const arrowObserver = (props : ArrowObserver) => {
+  const { obsRef } = props;
+  const [elementVisibility, setElementVisibility] = useState<boolean>();
+  const [animation, setAnimation] = useState('');
+  const [hidden, setHidden] = useState('hidden');
+
+  useEffect(() => {
+    if (elementVisibility === undefined) return;
+    if (elementVisibility) {
+      setAnimation('fade-out');
+      setHidden('hidden');
+          }
+    else {
+        setAnimation('animate-arrowPop');
+      setHidden('');
+    }
+  }, [elementVisibility])
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      // only observe the first time
+      // if (entry.isIntersecting) observer.unobserve(entry.target);
+      setElementVisibility(entry.isIntersecting);
+    },
+    {
+      rootMargin: '30%',
+      threshold: 1
+    })
+    if(obsRef.current) observer.observe(obsRef.current);
+  }, []);
+
+  return [animation, hidden];
+}
+
+export default arrowObserver;

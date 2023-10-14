@@ -1,11 +1,16 @@
 import { Button, Link } from '@mui/material';
 import SocialsMedia from './micro-components/SocialsMedia';
+import { ArrowObserver } from '../hooks/arrowObserver';
 
 //border-solid border-2 border-green-500
-const Header = () => {
+const Header = (props: ArrowObserver) => {
+  const { obsRef } = props;
   return (
-    <div id='intro' className='bg-shade0 pt-32
-    w-screen h-[calc(100vh_-_2rem)]'>
+    <div
+      ref={obsRef}
+      id='header'
+      className='bg-shade0 pt-32
+        w-screen h-[calc(100vh_-_2rem)]'>
       <div
         className="h-4/5 w-11/12 mt-8 m-auto
         flex flex-row justify-center
