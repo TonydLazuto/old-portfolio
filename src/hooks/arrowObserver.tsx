@@ -18,7 +18,7 @@ const arrowObserver = (props : ArrowObserver) => {
     }
     else {
       setHidden('');
-        setAnimation('animate-arrowPop');
+      setAnimation('animate-arrowPop');
     }
   }, [elementVisibility])
 
