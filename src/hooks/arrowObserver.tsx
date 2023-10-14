@@ -13,12 +13,12 @@ const arrowObserver = (props : ArrowObserver) => {
   useEffect(() => {
     if (elementVisibility === undefined) return;
     if (elementVisibility) {
-      setAnimation('fade-out');
       setHidden('hidden');
-          }
+      setAnimation('fade-out');
+    }
     else {
-        setAnimation('animate-arrowPop');
       setHidden('');
+        setAnimation('animate-arrowPop');
     }
   }, [elementVisibility])
 

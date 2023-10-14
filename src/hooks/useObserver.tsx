@@ -2,25 +2,31 @@ import React, { RefObject, useEffect, useRef, useState } from 'react'
 
 export interface UseObserver {
 	animationProps: string
-  obsRef: React.RefObject<HTMLDivElement>
 }
 
 const useObserver = (props : UseObserver) => {
-  const { animationProps, obsRef } = props;
-  const [elementVisibility, setElementVisibility] = useState(false);
-  const [animation, setAnimation] = useState('');
-  const [opacity, setOpacity] = useState('opacity-0');
+  const { animationProps } = props;
+  const [elementVisibility, setElementVisibility] = useState<boolean>();
+  const obsRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    if (elementVisibility === undefined) return;
     if (elementVisibility) {
-      setAnimation(animationProps);
-      setOpacity('opacity-1');
-          }
-    else {
-            setAnimation('');
-      setOpacity('opacity-0');
+      if (obsRef.current) {
+        obsRef.current.style.transition = 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out';
+        obsRef.current.style.opacity = '1';
+        obsRef.current.style.transform = 'translateX(0)';
+      };
+
     }
-  }, [elementVisibility])
+    else {
+      if (obsRef.current) {
+        obsRef.current.style.transition = 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out';
+        obsRef.current.style.opacity = '0';
+        obsRef.current.style.transform = 'translateX(-10rem)';
+      };
+    }
+  }, [elementVisibility, animationProps])
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -34,9 +40,15 @@ const useObserver = (props : UseObserver) => {
       threshold: 1
     })
     if(obsRef.current) observer.observe(obsRef.current);
-  }, []);
+    return () => {
+      if (obsRef.current) {
+        observer.unobserve(obsRef.current);
+      }
+    };
 
-  return [animation, opacity];
+  }, [obsRef]);
+
+  return obsRef;
 }
 
 export default useObserver

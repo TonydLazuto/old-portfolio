@@ -12,19 +12,15 @@ export interface Timeline {
 
 const TimelineItem = (timeline: Timeline) => {
 	const { year, title, duration, details } = timeline;
-	const obsRef = useRef<HTMLDivElement>(null);
 
-	const [animation, opacity] = useObserver({
-		animationProps: 'animate-leftToRight',
-		obsRef
+	const obsRef = useObserver({
+		animationProps: 'animate-leftToRight'
 	});
-
 	return (
 		<Box
 			ref={obsRef}
-			className={`flex flex-col md:flex-row
-				border-l border-slate-300 relative
-				${opacity} ${animation}`}>
+			className='flex flex-col md:flex-row
+				border-l border-slate-300 relative'>
 			<Box className='mb-4 ml-4'>
 				<div className='absolute w-3 h-3 bg-slate-300
 					rounded-full mt-2 -left-1.5 border-white' />

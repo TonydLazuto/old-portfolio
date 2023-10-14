@@ -22,17 +22,18 @@ module.exports = {
 				'0%': { transform: 'translateY(-300px)' },
 				'100%': { transform: 'translateY(0)' },
 			},
-			bottomToTop: {
-				'0%': { transform: 'translateY(100px)' },
-				'100%': { transform: 'translateY(0)' },
-			},
-			leftToRight: {
-				'0%': { transform: 'translateX(-10rem)' },
-				'100%': { transform: 'translateX(0)' },
-			},
 			fadeIn: {
 				'0%': { opacity: 0 },
+				'100%': { opacity: 1 }
+			},
+			
+			arrowFadeIn: {
+				'0%': { opacity: 0 },
 				'100%': { opacity: 0.6 }
+			},
+			arrowFadeOut: {
+				'0%': { opacity: 0.6 },
+				'100%': { opacity: 0 }
 			},
 			arrowPop : {
 				'0%': { transform: 'translateY(3rem)' },
@@ -45,10 +46,8 @@ module.exports = {
 			headerDelay2: 'topToBottom 0.6s ease-in-out forwards',
 			headerDelay3: 'topToBottom 0.8s ease-in-out forwards',
 			headerDelay4: 'topToBottom 1s ease-in-out forwards',
-			leftToRight: 'leftToRight 1s ease-in-out forwards, fadeIn 1s',
-			bottomToTop: 'bottomToTop 1s ease-in-out forwards, fadeIn 1s',
-			arrowPop: 'arrowPop 1s ease-in-out forwards, fadeIn 1s',
-			// arrowHidden: 'arrowHidden 1s ease-in-out forwards',
+
+			arrowPop: 'arrowPop 1s ease-in-out forwards, arrowFadeIn 1s',
 		},
 		dropShadow: {
 			'3xl': '0 10px 20px rgba(0,0,0,0.35)',

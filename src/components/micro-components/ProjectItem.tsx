@@ -11,16 +11,15 @@ export interface Project {
 }
 const ProjectItem = (project: Project) => {
 	const { title, imgUrl, stack, link } = project;
-	const obsRef = useRef<HTMLDivElement>(null);
 
-	const [animation, opacity] = useObserver({
-		animationProps: 'animate-bottomToTop',
-		obsRef
+    const obsRef = useObserver({
+		animationProps: 'animate-bottomToTop'
 	});
 
 	return (
-		<Box ref={obsRef} className={`rounded-md overflow drop-shadow-3xl
-		${opacity} ${animation} w-96 h-fit mb-4`}>
+		<Box ref={obsRef}
+			className='rounded-md overflow drop-shadow-3xl
+                 w-96 h-fit mb-4'>
 			<img
 				src={imgUrl}
 				alt="project"
