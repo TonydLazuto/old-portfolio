@@ -22,6 +22,10 @@ module.exports = {
 				'0%': { transform: 'translateY(-300px)' },
 				'100%': { transform: 'translateY(0)' },
 			},
+			picturePop: {
+				'0%': { transform: 'translateX(300px)' },
+				'100%': { transform: 'translateX(0)' },
+			},
 			fadeIn: {
 				'0%': { opacity: 0 },
 				'100%': { opacity: 1 }
@@ -48,6 +52,7 @@ module.exports = {
 			headerDelay4: 'topToBottom 1s ease-in-out forwards',
 
 			arrowPop: 'arrowPop 1s ease-in-out forwards, arrowFadeIn 1s',
+			picturePop : 'picturePop 1s ease-in-out forwards, fadeIn 1s'
 		},
 		dropShadow: {
 			'3xl': '0 10px 20px rgba(0,0,0,0.35)',

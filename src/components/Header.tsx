@@ -18,7 +18,8 @@ const Header = (props: ArrowObserver) => {
         <HeaderIntro />
         <div
           className="w-2/5 h-full p-10
-          flex justify-center items-center">
+          flex justify-center items-center
+          animate-picturePop">
           <img
             src="/assets/profile-pic.png"
             alt="profile-pic"
