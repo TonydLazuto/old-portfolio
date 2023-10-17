@@ -25,7 +25,7 @@ const Header = (props: ArrowObserver) => {
             alt="profile-pic"
             className="drop-shadow-4xl
             object-scale-down w-4/5 h-4/5
-            blur-lg"
+            blur-xl"
           />
         </div>
       </div>

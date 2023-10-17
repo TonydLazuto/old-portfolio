@@ -13,8 +13,7 @@ const ArrowNavigation = (props: ArrowNavigationProps) => {
         className={`fixed bottom-12 right-12
         rounded-full bg-slate-300/50 opacity-60
         shadow-2xl z-20 ${hidden} ${animation}
-        hover:opacity-100 hover:bg-slate-300/75
-        `}
+        hover:opacity-100 hover:bg-slate-300/75`}
         >
         <Link href="#header">
             <KeyboardArrowUpIcon

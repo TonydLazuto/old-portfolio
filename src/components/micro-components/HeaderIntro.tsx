@@ -3,6 +3,7 @@ import { Button, Link } from '@mui/material';
 import SocialsMedia from './SocialsMedia';
 
 const HeaderIntro = () => {
+  const mailPerso = "aderose73@gmail.com"
   return (
     <div
           className="flex flex-col justify-center
@@ -27,7 +28,7 @@ const HeaderIntro = () => {
             variant="outlined"
             className='w-1/3 animate-headerDelay3'
         >
-                <Link href="#contact">Contactez-moi</Link>
+                <Link href={`mailto:${mailPerso}`}>Contactez-moi</Link>
         </Button>
         <SocialsMedia />
         <div className='w-16 h-4 mt-4

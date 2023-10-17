@@ -1,4 +1,3 @@
-import Contact from './components/Contact'
 import Header from './components/Header'
 import Projects from './components/Projects'
 import Stack from './components/Stack'
@@ -7,6 +6,7 @@ import Navigation from './components/Navigation'
 import { useRef } from 'react';
 import arrowObserver from './hooks/arrowObserver';
 import ArrowNavigation from './components/ArrowNavigation'
+import Footer from './components/Footer'
 // linear-gradient(to top, rgba(1, 12, 68, 1.0), rgba(1, 42, 92, 1.0))
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
 				<Timeline />
 				<Projects />
 				<Stack />
-				<Contact />
+				<Footer />
 				<ArrowNavigation animation={animation} hidden={hidden} />
 			</div>
 		</div>
