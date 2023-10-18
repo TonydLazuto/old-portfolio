@@ -11,7 +11,8 @@ const Stack = () => {
 		<div
 			id='stack'
 			className='flex flex-col items-center
-				justify-center w-screen h-[calc(100vh_-_30rem)]
+				justify-center w-screen
+				min-h-screen md:min-h-full md:my-40
 				py-4'>
 			<div
                 ref={obsRef}

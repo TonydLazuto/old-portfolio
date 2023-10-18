@@ -7,7 +7,8 @@ const HeaderIntro = () => {
   return (
     <div
           className="flex flex-col justify-center
-          w-3/5 h-full pl-8 md:pl-14
+          w-3/5 h-full md:pl-8 md:pl-14
+          items-center md:items-start
           text-slate-100 z-10
           animate-header"
         >

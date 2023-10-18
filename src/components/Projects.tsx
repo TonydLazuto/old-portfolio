@@ -9,12 +9,12 @@ const Projects = ({}) => {
 			className='flex flex-col md:flex-row items-center
 			justify-center
 			m-auto mx-20
-			min-h-fit h-screen md:h-[calc(100vh_-_5rem)]
+			min-h-screen md:min-h-[calc(100vh_-_5rem)]
 			scroll-mt-12 mt-24
 			'>
 			<div className='w-screen flex
 				flex-col md:flex-row
-				items-start
+				items-center md:items-start
 				justify-evenly flex-wrap'>
 				{projects.map((project) => (
 					<ProjectItem

@@ -9,22 +9,29 @@ const Header = (props: ArrowObserver) => {
       ref={obsRef}
       id='header'
       className='bg-shade0 pt-32
-        w-screen h-[calc(100vh_-_2rem)]'>
+        w-screen min-h-[calc(100vh_-_2rem)]'>
       <div
-        className="h-4/5 w-11/12 mt-8 m-auto
-        flex flex-row justify-center
+        className="
+        h-[calc(100vh_-_12rem)] md:h-4/5
+        w-11/12 mt-8 m-auto
+        flex flex-col
+        justify-center
+        text-center md:text-left
+        items-center md:items-start
         md:flex-row md:justify-start"
       >
         <HeaderIntro />
         <div
-          className="w-2/5 h-full p-10
+          className="w-full md:w-2/5 
+          h-full p-10
           flex justify-center items-center
           animate-picturePop">
           <img
             src="/assets/profile-pic.png"
             alt="profile-pic"
             className="drop-shadow-4xl
-            object-scale-down w-4/5 h-4/5
+            object-scale-down
+            w-2/5 h-2/5 md:w-4/5 md:h-4/5
             blur-xl"
           />
         </div>
