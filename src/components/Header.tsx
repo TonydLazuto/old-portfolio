@@ -8,21 +8,22 @@ const Header = (props: ArrowObserver) => {
     <div
       ref={obsRef}
       id='header'
-      className='bg-shade0 pt-32
-        w-screen min-h-[calc(100vh_-_2rem)]'>
+      className='bg-shade0
+        w-screen min-h-[calc(100vh_-_2rem)]
+        flex justify-center items-center'>
       <div
         className="
-        h-[calc(100vh_-_12rem)] md:h-4/5
-        w-11/12 mt-8 m-auto
-        flex flex-col
+        h-[calc(100vh_-_12rem)] md:h-full
+        w-11/12 m-auto
+        flex
+        flex-col md:flex-row
         justify-center
         text-center md:text-left
-        items-center md:items-start
-        md:flex-row md:justify-start"
+        items-center"
       >
         <HeaderIntro />
         <div
-          className="w-full md:w-2/5 
+          className="w-full md:w-2/5
           h-full p-10
           flex justify-center items-center
           animate-picturePop">
