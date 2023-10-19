@@ -22,7 +22,7 @@ const Projects = ({}) => {
 						title={project.title}
 						imgUrl={project.imgUrl}
 						stack={project.stack}
-						link={project.link}
+						details={project.details}
 					/>
 				))}
 			</div>

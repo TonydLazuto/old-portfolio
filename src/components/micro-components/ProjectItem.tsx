@@ -7,10 +7,10 @@ export interface Project {
 	title: string
 	imgUrl: string
 	stack: string[]
-	link: string
+	details: string[]
 }
 const ProjectItem = (project: Project) => {
-	const { title, imgUrl, stack, link } = project;
+	const { title, imgUrl, stack, details } = project;
 
     const obsRef = useObserver({
 		animationProps: 'animate-bottomToTop'
