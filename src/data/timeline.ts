@@ -3,7 +3,7 @@ export default [
 		year: '2023',
 		title: "Développeur",
 		duration: "6 mois de stage + CDI",
-		details: 'Développeur full-stack chez l\'ESN Acensi.'
+		details: 'Développeur full-stack React/Node chez Acensi.'
 	},
 	{
 		year: '2020',
@@ -16,7 +16,7 @@ export default [
 		title: "Gestionnaire de Base de Données",
 		duration: "4 ans",
 		details: "Analyse de la complétude d'un dossier cartographique. \
-							Mise à jour de plans 2D comportant les schémas électriques unifilaires sur la zone de travaux (logiciel de CAO MicroStation, équivalent d'AutoCAD). \
-							Requêtes sur une BDD interne à l'entreprise."
+				Mise à jour de plans 2D comportant les schémas électriques unifilaires sur la zone de travaux (logiciel de CAO MicroStation, équivalent d'AutoCAD). \
+				Requêtes sur une BDD interne à l'entreprise."
 	},
 ]

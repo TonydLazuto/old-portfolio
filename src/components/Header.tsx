@@ -10,7 +10,8 @@ const Header = (props: ArrowObserver) => {
       id='header'
       className='bg-shade0
         w-screen min-h-[calc(100vh_-_2rem)]
-        flex justify-center items-center'>
+        flex justify-center items-center
+        pt-32 md:pt-0'>
       <div
         className="
         h-[calc(100vh_-_12rem)] md:h-full
