@@ -1,14 +1,14 @@
 export default [
 	{
 		title: "Acenstream",
-		description: "C'est une application de diffusion de flux de médias vers des écrans connectés à des Raspberry destinés à l’affichage d'évènements au sein des locaux de l'entreprise.",
+		description: "Application de diffusion de flux de médias, vers des écrans connectés à des Raspberry, destinés à l’affichage d'évènements au sein des locaux de l'entreprise.",
 		imgUrl: "https://via.placeholder.com/150",
 		stack: ["React", "Node", "Fastify", "Sequelize", "Socket.io", "Mui", "Electron.Js", "pgAdmin4", "PostgreSQL"],
 		details: ["Il existe une médiathèque qui permet d'ajouter des images, des vidéos ou des URL. Il suffit de les ajouter à une playlist personnalisable pour les diffuser en temps réel.", "On peut également décider de planifier des diffusions via un calendrier où sont lister les événements de diffusion à venir.", "Une interface est disponible pour les admnistrateurs qui souhaiteraient inspecter l'état de chaque raspberry disponible à l'application."]
 	},
 	{
 		title: "Syneryx",
-		description: "C'est un outil de gestion de parcs (licences, utilisateurs, appareils, boites mails, sms).",
+		description: "Outil de gestion de parcs (licences, utilisateurs, appareils, boites mails, sms).",
 		imgUrl: "https://via.placeholder.com/150",
 		stack: ["React", "Node", "Fastify", "Sequelize", "Socket.io", "Mui", "pgAdmin4", "PostgreSQL", "Redis"],
 		details: ["Permet de visualiser l'état des différentes licences. Les fonctionnalités incluent l'allocation, la suppression et la modification des informations liées aux licences.", "Répertorier les utilisateurs en fonction de critères spécifiques. Ceci donne la possibilité de modifier les mots de passe, d'ajouter ou de supprimer des groupes, etc.", "Syneryx est une plateforme de gestion des différentes machines, serveurs internes et externes. L'objectif principal est de simplifier la gestion des actifs."]
@@ -29,7 +29,7 @@ export default [
 	},
 	{
 		title: "Irc",
-		description: "Développement d'un serveur IRC (Internet Relay Chat) servant à la communication instantanée par des channels ou par messages directs.",
+		description: "Développement d'un serveur IRC (Internet Relay Chat) incluant la communication instantanée par des channels ou par messages privés.",
 		imgUrl: "/assets/irssi.png",
 		stack: ["C++"],
 		details: ["L'objectif ici est de gérer la connexion TCP/IP entre le client et le serveur.", "Gestion des opérations entrées/sorties non bloquantes (utilisation de poll ou select).", "L’utilisation du client de référence (Irssi) pour ce serveur est similaire à l’utilisation d’un serveur IRC officiel en reprenant les principales fonctionnalités."]

@@ -1,5 +1,5 @@
 import { Box } from '@mui/material'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import useObserver from '../../hooks/useObserver'
 
 export interface Project {
@@ -12,15 +12,31 @@ export interface Project {
 }
 const ProjectItem = (project: Project) => {
 	const { title, description, imgUrl, stack, details } = project;
+	const [showDescription, setShowDescription] = useState(false);
 
     const obsRef = useObserver({
 		animationProps: 'animate-bottomToTop'
 	});
 
+	const handleShowDescription = (e : React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+		e.preventDefault();
+		if (!showDescription) {
+			setShowDescription(true);
+		}
+	}
+	const handleHideDescription = (e : React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+		e.preventDefault();
+		if (showDescription) {
+			setShowDescription(false);
+		}
+	}
+
 	return (
 		<Box ref={obsRef}
 			className='rounded-md overflow drop-shadow-3xl
-                 w-96 h-fit mb-4'>
+                 w-96 h-fit mb-4'
+				 onMouseEnter={handleShowDescription}
+				 onMouseLeave={handleHideDescription}>
 			<img
 				src={imgUrl}
 				alt="project"
@@ -32,6 +48,13 @@ const ProjectItem = (project: Project) => {
 						mb-2 md:mb-3 font-semibold'>
 					{title}
 				</h3>
+				{showDescription ? (
+				<h4 className='text-lg md:text-lg
+						mb-2 md:mb-3
+						animate-projectDescriptionPop'>
+					{description}
+				</h4>
+				) : null}
 				<Box className='flex flex-wrap gap-2
 						flex-row items-center justify-start text-xs md:text-sm'>
 					{stack.map((item) => (

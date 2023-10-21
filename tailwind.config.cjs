@@ -30,7 +30,6 @@ module.exports = {
 				'0%': { opacity: 0 },
 				'100%': { opacity: 1 }
 			},
-			
 			arrowFadeIn: {
 				'0%': { opacity: 0 },
 				'100%': { opacity: 0.6 }
@@ -42,17 +41,26 @@ module.exports = {
 			arrowPop : {
 				'0%': { transform: 'translateY(3rem)' },
 				'100%': { transform: 'translateX(0)' },
+			},
+			projectDescriptionPop: {
+				'0%': { transform: 'translateY(0.7rem)', },
+				'100%': { transform: 'translateY(0)', },
+			},
+			heightAppear: {
+				'0%': { maxHeight: '0' },
+				'100%': { maxHeight: '100vh' }
 			}
 		},
 		animation: {
-			header: 'topToBottom 800ms ease-in-out forwards, fadeIn 1s',
+			header: 'topToBottom 800ms ease-in-out forwards, fadeIn 800ms',
 			headerDelay: 'topToBottom 0.3s ease-in-out forwards',
 			headerDelay2: 'topToBottom 0.6s ease-in-out forwards',
 			headerDelay3: 'topToBottom 0.8s ease-in-out forwards',
 			headerDelay4: 'topToBottom 1s ease-in-out forwards',
 
 			arrowPop: 'arrowPop 1s ease-in-out forwards, arrowFadeIn 1s',
-			picturePop : 'picturePop 1s ease-in-out forwards, fadeIn 1s'
+			picturePop : 'picturePop 1s ease-in-out forwards, fadeIn 1s',
+			projectDescriptionPop : 'projectDescriptionPop 500ms ease-in-out forwards, heightAppear 2300ms, fadeIn 1200ms'
 		},
 		dropShadow: {
 			'3xl': '0 10px 20px rgba(0,0,0,0.35)',
