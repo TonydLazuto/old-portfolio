@@ -5,12 +5,13 @@ import useObserver from '../../hooks/useObserver'
 export interface Project {
 	key: string
 	title: string
+	description: string
 	imgUrl: string
 	stack: string[]
 	details: string[]
 }
 const ProjectItem = (project: Project) => {
-	const { title, imgUrl, stack, details } = project;
+	const { title, description, imgUrl, stack, details } = project;
 
     const obsRef = useObserver({
 		animationProps: 'animate-bottomToTop'

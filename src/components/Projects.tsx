@@ -20,6 +20,7 @@ const Projects = ({}) => {
 					<ProjectItem
 						key={project.title}
 						title={project.title}
+						description={project.description}
 						imgUrl={project.imgUrl}
 						stack={project.stack}
 						details={project.details}
