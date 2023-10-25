@@ -6,7 +6,7 @@ module.exports = {
     extend: {
 		colors: {
 			'shade0': '#1A1E38',
-			'shade1' : '#7489F4',
+			'shade1' : '#e0e0dc',
 			'shade2' :'#F8F8FF',
 			'shade3' :'#F1F1E6',
 			'shade4' : '#C0C0F2'
@@ -60,7 +60,8 @@ module.exports = {
 
 			arrowPop: 'arrowPop 1s ease-in-out forwards, arrowFadeIn 1s',
 			picturePop : 'picturePop 1s ease-in-out forwards, fadeIn 1s',
-			projectDescriptionPop : 'projectDescriptionPop 500ms ease-in-out forwards, heightAppear 2300ms, fadeIn 1200ms'
+			projectDescriptionPop : 'projectDescriptionPop 500ms ease-in-out forwards, heightAppear 2300ms, fadeIn 1200ms',
+			fadeIn: 'fadeIn 800ms'
 		},
 		dropShadow: {
 			'3xl': '0 10px 20px rgba(0,0,0,0.35)',

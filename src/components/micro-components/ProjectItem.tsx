@@ -12,49 +12,53 @@ export interface Project {
 }
 const ProjectItem = (project: Project) => {
 	const { title, description, imgUrl, stack, details } = project;
-	const [showDescription, setShowDescription] = useState(false);
+	const [hidden, setHidden] = useState('hidden');
+	const [hoverDesign, setHoverDesign] = useState('');
+	const [imgClass, setImgClass] = useState('');
 
     const obsRef = useObserver({
 		animationProps: 'animate-bottomToTop'
 	});
 
-	const handleShowDescription = (e : React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+	const handleProjectHoverEnter = (e : React.MouseEvent<HTMLDivElement, MouseEvent>) => {
 		e.preventDefault();
-		if (!showDescription) {
-			setShowDescription(true);
+		if (hidden) {
+			setHidden('');
+			setHoverDesign('cursor-pointer rounded-xl drop-shadow-4xl bg-shade1');
+			setImgClass('rounded-t-xl');
 		}
 	}
-	const handleHideDescription = (e : React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+	const handleProjectHoverLeave = (e : React.MouseEvent<HTMLDivElement, MouseEvent>) => {
 		e.preventDefault();
-		if (showDescription) {
-			setShowDescription(false);
+		if (!hidden) {
+			setHidden('hidden');
+			setHoverDesign('');
+			setImgClass('');
 		}
 	}
 
 	return (
 		<Box ref={obsRef}
-			className='rounded-md overflow drop-shadow-3xl
-                 w-96 h-fit mb-4'
-				 onMouseEnter={handleShowDescription}
-				 onMouseLeave={handleHideDescription}>
+			className={`rounded-md overflow drop-shadow-3xl
+                 w-96 h-fit mb-4 ${hoverDesign}`}
+				 onMouseEnter={handleProjectHoverEnter}
+				 onMouseLeave={handleProjectHoverLeave}>
 			<img
 				src={imgUrl}
 				alt="project"
-				className="w-full h-72
-							object-cover cursor-pointer"
+				className={`w-full h-72
+							object-cover ${imgClass}`}
 			/>
 			<Box className='p-2'>
 				<h3 className='text-lg md:text-xl
 						mb-2 md:mb-3 font-semibold'>
 					{title}
 				</h3>
-				{showDescription ? (
-				<h4 className='text-lg md:text-lg
+				<h4 className={`text-lg md:text-lg
 						mb-2 md:mb-3
-						animate-projectDescriptionPop'>
+						animate-projectDescriptionPop ${hidden}`}>
 					{description}
 				</h4>
-				) : null}
 				<Box className='flex flex-wrap gap-2
 						flex-row items-center justify-start text-xs md:text-sm'>
 					{stack.map((item) => (
