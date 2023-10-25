@@ -13,7 +13,7 @@ export interface Project {
 const ProjectItem = (project: Project) => {
 	const { title, description, imgUrl, stack, details } = project;
 	const [hidden, setHidden] = useState('hidden');
-	const [hoverDesign, setHoverDesign] = useState('');
+	const [projectItemClass, setProjectItemClass] = useState('');
 	const [imgClass, setImgClass] = useState('');
 
     const obsRef = useObserver({
@@ -24,23 +24,23 @@ const ProjectItem = (project: Project) => {
 		e.preventDefault();
 		if (hidden) {
 			setHidden('');
-			setHoverDesign('cursor-pointer rounded-xl drop-shadow-4xl bg-shade1');
-			setImgClass('rounded-t-xl');
+			setProjectItemClass('cursor-pointer animate-projectHoverEnter');
+			setImgClass('animate-projectImgHoverEnter');
 		}
 	}
 	const handleProjectHoverLeave = (e : React.MouseEvent<HTMLDivElement, MouseEvent>) => {
 		e.preventDefault();
 		if (!hidden) {
 			setHidden('hidden');
-			setHoverDesign('');
-			setImgClass('');
+			setProjectItemClass('animate-projectHoverLeave');
+			setImgClass('animate-projectImgHoverLeave');
 		}
 	}
 
 	return (
 		<Box ref={obsRef}
 			className={`rounded-md overflow drop-shadow-3xl
-                 w-96 h-fit mb-4 ${hoverDesign}`}
+                 w-96 h-fit mb-4 ${projectItemClass}`}
 				 onMouseEnter={handleProjectHoverEnter}
 				 onMouseLeave={handleProjectHoverLeave}>
 			<img

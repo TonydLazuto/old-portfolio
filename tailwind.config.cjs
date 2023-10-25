@@ -6,7 +6,7 @@ module.exports = {
     extend: {
 		colors: {
 			'shade0': '#1A1E38',
-			'shade1' : '#e0e0dc',
+			'shade1' : '#ebebe4',
 			'shade2' :'#F8F8FF',
 			'shade3' :'#F1F1E6',
 			'shade4' : '#C0C0F2'
@@ -49,7 +49,41 @@ module.exports = {
 			heightAppear: {
 				'0%': { maxHeight: '0' },
 				'100%': { maxHeight: '100vh' }
-			}
+			},
+			projectHoverEnter: {
+				'0%': {},
+				'100%': {
+					borderRadius: '1rem',
+					backgroundColor: '#ebebe4',
+					filter: 'drop-shadow(0 25px 35px rgba(0,0,0,0.55))',
+					padding: '1rem'
+				},
+			},
+			projectHoverLeave: {
+				'0%': {
+					borderRadius: '1rem',
+					backgroundColor: '#ebebe4',
+					filter: 'drop-shadow(0 25px 35px rgba(0,0,0,0.55))',
+					padding: '1rem'
+				},
+				'100%': {},
+			},
+			projectImgHoverEnter: {
+				'0%': {
+				},
+				'100%': {
+					borderRadius: '1rem',
+					height: '100%',
+				},
+			},
+			projectImgHoverLeave: {
+				'0%': {
+					borderRadius: '1rem',
+					height: '100%',
+				},
+				'100%': {
+				},
+			},
 		},
 		animation: {
 			header: 'topToBottom 800ms ease-in-out forwards, fadeIn 800ms',
@@ -61,7 +95,11 @@ module.exports = {
 			arrowPop: 'arrowPop 1s ease-in-out forwards, arrowFadeIn 1s',
 			picturePop : 'picturePop 1s ease-in-out forwards, fadeIn 1s',
 			projectDescriptionPop : 'projectDescriptionPop 500ms ease-in-out forwards, heightAppear 2300ms, fadeIn 1200ms',
-			fadeIn: 'fadeIn 800ms'
+			fadeIn: 'fadeIn 800ms',
+			projectHoverEnter: 'projectHoverEnter 400ms ease-in-out forwards',
+			projectHoverLeave: 'projectHoverLeave 400ms ease-in-out forwards',
+			projectImgHoverEnter: 'projectImgHoverEnter 400ms ease-in-out forwards',
+			projectImgHoverLeave: 'projectImgHoverLeave 400ms ease-in-out forwards',
 		},
 		dropShadow: {
 			'3xl': '0 10px 20px rgba(0,0,0,0.35)',
