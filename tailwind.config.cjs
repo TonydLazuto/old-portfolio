@@ -73,33 +73,35 @@ module.exports = {
 				},
 				'100%': {
 					borderRadius: '1rem',
-					height: '100%',
+					// height: '100%',
 				},
 			},
 			projectImgHoverLeave: {
 				'0%': {
 					borderRadius: '1rem',
-					height: '100%',
+					// height: '100%',
 				},
 				'100%': {
+					// height: '18rem',
 				},
 			},
 		},
 		animation: {
 			header: 'topToBottom 800ms ease-in-out forwards, fadeIn 800ms',
-			headerDelay: 'topToBottom 0.3s ease-in-out forwards',
-			headerDelay2: 'topToBottom 0.6s ease-in-out forwards',
-			headerDelay3: 'topToBottom 0.8s ease-in-out forwards',
+			headerDelay: 'topToBottom 300ms ease-in-out forwards',
+			headerDelay2: 'topToBottom 600ms ease-in-out forwards',
+			headerDelay3: 'topToBottom 800ms ease-in-out forwards',
 			headerDelay4: 'topToBottom 1s ease-in-out forwards',
 
 			arrowPop: 'arrowPop 1s ease-in-out forwards, arrowFadeIn 1s',
 			picturePop : 'picturePop 1s ease-in-out forwards, fadeIn 1s',
-			projectDescriptionPop : 'projectDescriptionPop 500ms ease-in-out forwards, heightAppear 2300ms, fadeIn 1200ms',
+			projectDescriptionPop : 'projectDescriptionPop 300ms ease-in-out forwards, heightAppear 2300ms, fadeIn 1200ms',
 			fadeIn: 'fadeIn 800ms',
-			projectHoverEnter: 'projectHoverEnter 400ms ease-in-out forwards',
-			projectHoverLeave: 'projectHoverLeave 400ms ease-in-out forwards',
-			projectImgHoverEnter: 'projectImgHoverEnter 400ms ease-in-out forwards',
-			projectImgHoverLeave: 'projectImgHoverLeave 400ms ease-in-out forwards',
+
+			projectHoverEnter: 'projectHoverEnter 200ms ease-in-out forwards',
+			projectHoverLeave: 'projectHoverLeave 200ms ease-in-out forwards',
+			projectImgHoverEnter: 'projectImgHoverEnter 200ms ease-in-out forwards',
+			projectImgHoverLeave: 'projectImgHoverLeave 300ms ease-in-out forwards',
 		},
 		dropShadow: {
 			'3xl': '0 10px 20px rgba(0,0,0,0.35)',

@@ -4,8 +4,7 @@ export interface UseObserver {
 	animationProps: string
 }
 
-const useObserver = (props : UseObserver) => {
-  const { animationProps } = props;
+const useObserver = () => {
   const [elementVisibility, setElementVisibility] = useState<boolean>();
   const obsRef = useRef<HTMLDivElement | null>(null);
 
@@ -13,7 +12,7 @@ const useObserver = (props : UseObserver) => {
     if (elementVisibility === undefined) return;
     if (elementVisibility) {
       if (obsRef.current) {
-        obsRef.current.style.transition = 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out';
+        obsRef.current.style.transition = 'opacity 300ms ease-in-out, transform 300ms ease-in-out';
         obsRef.current.style.opacity = '1';
         obsRef.current.style.transform = 'translateX(0)';
       };
@@ -21,12 +20,12 @@ const useObserver = (props : UseObserver) => {
     }
     else {
       if (obsRef.current) {
-        obsRef.current.style.transition = 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out';
+        obsRef.current.style.transition = 'opacity 300ms ease-in-out, transform 300ms ease-in-out';
         obsRef.current.style.opacity = '0';
-        obsRef.current.style.transform = 'translateX(-10rem)';
+        obsRef.current.style.transform = 'translateX(-5rem)';
       };
     }
-  }, [elementVisibility, animationProps])
+  }, [elementVisibility])
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {

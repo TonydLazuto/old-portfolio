@@ -3,9 +3,7 @@ import stacks from '../data/stack';
 import useObserver from '../hooks/useObserver';
 
 const Stack = () => {
-	const obsRef = useObserver({
-		animationProps: 'animate-leftToRight'
-	});
+	const obsRef = useObserver();
 
 	return (
 		<div

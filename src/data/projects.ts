@@ -2,14 +2,14 @@ export default [
 	{
 		title: "Acenstream",
 		description: "Application de diffusion de flux de médias, vers des écrans connectés à des Raspberry, destinés à l’affichage d'évènements au sein des locaux de l'entreprise.",
-		imgUrl: "https://via.placeholder.com/150",
+		imgUrl: "https://via.placeholder.com/120",
 		stack: ["React", "Node", "Fastify", "Sequelize", "Socket.io", "Mui", "Electron.Js", "pgAdmin4", "PostgreSQL"],
 		details: ["Il existe une médiathèque qui permet d'ajouter des images, des vidéos ou des URL. Il suffit de les ajouter à une playlist personnalisable pour les diffuser en temps réel.", "On peut également décider de planifier des diffusions via un calendrier où sont lister les événements de diffusion à venir.", "Une interface est disponible pour les admnistrateurs qui souhaiteraient inspecter l'état de chaque raspberry disponible à l'application."]
 	},
 	{
 		title: "Syneryx",
 		description: "Outil de gestion de parcs (licences, utilisateurs, appareils, boites mails, sms).",
-		imgUrl: "https://via.placeholder.com/150",
+		imgUrl: "https://via.placeholder.com/120",
 		stack: ["React", "Node", "Fastify", "Sequelize", "Socket.io", "Mui", "pgAdmin4", "PostgreSQL", "Redis"],
 		details: ["Permet de visualiser l'état des différentes licences. Les fonctionnalités incluent l'allocation, la suppression et la modification des informations liées aux licences.", "Répertorier les utilisateurs en fonction de critères spécifiques. Ceci donne la possibilité de modifier les mots de passe, d'ajouter ou de supprimer des groupes, etc.", "Syneryx est une plateforme de gestion des différentes machines, serveurs internes et externes. L'objectif principal est de simplifier la gestion des actifs."]
 	},
@@ -37,14 +37,14 @@ export default [
 	{
 		title: "Containers",
 		description: "Implémentation d'un arbre binaire de recherche automatiquement équilibré.",
-		imgUrl: "https://via.placeholder.com/150",
+		imgUrl: "https://via.placeholder.com/120",
 		stack: ["C++"],
 		details: ["Dans ce projet on a ré-implémenter les containers vector stack et map de la STL (Standard Template Library) en C++", "Ce projet a pour but de nous donner une approche ludique sur le système de stockage des données de la librairie STL", "On a surtout eu l'occasion d'implémenter un arbre binaire automatiquement équilibré"]
 	},
 	{
 		title: "Portfolio",
 		description: "Vous y êtes !",
-		imgUrl: "https://via.placeholder.com/150",
+		imgUrl: "https://via.placeholder.com/120",
 		stack: ["React", "Typescript", "Tailwind", "Vite"],
 		details: []
 	}

@@ -13,9 +13,7 @@ export interface Timeline {
 const TimelineItem = (timeline: Timeline) => {
 	const { year, title, duration, details } = timeline;
 
-	const obsRef = useObserver({
-		animationProps: 'animate-leftToRight'
-	});
+	const obsRef = useObserver();
 	return (
 		<Box
 			ref={obsRef}
