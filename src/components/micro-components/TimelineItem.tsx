@@ -15,36 +15,51 @@ const TimelineItem = (timeline: Timeline) => {
 
 	const obsRef = useObserver();
 	return (
-		<Box
-			ref={obsRef}
-			className='flex flex-col md:flex-row
-				border-l border-slate-300 relative'>
-			<Box className='mb-4 ml-4'>
-				<div className='absolute w-3 h-3 bg-slate-300
-					rounded-full mt-2 -left-1.5 border-white' />
-				<Box className='flex flex-wrap gap-4 flex-row
+    <Box
+      className="flex flex-col md:flex-row
+				border-l border-slate-300 relative"
+    >
+      <Box className="mb-4 ml-4">
+        <div
+          className="absolute w-3 h-3 bg-slate-300
+					rounded-full mt-2 -left-1.5 border-white"
+        />
+
+        <Box ref={obsRef}>
+          <Box
+            className="flex flex-wrap gap-4 flex-row
 					items-center justify-start
-					text-xs md:text-sm'>
-						<span className='inline-block px-2 py-1 font-semibold
-							text-white bg-stone-900 rounded-md'>
-							{year}
-						</span>
-						<h3 className='text-lg font-semibold text-stone-900
-							drop-shadow-4xl'>
-							{title}
-						</h3>
-						<div className='text-sm font-normal leading-none
-							text-stone-400'>
-							{duration}
-						</div>
-				</Box>
-				<div className='my-2 text-base font-normal
-					text-stone-500'>
-					{details}
-				</div>
-			</Box>
-		</Box>
-	)
+					text-xs md:text-sm"
+          >
+            <span
+              className="inline-block px-2 py-1 font-semibold
+							text-white bg-stone-900 rounded-md"
+            >
+              {year}
+            </span>
+            <h3
+              className="text-lg font-semibold text-stone-900
+							drop-shadow-4xl"
+            >
+              {title}
+            </h3>
+            <div
+              className="text-sm font-normal leading-none
+							text-stone-400"
+            >
+              {duration}
+            </div>
+          </Box>
+          <div
+            className="my-2 text-base font-normal
+					text-stone-500"
+          >
+            {details}
+          </div>
+        </Box>
+      </Box>
+    </Box>
+  );
 }
 
 export default TimelineItem

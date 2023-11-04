@@ -15,7 +15,7 @@ export default [
 	},
 	{
 		title: "Transcendence",
-		description: "Un site web permettant de jouer contre d'autres utilisateurs sur le célèbre jeu PONG.",
+		description: "Jeu PONG revisité, en permettant de défier contre d'autres utilisateurs directement dans l'application.",
 		imgUrl: "/assets/Transcendence-project.jpeg",
 		stack: ["React", "Typescript", "Nest", "Express", "PostgreSQL", "TypeORM", "Websockets", "API REST"],
 		details: ["Connexion avec le système OAuth2 de l'Api42. Implémentation de l’authentification à deux facteurs avec Google Authenticator.", "Un système de MatchMaking permet à l'utilisateur de rejoindre une file d’attente, jusqu’à être matché automatiquement avec un autre utilisateur.", "Création d'un chat avec des channels (privés/public) et des rôles pour les utilisateurs."]

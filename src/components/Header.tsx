@@ -25,7 +25,7 @@ const Header = (props: ArrowObserver) => {
         <HeaderIntro />
         <div
           className="w-full md:w-2/5
-          h-full p-10
+          h-full p-0 md:p-10
           flex justify-center items-center
           animate-picturePop">
           <img

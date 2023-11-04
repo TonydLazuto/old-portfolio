@@ -12,7 +12,7 @@ const useObserver = () => {
     if (elementVisibility === undefined) return;
     if (elementVisibility) {
       if (obsRef.current) {
-        obsRef.current.style.transition = 'opacity 300ms ease-in-out, transform 300ms ease-in-out';
+        obsRef.current.style.transition = 'opacity 600ms ease-out, transform 200ms ease-out';
         obsRef.current.style.opacity = '1';
         obsRef.current.style.transform = 'translateX(0)';
       };
@@ -20,9 +20,9 @@ const useObserver = () => {
     }
     else {
       if (obsRef.current) {
-        obsRef.current.style.transition = 'opacity 300ms ease-in-out, transform 300ms ease-in-out';
+        obsRef.current.style.transition = 'opacity 600ms ease-out, transform 200ms ease-out';
         obsRef.current.style.opacity = '0';
-        obsRef.current.style.transform = 'translateX(-5rem)';
+        obsRef.current.style.transform = 'translateX(-6rem)';
       };
     }
   }, [elementVisibility])

@@ -1,32 +1,35 @@
-import { useRef } from 'react';
-import stacks from '../data/stack';
-import useObserver from '../hooks/useObserver';
+import { useRef, useState } from "react";
+import stacks from "../data/stack";
+import useObserver from "../hooks/useObserver";
+import StackItem from "./micro-components/StackItem";
 
 const Stack = () => {
-	const obsRef = useObserver();
+  const obsRef = useObserver();
 
-	return (
-		<div
-			id='stack'
-			className='flex flex-col items-center
+  return (
+    <div
+      id="stack"
+      className="flex flex-col items-center
 				justify-center w-screen
 				min-h-full md:my-40
-				py-40 md:py-4'>
-			<div
-				ref={obsRef}
-				className='flex justify-evenly flex-wrap
-				items-center w-1/2'>
-				{stacks.map((stack, index) => (
-					<img
-						key={index}
-						src={stack.src}
-						alt={stack.alt}
-						className='w-12 h-12 md:w-20 md:h-20 mx-1'
-					/>
-				))}
-			</div>
-		</div>
-	)
-}
+				py-40 md:py-4"
+    >
+      <div
+        ref={obsRef}
+        className="flex justify-evenly items-center flex-wrap
+				items-center w-3/5"
+      >
+        {stacks.map((stack, index) => (
+          <StackItem
+            key={index}
+            src={stack.src}
+            link={stack.link}
+            alt={stack.alt}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
-export default Stack
+export default Stack;

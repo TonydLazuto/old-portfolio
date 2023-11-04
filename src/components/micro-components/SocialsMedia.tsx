@@ -4,7 +4,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 const SocialsMedia = () => {
 	return (
 		<div className='flex justify-around items-center
-				w-24 mt-4 flex-col md:flex-row
+				w-24 mt-4 flex-row
 				animate-topToBottomDelay3'>
 			 <a href="https://github.com/TonydLazuto"
 			 	className='block w-full h-3/5

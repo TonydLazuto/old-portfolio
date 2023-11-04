@@ -30,7 +30,7 @@ module.exports = {
 			},
 			picturePop: {
 				'0%': { transform: 'translateX(300px)', filter: 'blur(40px)' },
-				'100%': { transform: 'translateX(0)', filter: 'blur(15px)' },
+				'100%': { transform: 'translateX(0)', filter: 'blur(0)' },
 			},
 			fadeIn: {
 				'0%': { opacity: 0 },
@@ -71,6 +71,7 @@ module.exports = {
 					backgroundColor: '#ebebe4',
 					filter: 'drop-shadow(0 25px 35px rgba(0,0,0,0.55))',
 					padding: '1rem'
+
 				},
 				'100%': {},
 			},
@@ -91,23 +92,52 @@ module.exports = {
 					// height: '18rem',
 				},
 			},
+			stackItemHoverEnter: {
+				'0%': {
+				},
+				'100%': {
+					backdropFilter: 'blur(2em)',
+					backgroundColor: 'rgba(255, 255, 255, .3)',
+					filter: 'drop-shadow(0 5px 15px rgba(0,0,0,0.45))',
+					borderRadius: '1em',
+					transform: 'scale(1.5)',
+					padding: '0.5em',
+					cursor: 'pointer'
+				},
+			},
+			stackItemHoverLeave: {
+				'0%': {
+					backdropFilter: 'blur(2em)',
+					backgroundColor: 'rgba(255, 255, 255, .3)',
+					filter: 'drop-shadow(0 5px 15px rgba(0,0,0,0.45))',
+					borderRadius: '1em',
+					transform: 'scale(1.5)',
+					padding: '0.5em',
+					cursor: 'pointer'
+				},
+				'100%': {
+				},
+			},
 		},
 		animation: {
-			header: 'topToBottom 800ms ease-in-out forwards, fadeIn 1s',
+			header: 'topToBottom 800ms ease-in-out forwards, fadeIn 1.2s',
 			headerDelay: 'topToBottom 300ms ease-in-out forwards',
 			headerDelay2: 'topToBottom 600ms ease-in-out forwards',
 			headerDelay3: 'topToBottom 800ms ease-in-out forwards',
 			headerDelay4: 'topToBottom 1s ease-in-out forwards',
 
 			arrowPop: 'arrowPop 1.2s ease-in-out forwards, arrowFadeIn 1.5s',
-			picturePop : 'picturePop 800ms ease-in-out forwards, fadeIn 1s',
-			projectDescriptionPop : 'projectDescriptionPop 300ms ease-in-out forwards, heightAppear 2300ms, fadeIn 1200ms',
+			picturePop : 'picturePop 800ms ease-in-out forwards, fadeIn 1.2s',
+			projectDescriptionPop : 'projectDescriptionPop 300ms ease-in-out forwards, heightAppear 700ms, fadeIn 1s',
 			fadeIn: 'fadeIn 800ms',
 
 			projectHoverEnter: 'projectHoverEnter 200ms ease-in-out forwards',
 			projectHoverLeave: 'projectHoverLeave 200ms ease-in-out forwards',
 			projectImgHoverEnter: 'projectImgHoverEnter 200ms ease-in-out forwards',
 			projectImgHoverLeave: 'projectImgHoverLeave 300ms ease-in-out forwards',
+
+			stackItemHoverEnter: 'stackItemHoverEnter 100ms ease-out forwards',
+			stackItemHoverLeave: 'stackItemHoverLeave 100ms ease-out forwards',
 		},
 		dropShadow: {
 			'3xl': '0 10px 20px rgba(0,0,0,0.35)',
