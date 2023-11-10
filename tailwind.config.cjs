@@ -28,7 +28,7 @@ module.exports = {
 				'0%': { transform: 'translateY(-300px)' },
 				'100%': { transform: 'translateY(0)' },
 			},
-			picturePop: {
+			rightToLeft: {
 				'0%': { transform: 'translateX(300px)', filter: 'blur(40px)' },
 				'100%': { transform: 'translateX(0)', filter: 'blur(0)' },
 			},
@@ -127,7 +127,8 @@ module.exports = {
 			headerDelay4: 'topToBottom 1s ease-in-out forwards',
 
 			arrowPop: 'arrowPop 1.2s ease-in-out forwards, arrowFadeIn 1.5s',
-			picturePop : 'picturePop 800ms ease-in-out forwards, fadeIn 1.2s',
+			picturePop : 'rightToLeft 800ms ease-in-out forwards, fadeIn 1.2s',
+			burgerMenu : 'rightToLeft 600ms ease-in-out forwards, fadeIn 1.5s',
 			projectDescriptionPop : 'projectDescriptionPop 300ms ease-in-out forwards, heightAppear 700ms, fadeIn 1s',
 			fadeIn: 'fadeIn 800ms',
 
