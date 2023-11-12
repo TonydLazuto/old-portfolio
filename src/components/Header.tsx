@@ -10,22 +10,18 @@ const Header = (props: ArrowObserver) => {
       id='header'
       className='bg-shade0
         w-screen min-h-[calc(100vh_-_2rem)]
-        flex justify-center items-center
-        pt-32 md:pt-0'>
+        flex justify-center items-center'>
       <div
-        className="
-        h-[calc(100vh_-_12rem)] md:h-full
-        w-11/12 m-auto
-        flex
-        flex-col md:flex-row
-        justify-center
-        text-center md:text-left
-        items-center"
+        className="h-full
+        md:w-11/12
+        flex flex-col md:flex-row
+        justify-center items-center
+        text-center md:text-left"
       >
         <HeaderIntro />
         <div
-          className="w-full md:w-2/5
-          h-full p-0 md:p-10
+          className="w-3/4 md:w-2/5
+          h-full mt-4 md:mt-0 md:p-10
           flex justify-center items-center
           animate-picturePop">
           <img
@@ -33,7 +29,8 @@ const Header = (props: ArrowObserver) => {
             alt="profile-pic"
             className="drop-shadow-4xl
             object-scale-down
-            w-2/5 h-2/5 md:w-4/5 md:h-4/5"
+            w-1/3 h-1/3
+            md:w-4/5 md:h-4/5"
           />
         </div>
       </div>

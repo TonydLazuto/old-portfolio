@@ -7,7 +7,7 @@ const HeaderIntro = () => {
   return (
     <div
           className="flex flex-col justify-center
-          w-3/5 h-full md:pl-8 md:pl-14
+          w-4/5 h-full max-w-xl md:pl-8 md:pl-14
           items-center md:items-start
           text-slate-100 z-10
           animate-header"
@@ -20,7 +20,7 @@ const HeaderIntro = () => {
             Développeur full-stack
         </h1>
         <p className="text-base w-11/12
-        mb-3 font-light font-lg
+        mb-5 md:mb-3 font-light font-lg
         animate-headerDelay2 mt-2">
             Je suis intéressé par la résolution de problèmes dans l'IT,
             mais plus particulièrement allié l'experience utilisateur à une solide architecture.

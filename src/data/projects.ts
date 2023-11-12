@@ -37,7 +37,7 @@ export default [
 	{
 		title: "Containers",
 		description: "Implémentation d'un arbre binaire de recherche automatiquement équilibré.",
-		imgUrl: "https://via.placeholder.com/120",
+		imgUrl: "/assets/bst.png",
 		stack: ["C++"],
 		details: ["Dans ce projet on a ré-implémenter les containers vector stack et map de la STL (Standard Template Library) en C++", "Ce projet a pour but de nous donner une approche ludique sur le système de stockage des données de la librairie STL", "On a surtout eu l'occasion d'implémenter un arbre binaire automatiquement équilibré"]
 	},
