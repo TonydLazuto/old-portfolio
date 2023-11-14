@@ -26,13 +26,13 @@ const StackItem = (stackItemProps: StackItemProps) => {
     <div
       onMouseEnter={handleStackHoverEnter}
       onMouseLeave={handleStackHoverLeave}
-      className="mb-4 md:mb-6 md:mr-2"
+      className="mb-4 md:mb-6 mx-1"
     >
       <a href={link}>
       <img
         src={src}
         alt={alt}
-        className={`w-12 h-12 md:w-20 md:h-20 mx-1 ${stackItemClass}`}
+        className={`w-12 h-12 md:w-20 md:h-20 md:mx-2 mx-1 ${stackItemClass}`}
       />
       </a>
     </div>
