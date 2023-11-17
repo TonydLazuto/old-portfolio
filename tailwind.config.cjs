@@ -9,6 +9,7 @@ module.exports = {
 		},
 		height: {
 			'128': '32rem',
+			'200': '40rem',
 		},
 		colors: {
 			'shade0': '#1A1E38',
@@ -54,7 +55,7 @@ module.exports = {
 			},
 			heightAppear: {
 				'0%': { maxHeight: '0' },
-				'100%': { maxHeight: '100vh' }
+				'100%': { maxHeight: '100%' }
 			},
 			projectHoverEnter: {
 				'0%': {},

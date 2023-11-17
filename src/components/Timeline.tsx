@@ -1,9 +1,7 @@
 import timeline from '../data/timeline';
 import TimelineItem from './micro-components/TimelineItem';
 import { Box } from '@mui/material';
-// bg-shade2 drop-shadow-3xl p-4 mb-4 rounded-lg
-// scroll-mt-28
-// h-[calc(100vh_-_20rem)]
+
 const Timeline = () => {
 	return (
 		<Box

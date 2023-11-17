@@ -2,7 +2,7 @@ export default [
 	{
 		title: "Acenstream",
 		description: "Application de diffusion de flux de médias, vers des écrans connectés à des Raspberry, destinés à l’affichage d'évènements au sein des locaux de l'entreprise.",
-		imgUrl: "/assets/acenstream.png",
+		imgUrl: "/assets/raspberry.png",
 		stack: ["React", "Node", "Fastify", "Sequelize", "Socket.io", "Mui", "Electron.Js", "pgAdmin4", "PostgreSQL"],
 		details: ["Il existe une médiathèque qui permet d'ajouter des images, des vidéos ou des URL. Il suffit de les ajouter à une playlist personnalisable pour les diffuser en temps réel.", "On peut également décider de planifier des diffusions via un calendrier où sont lister les événements de diffusion à venir.", "Une interface est disponible pour les admnistrateurs qui souhaiteraient inspecter l'état de chaque raspberry disponible à l'application."]
 	},
@@ -44,7 +44,7 @@ export default [
 	{
 		title: "Portfolio",
 		description: "Vous y êtes !",
-		imgUrl: "https://via.placeholder.com/120",
+		imgUrl: "/assets/previewPageTochange.png",
 		stack: ["React", "Typescript", "Tailwind", "Vite"],
 		details: []
 	}
