@@ -9,7 +9,7 @@ export default [
 	{
 		title: "Syneryx",
 		description: "Outil de gestion de parcs (licences, utilisateurs, appareils, boites mails, sms).",
-		imgUrl: "https://via.placeholder.com/120",
+		imgUrl: "/assets/syneryx.png",
 		stack: ["React", "Node", "Fastify", "Sequelize", "Socket.io", "Mui", "pgAdmin4", "PostgreSQL", "Redis"],
 		details: ["Permet de visualiser l'état des différentes licences. Les fonctionnalités incluent l'allocation, la suppression et la modification des informations liées aux licences.", "Répertorier les utilisateurs en fonction de critères spécifiques. Ceci donne la possibilité de modifier les mots de passe, d'ajouter ou de supprimer des groupes, etc.", "Syneryx est une plateforme de gestion des différentes machines, serveurs internes et externes. L'objectif principal est de simplifier la gestion des actifs."]
 	},

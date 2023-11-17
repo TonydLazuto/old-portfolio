@@ -44,7 +44,7 @@ const ProjectItem = (project: Project) => {
     <Box
       ref={obsRef}
       className={`rounded-md overflow drop-shadow-3xl
-				w-96 mb-4 ${projectItemClass}`}
+				w-3/4 md:w-128 mb-4 ${projectItemClass}`}
       onMouseEnter={handleProjectHoverEnter}
       onMouseLeave={handleProjectHoverLeave}
     >
@@ -54,7 +54,7 @@ const ProjectItem = (project: Project) => {
         <img
           src={imgUrl}
           alt="project"
-          className={`w-full h-72 rounded-t-lg
+          className={`w-full h-80 md:h-96 rounded-t-lg
 					object-cover ${imgClass}`}
         />
         <Box className="p-2">
