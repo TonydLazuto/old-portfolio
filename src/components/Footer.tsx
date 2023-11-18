@@ -1,12 +1,10 @@
-import React from 'react'
-
 const Footer = () => {
 	return (
 		<div
-			className='h-20 bg-gradient-to-tl from-shade0 to-shade4
+			className='h-20 bg-gradient-to-br from-shade0 via-slate-800 to-indigo-900
 				flex justify-center items-center
 				font-bold text-white'>
-				Copyright © Anthony Derose - 2023
+				<p>Copyright © Anthony Derose - 2023</p>
 		</div>
 	)
 }

@@ -12,7 +12,7 @@ const useObserver = () => {
     if (elementVisibility === undefined) return;
     if (elementVisibility) {
       if (obsRef.current) {
-        obsRef.current.style.transition = 'opacity 600ms ease-out, transform 200ms ease-out';
+        obsRef.current.style.transition = 'opacity 300ms ease-out, transform 200ms ease-in';
         obsRef.current.style.opacity = '1';
         obsRef.current.style.transform = 'translateX(0)';
       };
@@ -20,7 +20,7 @@ const useObserver = () => {
     }
     else {
       if (obsRef.current) {
-        obsRef.current.style.transition = 'opacity 600ms ease-out, transform 200ms ease-out';
+        obsRef.current.style.transition = 'opacity 300ms ease-out, transform 200ms ease-in';
         obsRef.current.style.opacity = '0';
         obsRef.current.style.transform = 'translateX(-6rem)';
       };
@@ -35,7 +35,7 @@ const useObserver = () => {
       setElementVisibility(entry.isIntersecting);
     },
     {
-      rootMargin: '3%',
+      rootMargin: '1%',
       threshold: 1
     })
     if(obsRef.current) observer.observe(obsRef.current);

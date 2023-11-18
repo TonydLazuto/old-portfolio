@@ -66,7 +66,7 @@ const ProjectItem = (project: Project) => {
             {title}
           </h3>
           <h4
-            className={`text-lg md:text-lg
+            className={`text-base md:text-lg
 							mb-2 md:mb-3
 							animate-projectDescriptionPop ${hidden}`}
           >

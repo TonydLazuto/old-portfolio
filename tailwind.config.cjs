@@ -13,10 +13,7 @@ module.exports = {
 		},
 		colors: {
 			'shade0': '#1A1E38',
-			'shade1' : '#ebebe4',
-			'shade2' :'#F8F8FF',
-			'shade3' :'#F1F1E6',
-			'shade4' : '#C0C0F2'
+			'shade1': '#C0C0F2'
 		},
 		backgroundImage: {
 			'intro-bg': "url('/img/intro-bg.png')",
@@ -61,7 +58,7 @@ module.exports = {
 				'0%': {},
 				'100%': {
 					borderRadius: '1rem',
-					backgroundColor: '#ebebe4',
+					backgroundColor: '#fcfbf7',
 					filter: 'drop-shadow(0 25px 35px rgba(0,0,0,0.55))',
 					padding: '0.7rem'
 				},
@@ -69,7 +66,7 @@ module.exports = {
 			projectHoverLeave: {
 				'0%': {
 					borderRadius: '1rem',
-					backgroundColor: '#ebebe4',
+					backgroundColor: '#fcfbf7',
 					filter: 'drop-shadow(0 25px 35px rgba(0,0,0,0.55))',
 					padding: '0.7rem'
 

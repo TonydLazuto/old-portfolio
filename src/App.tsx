@@ -14,8 +14,8 @@ function App() {
 	const [animation, hidden] = arrowObserver({ obsRef });
 
   return (
-		<div className='bg-gradient-to-tl from-shade3 to-white h-max'>
-			<div className="h-full shadow-2xl shadow-black">
+		<div className='w-screen h-max'>
+			<div className="w-full h-full shadow-2xl shadow-black">
 				<Navigation />
 				<Header obsRef={obsRef} />
 				<Timeline />
