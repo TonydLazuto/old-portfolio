@@ -32,7 +32,7 @@ const StackItem = (stackItemProps: StackItemProps) => {
       <img
         src={src}
         alt={alt}
-        className={`w-12 h-12 md:w-20 md:h-20 md:mx-2 mx-1 ${stackItemClass}`}
+        className={`w-12 h-12 md:w-16 md:h-16 md:mx-2 mx-1 ${stackItemClass}`}
       />
       </a>
     </div>

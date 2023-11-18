@@ -17,7 +17,8 @@ const ProjectItem = (project: Project) => {
 	const [projectItemClass, setProjectItemClass] = useState('');
 	const [imgClass, setImgClass] = useState('');
 
-    const obsRef = useObserver();
+  const imgStyle = title === 'Portfolio' ? 'object-contain' : 'object-cover';
+  const obsRef = useObserver();
 
 	const handleProjectHoverEnter = (e : React.MouseEvent<HTMLDivElement, MouseEvent>) => {
 		e.preventDefault();
@@ -44,7 +45,7 @@ const ProjectItem = (project: Project) => {
     <Box
       ref={obsRef}
       className={`rounded-md overflow drop-shadow-3xl
-				w-3/4 md:w-128 mb-4 ${projectItemClass}`}
+				w-4/5 md:w-96 mb-4 ${projectItemClass}`}
       onMouseEnter={handleProjectHoverEnter}
       onMouseLeave={handleProjectHoverLeave}
     >
@@ -54,8 +55,8 @@ const ProjectItem = (project: Project) => {
         <img
           src={imgUrl}
           alt="project"
-          className={`w-full h-80 md:h-96 rounded-t-lg
-					object-cover ${imgClass}`}
+          className={`w-full md:min-h-full h-80 md:h-72 rounded-t-lg
+					${imgStyle} ${imgClass}`}
         />
         <Box className="p-2">
           <h3

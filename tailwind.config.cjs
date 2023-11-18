@@ -63,7 +63,7 @@ module.exports = {
 					borderRadius: '1rem',
 					backgroundColor: '#ebebe4',
 					filter: 'drop-shadow(0 25px 35px rgba(0,0,0,0.55))',
-					padding: '1rem'
+					padding: '0.7rem'
 				},
 			},
 			projectHoverLeave: {
@@ -71,7 +71,7 @@ module.exports = {
 					borderRadius: '1rem',
 					backgroundColor: '#ebebe4',
 					filter: 'drop-shadow(0 25px 35px rgba(0,0,0,0.55))',
-					padding: '1rem'
+					padding: '0.7rem'
 
 				},
 				'100%': {},
@@ -81,16 +81,13 @@ module.exports = {
 				},
 				'100%': {
 					borderRadius: '1rem',
-					// height: '100%',
 				},
 			},
 			projectImgHoverLeave: {
 				'0%': {
 					borderRadius: '1rem',
-					// height: '100%',
 				},
 				'100%': {
-					// height: '18rem',
 				},
 			},
 			stackItemHoverEnter: {
@@ -136,7 +133,7 @@ module.exports = {
 			projectHoverEnter: 'projectHoverEnter 200ms ease-in-out forwards',
 			projectHoverLeave: 'projectHoverLeave 200ms ease-in-out forwards',
 			projectImgHoverEnter: 'projectImgHoverEnter 200ms ease-in-out forwards',
-			projectImgHoverLeave: 'projectImgHoverLeave 300ms ease-in-out forwards',
+			projectImgHoverLeave: 'projectImgHoverLeave 200ms ease-in-out forwards',
 
 			stackItemHoverEnter: 'stackItemHoverEnter 100ms ease-out forwards',
 			stackItemHoverLeave: 'stackItemHoverLeave 100ms ease-out forwards',

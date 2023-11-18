@@ -3,7 +3,7 @@ export default [
 		year: '2023',
 		title: "Développeur",
 		duration: "6 mois de stage + CDI",
-		details: 'Développeur full-stack React/Node chez Acensi.'
+		details: 'Consultant développeur full-stack React/Node chez Acensi.'
 	},
 	{
 		year: '2020',

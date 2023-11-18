@@ -8,8 +8,8 @@ const Timeline = () => {
 			id='timeline'
 			className='mt-24
 			flex flex-col md:flex-row justify-center
-			w-2/3 md:w-2/5
-			min-h-screen md:min-h-full
+			w-2/3 md:w-1/2
+			md:min-h-full
 			m-auto
 			scroll-mt-24'>
 			<Box

@@ -13,14 +13,14 @@ const HeaderIntro = () => {
           animate-header"
         >
         <h1 className="
-        text-4xl md:text-5xl
+        text-3xl md:text-4xl
         mb-1 md:mb-3
         animate-headerDelay">
             Je suis <span className='text-blue-800'>Anthony</span>,<br />
             Développeur full-stack
         </h1>
-        <p className="text-base w-11/12
-        mb-5 md:mb-3 font-light font-lg
+        <p className="text-sm md:text-lg w-11/12
+        mb-5 md:mb-3 font-light
         animate-headerDelay2 mt-2">
             Je suis intéressé par la résolution de problèmes dans l'IT,
             mais plus particulièrement allié l'experience utilisateur à une solide architecture.
