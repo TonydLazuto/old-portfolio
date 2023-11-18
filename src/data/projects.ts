@@ -44,7 +44,7 @@ export default [
   {
     title: "Transcendence",
     description:
-      "Jeu PONG revisité, en permettant de défier d'autres utilisateurs connectés à l'application.",
+      "Jeu PONG revisité intégrant un système de MatchMaking pour défier d'autres utilisateurs et un chat en temps réel.",
     imgUrl: "/assets/Transcendence-project.jpeg",
     stack: [
       "React",

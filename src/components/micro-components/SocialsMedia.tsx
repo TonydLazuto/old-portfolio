@@ -11,7 +11,7 @@ const SocialsMedia = () => {
 					flex items-center justify-center
 					text-gray-100
 					hover:text-gray-400
-					transition-all duration-500 ease-in-out
+					transition-all duration-400 ease-in-out
 					rounded-lg'>
 				<GitHubIcon fontSize='large' />
 				</a>
@@ -20,7 +20,7 @@ const SocialsMedia = () => {
 					flex items-center justify-center
 					text-gray-100
 					hover:text-gray-400
-					transition-all duration-500 ease-in-out
+					transition-all duration-400 ease-in-out
 					rounded-lg'>
 				<LinkedInIcon fontSize='large' />
 			</a>
