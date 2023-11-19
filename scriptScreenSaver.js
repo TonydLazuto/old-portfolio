@@ -18,7 +18,6 @@ import puppeteer from 'puppeteer';
     // await page.waitForTimeout(5000); // Adjust as needed
     await page.setViewport({ width: 1280, height: 1024 });
     await page.goto(url, { waitUntil: ['load', 'domcontentloaded'] });
-    // new Promise(r => setTimeout(r, 5000));
 
     await page.screenshot({ path: 'screenshot.png', fullPage: true });
 

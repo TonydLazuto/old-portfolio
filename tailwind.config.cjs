@@ -151,7 +151,7 @@ module.exports = {
           left: "0",
           width: "100%",
           height: "100%",
-          background: "linear-gradient(to right, #f2f4ff, white)", // Adjust the colors as needed
+          background: "linear-gradient(to right, #f2f4ff, white)",
           zIndex: "-1",
           transformOrigin: "right",
           transform: "scaleX(0)",

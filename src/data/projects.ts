@@ -108,7 +108,7 @@ export default [
   {
     title: "Portfolio",
     description: "Vous y êtes !",
-    imgUrl: "/assets/previewPageTochange.png",
+    imgUrl: "/assets/screenshot.png",
     stack: ["React", "Typescript", "Tailwind", "Vite"],
     details: [],
     link: "#"

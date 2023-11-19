@@ -36,6 +36,11 @@ export default [
         alt: 'PostgreSQL'
 	},
 	{
+		src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg',
+		link: 'https://tailwindcss.com/',
+        alt: 'Tailwindcss'
+	},
+	{
 		src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
 		link: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
         alt: 'HTML'
@@ -44,11 +49,6 @@ export default [
 		src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
 		link: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
         alt: 'CSS'
-	},
-	{
-		src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg',
-		link: 'https://tailwindcss.com/',
-        alt: 'Tailwindcss'
 	},
 	{
 		src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',

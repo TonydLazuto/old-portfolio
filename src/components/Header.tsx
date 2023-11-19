@@ -1,7 +1,6 @@
 import { ArrowObserver } from '../hooks/arrowObserver';
 import HeaderIntro from './micro-components/HeaderIntro';
 
-//border-solid border-2 border-green-500
 const Header = (props: ArrowObserver) => {
   const { obsRef } = props;
   return (

@@ -7,7 +7,6 @@ import { useRef } from 'react';
 import arrowObserver from './hooks/arrowObserver';
 import ArrowNavigation from './components/ArrowNavigation'
 import Footer from './components/Footer'
-// linear-gradient(to top, rgba(1, 12, 68, 1.0), rgba(1, 42, 92, 1.0))
 
 function App() {
 	const obsRef = useRef<HTMLDivElement>(null);
