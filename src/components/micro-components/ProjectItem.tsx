@@ -1,4 +1,4 @@
-import { Box } from '@mui/material'
+import { Box, Link } from '@mui/material'
 import { useState } from 'react'
 import useObserver from '../../hooks/useObserver'
 import ProjectDetails from './ProjectDetails'
@@ -9,10 +9,12 @@ export interface Project {
 	description: string
 	imgUrl: string
 	stack: string[]
-	details: string[]
+	details: string[],
+  link: string
 }
 const ProjectItem = (project: Project) => {
-	const { title, description, imgUrl, stack, details } = project;
+	const { title, description, imgUrl, stack, details, link } =
+    project;
 	const [hidden, setHidden] = useState('hidden');
 	const [projectItemClass, setProjectItemClass] = useState('');
 	const [imgClass, setImgClass] = useState('');
@@ -49,45 +51,47 @@ const ProjectItem = (project: Project) => {
       onMouseEnter={handleProjectHoverEnter}
       onMouseLeave={handleProjectHoverLeave}
     >
-      <Box
-      // onClick={handleProjectDetails}
-      >
-        <img
-          src={imgUrl}
-          alt="project"
-          className={`w-full md:min-h-full h-80 md:h-72 rounded-t-lg
+      <Link href={link} style={{ textDecoration: 'none', color: 'black' }}>
+        <Box
+        // onClick={handleProjectDetails}
+        >
+          <img
+            src={imgUrl}
+            alt="project"
+            className={`w-full md:min-h-full h-80 md:h-72 rounded-t-lg
 					${imgStyle} ${imgClass}`}
-        />
-        <Box className="p-2">
-          <h3
-            className="text-lg md:text-xl
+          />
+          <Box className="p-2">
+            <h3
+              className="text-lg md:text-xl
 							mb-2 md:mb-3 font-semibold"
-          >
-            {title}
-          </h3>
-          <h4
-            className={`text-base md:text-lg
+            >
+              {title}
+            </h3>
+            <h4
+              className={`text-base md:text-lg
 							mb-2 md:mb-3
 							animate-projectDescriptionPop ${hidden}`}
-          >
-            {description}
-          </h4>
-          <Box
-            className="flex flex-wrap gap-2
+            >
+              {description}
+            </h4>
+            <Box
+              className="flex flex-wrap gap-2
 							flex-row items-center justify-start text-xs md:text-sm"
-          >
-            {stack.map((item) => (
-              <span
-                key={item}
-                className="inline-block px-2 py-1
+            >
+              {stack.map((item) => (
+                <span
+                  key={item}
+                  className="inline-block px-2 py-1
 									font-semi-bold border-2 border-stone-900 rounded-md"
-              >
-                {item}
-              </span>
-            ))}
+                >
+                  {item}
+                </span>
+              ))}
+            </Box>
           </Box>
         </Box>
-      </Box>
+      </Link>
     </Box>
   );
 }

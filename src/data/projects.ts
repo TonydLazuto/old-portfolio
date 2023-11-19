@@ -19,6 +19,7 @@ export default [
       "On peut également décider de planifier des diffusions via un calendrier où sont lister les événements de diffusion à venir.",
       "Une interface est disponible pour les admnistrateurs qui souhaiteraient inspecter l'état de chaque raspberry disponible à l'application.",
     ],
+    link: "https://www.acensi.fr/"
   },
   {
     title: "Syneryx",
@@ -40,6 +41,7 @@ export default [
       "Répertorier les utilisateurs en fonction de critères spécifiques. Ceci donne la possibilité de modifier les mots de passe, d'ajouter ou de supprimer des groupes, etc.",
       "Syneryx est une plateforme de gestion des différentes machines, serveurs internes et externes. L'objectif principal est de simplifier la gestion des actifs.",
     ],
+    link: "https://www.acensi.fr/"
   },
   {
     title: "Transcendence",
@@ -61,6 +63,7 @@ export default [
       "Un système de MatchMaking permet à l'utilisateur de rejoindre une file d'attente, jusqu'à être matché automatiquement avec un autre utilisateur.",
       "Création d'un chat avec des channels (privés/public) et des rôles pour les utilisateurs.",
     ],
+    link: "https://github.com/TonydLazuto/ft_transcendence"
   },
   {
     title: "Inception",
@@ -74,6 +77,7 @@ export default [
       "Liste des Volumes associés => Database Mariadb et fichiers du site WordPress.",
       "Un network établit la connexion entre tous ces services.",
     ],
+    link: "https://github.com/TonydLazuto/inception"
   },
   {
     title: "Irc",
@@ -86,6 +90,7 @@ export default [
       "Gestion des opérations entrées/sorties non bloquantes (utilisation de poll ou select).",
       "L'utilisation du client de référence (Irssi) pour ce serveur est similaire à l'utilisation d'un serveur IRC officiel en reprenant les principales fonctionnalités.",
     ],
+    link: "https://github.com/TonydLazuto/ft_irc"
   },
   {
     title: "Containers",
@@ -98,6 +103,7 @@ export default [
       "Ce projet a pour but de nous donner une approche ludique sur le système de stockage des données de la librairie STL",
       "On a surtout eu l'occasion de mettre en place un arbre binaire automatiquement équilibré",
     ],
+    link: "https://github.com/TonydLazuto/ft_containers"
   },
   {
     title: "Portfolio",
@@ -105,5 +111,6 @@ export default [
     imgUrl: "/assets/previewPageTochange.png",
     stack: ["React", "Typescript", "Tailwind", "Vite"],
     details: [],
+    link: "#"
   },
 ];
