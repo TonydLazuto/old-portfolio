@@ -4,7 +4,7 @@ export default [
     title: "Consultant développeur full-stack - Acensi (ESN)",
     duration: "6 mois de stage, puis embauche",
     details: [
-      "Conception et réalisation de fonctionnalités tant côté client que serveur.",
+      "Conception et implémentation de fonctionnalités côté client et côté serveur.",
       "Développement de projets en environnement agile au sein d'équipes composées d'environ six développeurs.",
       "Participation active à la planification/revue de sprints, à la rédaction de spécifications techniques, et à la résolution des problèmes tout au long des cycles.",
     ],
@@ -14,7 +14,7 @@ export default [
     title: "Architecte en Technologie du Numérique - Ecole 42",
     duration: "3 ans de formation",
     details: [
-      "Apprentissage du code peer-to-peer avec une pédagogie par projets pour développer des compétences techniques et de collaboration.",
+      "Apprentissage du code peer-to-peer avec une pédagogie par projets pour développer des compétences techniques et collaboratives.",
       "Programmation en C et C++ en utilisant des algorithmes classiques.",
       "Gestion des processus UNIX et des threads.",
       "Programmation orientée objet, comprenant un projet client-serveur",

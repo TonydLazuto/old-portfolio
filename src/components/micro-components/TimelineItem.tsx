@@ -52,12 +52,22 @@ const TimelineItem = (timeline: Timeline) => {
           </Box>
           <div
             className="my-2 text-sm md:text-base font-normal
-					text-stone-700"
+					text-stone-700 "
           >
             {details.map((detail) => (
-              <p key={detail} className="flex justify-start items-start mb-1">
+              <p
+                key={detail}
+                className="flex justify-start items-start mb-1
+                  pb-2 background-gradient-expand"
+              >
                 <TaskAltIcon
-                  sx={{ height: "1.5rem", width: "1.5rem", color: "#1A1E38", marginRight: "0.5rem", opacity: "0.9" }}
+                  sx={{
+                    height: "1.5rem",
+                    width: "1.5rem",
+                    color: "#1A1E38",
+                    marginRight: "0.5rem",
+                    opacity: "0.9",
+                  }}
                 />
                 {detail}
               </p>
