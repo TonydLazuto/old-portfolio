@@ -35,8 +35,8 @@ const useObserver = () => {
       setElementVisibility(entry.isIntersecting);
     },
     {
-      rootMargin: '1%',
-      threshold: 1
+      rootMargin: '7%',
+      threshold: 0.7
     })
     if(obsRef.current) observer.observe(obsRef.current);
     return () => {

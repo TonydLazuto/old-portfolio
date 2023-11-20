@@ -41,7 +41,7 @@ const Header = (props: ArrowObserver) => {
       absolute bottom-0 right-52
       blur-3xl mix-blend-overlay opacity-50
       bg-slate-400'/>
-      <div className='w-72 h-72 rounded-full
+      <div className='hidden md:block w-72 h-72 rounded-full
       absolute bottom-96 left-64
       blur-3xl opacity-40
       bg-slate-600'/>
