@@ -110,15 +110,15 @@ module.exports = {
         },
       },
       animation: {
-        header: "topToBottom 600ms ease-in forwards, fadeIn 1.7s",
+        header: "topToBottom 600ms ease-in forwards, fadeIn 1s",
         headerDelay: "topToBottom 200ms ease-in forwards",
         headerDelay2: "topToBottom 400ms ease-in forwards",
         headerDelay3: "topToBottom 600ms ease-in forwards",
         headerDelay4: "topToBottom 800ms ease-in forwards",
-        picturePop: "rightToLeft 600ms ease-in forwards, fadeIn 1.7s",
+        picturePop: "rightToLeft 600ms ease-in forwards, fadeIn 1s",
 
-        arrowPop: "arrowPop 1s ease-in-out forwards, arrowFadeIn 1.5s",
-        burgerMenu: "rightToLeft 400ms ease-in-out forwards, fadeIn 1.5s",
+        arrowPop: "arrowPop 1s ease-in-out forwards, arrowFadeIn 1.2s",
+        burgerMenu: "rightToLeft 400ms ease-in-out forwards, fadeIn 1.2s",
         projectDescriptionPop:
           "projectDescriptionPop 300ms ease-in-out forwards, heightAppear 700ms, fadeIn 1s",
         fadeIn: "fadeIn ease-out 800ms",

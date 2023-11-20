@@ -33,11 +33,6 @@ const HeaderIntro = () => {
         <Link href={`mailto:${mailPerso}`}>Contactez-moi</Link>
       </Button>
       <SocialsMedia />
-      <div
-        className="w-11 md:w-16 h-4 mt-4
-        bg-sky-500/75 rounded-sm
-        animate-headerDelay4"
-      />
     </div>
   );
 }

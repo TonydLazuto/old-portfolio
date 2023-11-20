@@ -20,7 +20,7 @@ const useObserver = () => {
     }
     else {
       if (obsRef.current) {
-        obsRef.current.style.transition = 'opacity 300ms ease-out, transform 200ms ease-in';
+        obsRef.current.style.transition = 'opacity 500ms ease-out, transform 800ms ease-in';
         obsRef.current.style.opacity = '0';
         obsRef.current.style.transform = 'translateX(-6rem)';
       };
