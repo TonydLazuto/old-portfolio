@@ -3,7 +3,7 @@ import Projects from './components/Projects'
 import Stack from './components/Stack'
 import Timeline from './components/Timeline'
 import Navigation from './components/Navigation'
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import arrowObserver from './hooks/arrowObserver';
 import ArrowNavigation from './components/ArrowNavigation'
 import Footer from './components/Footer'
@@ -11,6 +11,11 @@ import Footer from './components/Footer'
 function App() {
 	const obsRef = useRef<HTMLDivElement>(null);
 	const [animation, hidden] = arrowObserver({ obsRef });
+	const [isMobile, setIsMobile] = useState(false);
+
+	useEffect(() => {
+		setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent));
+	}, []);
 
   return (
 		<div className='w-screen h-max'>
@@ -18,7 +23,7 @@ function App() {
 				<Navigation />
 				<Header obsRef={obsRef} />
 				<Timeline />
-				<Projects />
+				<Projects isMobile={isMobile} />
 				<Stack />
 				<Footer />
 				<ArrowNavigation animation={animation} hidden={hidden} />

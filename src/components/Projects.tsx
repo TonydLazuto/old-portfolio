@@ -3,8 +3,12 @@ import projects from '../data/projects';
 import ProjectItemMobile from './micro-components/ProjectItemMobile';
 import ProjectItemDesktop from './micro-components/ProjectItemDesktop';
 
-const Projects = ({}) => {
-	const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+export interface IsMobile {
+	isMobile: boolean
+}
+
+const Projects = (props: IsMobile) => {
+	const { isMobile } = props;
 
 	return (
 		<div
