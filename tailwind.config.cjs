@@ -23,36 +23,24 @@ module.exports = {
       },
       keyframes: {
         topToBottom: {
-          "0%": { transform: "translateY(-300px)" },
-          "100%": { transform: "translateY(0)" },
+          "0%": { transform: "translateY(-300px)", filter: "blur(2em)" },
+          "100%": { transform: "translateY(0)", filter: "blur(0)" },
         },
         rightToLeft: {
-          "0%": { transform: "translateX(300px)", filter: "blur(40px)" },
+          "0%": { transform: "translateX(300px)", filter: "blur(2em)" },
           "100%": { transform: "translateX(0)", filter: "blur(0)" },
         },
         fadeIn: {
           "0%": { opacity: 0 },
           "100%": { opacity: 1 },
         },
-        arrowFadeIn: {
-          "0%": { opacity: 0 },
-          "100%": { opacity: 0.6 },
-        },
-        arrowFadeOut: {
-          "0%": { opacity: 0.6 },
-          "100%": { opacity: 0 },
-        },
         arrowPop: {
-          "0%": { transform: "translateY(3rem)" },
-          "100%": { transform: "translateX(0)" },
+          "0%": { transform: "translateY(3rem)", opacity: 0 },
+          "100%": { transform: "translateX(0)", opacity: 0.6 },
         },
         projectDescriptionPop: {
-          "0%": { transform: "translateY(0.7rem)" },
-          "100%": { transform: "translateY(0)" },
-        },
-        heightAppear: {
-          "0%": { maxHeight: "0" },
-          "100%": { maxHeight: "100%" },
+          "0%": { transform: "translateY(0.7rem)", maxHeight: "0", opacity: 0 },
+          "100%": { transform: "translateY(0)", maxHeight: "100%", opacity: 1 },
         },
         projectHoverEnter: {
           "0%": {},
@@ -110,17 +98,17 @@ module.exports = {
         },
       },
       animation: {
-        header: "topToBottom 600ms ease-in forwards, fadeIn 1s",
+        header: "topToBottom 800ms ease-in forwards",
         headerDelay: "topToBottom 200ms ease-in forwards",
         headerDelay2: "topToBottom 400ms ease-in forwards",
         headerDelay3: "topToBottom 600ms ease-in forwards",
         headerDelay4: "topToBottom 800ms ease-in forwards",
-        picturePop: "rightToLeft 600ms ease-in forwards, fadeIn 1s",
+        picturePop: "rightToLeft 800ms ease-in forwards",
 
-        arrowPop: "arrowPop 1s ease-in-out forwards, arrowFadeIn 1.2s",
-        burgerMenu: "rightToLeft 400ms ease-in-out forwards, fadeIn 1.2s",
+        arrowPop: "arrowPop 1s ease-in-out forwards",
+        burgerMenu: "rightToLeft 400ms ease-in-out forwards",
         projectDescriptionPop:
-          "projectDescriptionPop 300ms ease-in-out forwards, heightAppear 700ms, fadeIn 1s",
+          "projectDescriptionPop 300ms ease-in-out forwards",
         fadeIn: "fadeIn ease-out 800ms",
 
         projectHoverEnter: "projectHoverEnter 200ms ease-in-out forwards",

@@ -6,7 +6,7 @@ const SocialsMedia = () => {
 	return (
     <div className='flex justify-around items-center
         w-24 h-12 mt-4 flex-row
-        animate-topToBottomDelay3'>
+        animate-headerDelay4'>
       <a href="https://github.com/TonydLazuto"
         className='block w-full h-full
           flex items-center justify-center
