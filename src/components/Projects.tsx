@@ -1,8 +1,11 @@
 import React from 'react'
 import projects from '../data/projects';
-import ProjectItem from './micro-components/ProjectItem';
+import ProjectItemMobile from './micro-components/ProjectItemMobile';
+import ProjectItemDesktop from './micro-components/ProjectItemDesktop';
 
 const Projects = ({}) => {
+	const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
 	return (
 		<div
 			id='projects'
@@ -16,17 +19,30 @@ const Projects = ({}) => {
 				flex-col md:flex-row
 				items-center md:items-start
 				justify-evenly flex-wrap'>
-				{projects.map((project) => (
-					<ProjectItem
-						key={project.title}
-						title={project.title}
-						description={project.description}
-						imgUrl={project.imgUrl}
-						stack={project.stack}
-						details={project.details}
-						link={project.link}
-					/>
-				))}
+				{isMobile ?
+					projects.map((project) => (
+						<ProjectItemMobile
+							key={project.title}
+							title={project.title}
+							description={project.description}
+							imgUrl={project.imgUrl}
+							stack={project.stack}
+							details={project.details}
+							link={project.link}
+							linkName={project.linkName}
+						/>
+					)) :
+					projects.map((project) => (
+						<ProjectItemDesktop
+							key={project.title}
+							title={project.title}
+							description={project.description}
+							imgUrl={project.imgUrl}
+							stack={project.stack}
+							details={project.details}
+							link={project.link}
+						/>
+					))}
 			</div>
 		</div>
 	)

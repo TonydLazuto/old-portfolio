@@ -2,6 +2,7 @@ import { Box, Link } from '@mui/material'
 import { useState } from 'react'
 import useObserver from '../../hooks/useObserver'
 import ProjectDetails from './ProjectDetails'
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 
 export interface Project {
 	key: string
@@ -11,9 +12,10 @@ export interface Project {
 	stack: string[]
 	details: string[],
   link: string
+  linkName: string
 }
-const ProjectItem = (project: Project) => {
-	const { title, description, imgUrl, stack, details, link } =
+const ProjectItemMobile = (project: Project) => {
+	const { title, description, imgUrl, stack, details, link, linkName } =
     project;
 	const [hidden, setHidden] = useState('hidden');
 	const [projectItemClass, setProjectItemClass] = useState('');
@@ -22,39 +24,31 @@ const ProjectItem = (project: Project) => {
   const imgStyle = title === 'Portfolio' ? 'object-contain' : 'object-cover';
   const obsRef = useObserver();
 
-	const handleProjectHoverEnter = (e : React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-		e.preventDefault();
-		if (hidden) {
-			setHidden('');
-			setProjectItemClass('animate-projectHoverEnter');
-			setImgClass('animate-projectImgHoverEnter');
-		}
-	}
-	const handleProjectHoverLeave = (e : React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-		e.preventDefault();
-		if (!hidden) {
-			setHidden('hidden');
-			setProjectItemClass('animate-projectHoverLeave');
-			setImgClass('animate-projectImgHoverLeave');
-		}
-	}
-
 	// const handleProjectDetails = (e : React.MouseEvent<HTMLDivElement, MouseEvent>) => {
 	// 	e.preventDefault();
 	// }
+
+  const toggleProjectDescription = () => {
+    if (hidden) {
+      setHidden('');
+      setProjectItemClass('animate-projectHoverEnter');
+      setImgClass('animate-projectImgHoverEnter');
+    }
+    else {
+      setHidden('hidden');
+      setProjectItemClass('animate-projectHoverLeave');
+      setImgClass('animate-projectImgHoverLeave');
+    }
+  };
 
 	return (
     <Box
       ref={obsRef}
       className={`rounded-md overflow drop-shadow-3xl
 				w-4/5 md:w-96 mb-4 ${projectItemClass}`}
-      onMouseEnter={handleProjectHoverEnter}
-      onMouseLeave={handleProjectHoverLeave}
+      onClick={toggleProjectDescription}
     >
-      <Link href={link} style={{ textDecoration: 'none', color: 'black' }}>
-        <Box
-        // onClick={handleProjectDetails}
-        >
+        <Box>
           <img
             src={imgUrl}
             alt="project"
@@ -89,11 +83,28 @@ const ProjectItem = (project: Project) => {
                 </span>
               ))}
             </Box>
+            <div className={`${hidden} animate-projectDescriptionPop mt-4`}>
+              <Link href={link} style={{
+                textDecoration: 'none',
+                color: '#1A1E38',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                boxShadow: '0 0 10px 0 rgba(0, 0, 0, 0.2)',
+                borderRadius: '0.6em',
+                height: '2.5em',
+                width: '100%',
+                letterSpacing: '0.025em',
+                lineHeight: '2rem'
+              }}>
+                <ExitToAppIcon />
+                <span className='ml-1'>{linkName}</span>
+              </Link>
+            </div>
           </Box>
         </Box>
-      </Link>
     </Box>
   );
 }
 
-export default ProjectItem
+export default ProjectItemMobile
