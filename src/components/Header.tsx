@@ -1,8 +1,15 @@
 import { ArrowObserver } from '../hooks/arrowObserver';
 import HeaderIntro from './micro-components/HeaderIntro';
 
-const Header = (props: ArrowObserver) => {
-  const { obsRef } = props;
+interface Header {
+  obsRef: React.RefObject<HTMLDivElement>
+  isMobile: boolean
+}
+
+const Header = (props: Header) => {
+  const { obsRef, isMobile } = props;
+
+  const animatePicturePop = isMobile ? '' : 'animate-picturePop';
   return (
     <div
       ref={obsRef}
@@ -17,12 +24,12 @@ const Header = (props: ArrowObserver) => {
         justify-center items-center
         text-center md:text-left"
       >
-        <HeaderIntro />
+        <HeaderIntro isMobile={isMobile} />
         <div
-          className="w-3/4 md:w-1/4 md:min-w-[20em]
+          className={`w-3/4 md:w-1/4 md:min-w-[20em]
           h-full mt-4 md:mt-0
           flex justify-center items-center
-          animate-picturePop">
+          ${animatePicturePop}`}>
           <img
             src="/assets/profile-pic.png"
             alt="profile-pic"

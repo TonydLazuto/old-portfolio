@@ -21,7 +21,7 @@ function App() {
 		<div className='w-screen h-max'>
 			<div className="w-full h-full shadow-2xl shadow-black">
 				<Navigation />
-				<Header obsRef={obsRef} />
+				<Header isMobile={isMobile} obsRef={obsRef} />
 				<Timeline />
 				<Projects isMobile={isMobile} />
 				<Stack />

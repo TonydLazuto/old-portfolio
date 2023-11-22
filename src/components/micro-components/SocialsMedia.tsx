@@ -2,11 +2,18 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { useState } from 'react';
 
-const SocialsMedia = () => {
+interface SocialsMediaProps {
+  isMobile: boolean
+}
+
+const SocialsMedia = (props: SocialsMediaProps) => {
+  const { isMobile } = props;
+  const animateHeaderDelay4 = isMobile ? '' : 'animate-headerDelay4';
+
 	return (
-    <div className='flex justify-around items-center
+    <div className={`flex justify-around items-center
         w-24 h-12 mt-4 flex-row
-        animate-headerDelay4'>
+        ${animateHeaderDelay4}`}>
       <a href="https://github.com/TonydLazuto"
         className='block w-full h-full
           flex items-center justify-center

@@ -23,16 +23,12 @@ module.exports = {
       },
       keyframes: {
         topToBottom: {
-          "0%": { transform: "translateY(-300px)", filter: "blur(2em)" },
+          "0%": { transform: "translateY(-30rem)", filter: "blur(2em)" },
           "100%": { transform: "translateY(0)", filter: "blur(0)" },
         },
         rightToLeft: {
-          "0%": { transform: "translateX(300px)", filter: "blur(2em)" },
+          "0%": { transform: "translateX(30rem)", filter: "blur(2em)" },
           "100%": { transform: "translateX(0)", filter: "blur(0)" },
-        },
-        fadeIn: {
-          "0%": { opacity: 0 },
-          "100%": { opacity: 1 },
         },
         arrowPop: {
           "0%": { transform: "translateY(3rem)", opacity: 0 },
@@ -98,18 +94,17 @@ module.exports = {
         },
       },
       animation: {
-        header: "topToBottom 800ms ease-in forwards",
-        headerDelay: "topToBottom 200ms ease-in forwards",
-        headerDelay2: "topToBottom 400ms ease-in forwards",
-        headerDelay3: "topToBottom 600ms ease-in forwards",
-        headerDelay4: "topToBottom 800ms ease-in forwards",
-        picturePop: "rightToLeft 800ms ease-in forwards",
+        header: "topToBottom 500ms ease-in forwards",
+        headerDelay: "topToBottom 100ms ease-in forwards",
+        headerDelay2: "topToBottom 200ms ease-in forwards",
+        headerDelay3: "topToBottom 300ms ease-in forwards",
+        headerDelay4: "topToBottom 400ms ease-in forwards",
+        picturePop: "rightToLeft 500ms ease-in forwards",
 
-        arrowPop: "arrowPop 1s ease-in-out forwards",
+        arrowPop: "arrowPop 800ms ease-in-out forwards",
         burgerMenu: "rightToLeft 400ms ease-in-out forwards",
         projectDescriptionPop:
           "projectDescriptionPop 300ms ease-in-out forwards",
-        fadeIn: "fadeIn ease-out 800ms",
 
         projectHoverEnter: "projectHoverEnter 200ms ease-in-out forwards",
         projectHoverLeave: "projectHoverLeave 200ms ease-in-out forwards",
