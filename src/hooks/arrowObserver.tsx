@@ -30,8 +30,8 @@ const arrowObserver = (props : ArrowObserver) => {
       setElementVisibility(entry.isIntersecting);
     },
     {
-      rootMargin: '30%',
-      threshold: 1
+      rootMargin: '7%',
+      threshold: 0.3
     })
     if(obsRef.current) observer.observe(obsRef.current);
   }, []);

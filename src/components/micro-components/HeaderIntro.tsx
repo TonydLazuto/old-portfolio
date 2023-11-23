@@ -39,8 +39,10 @@ const HeaderIntro = (props: HeaderIntroProps) => {
         Passionné par le développement web, je me spécialise dans les technologies Node et React.<br />
         De la conception à la réalisation, je m'engage à créer des expériences utilisateurs dynamiques et innovantes avec une solide architecture.
       </p>
-      <Button variant="outlined" className={`w-1/3 ${animateHeaderDelay3}`}>
-        <Link href={`mailto:${mailPerso}`}>Contactez-moi</Link>
+      <Button variant="outlined"
+              className={`w-1/3 ${animateHeaderDelay3} transition-all duration-200 ease-in-out`}>
+        <Link href={`mailto:${mailPerso}`}
+          sx={{ textDecoration: 'none' }}>Contactez-moi</Link>
       </Button>
       <SocialsMedia isMobile={isMobile}/>
     </div>
