@@ -41,8 +41,7 @@ const HeaderIntro = (props: HeaderIntroProps) => {
       </p>
       <Button variant="outlined"
               className={`w-1/3 ${animateHeaderDelay3} transition-all duration-200 ease-in-out`}>
-        <Link href={`mailto:${mailPerso}`}
-          sx={{ textDecoration: 'none' }}>Contactez-moi</Link>
+          Contactez-moi
       </Button>
       <SocialsMedia isMobile={isMobile}/>
     </div>
