@@ -8,12 +8,11 @@ interface SocialsMediaProps {
 
 const SocialsMedia = (props: SocialsMediaProps) => {
   const { isMobile } = props;
-  const animateHeaderDelay4 = isMobile ? '' : 'animate-headerDelay4';
+  const animateHeaderDelay3 = isMobile ? '' : 'animate-headerDelay3';
 
 	return (
     <div className={`flex justify-around items-center
-        w-24 h-12 mt-4 flex-row
-        ${animateHeaderDelay4}`}>
+        w-24 h-12 ${animateHeaderDelay3}`}>
       <a href="https://github.com/TonydLazuto"
         className='block w-full h-full
           flex items-center justify-center

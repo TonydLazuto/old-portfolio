@@ -110,14 +110,5 @@ export default [
     ],
     link: "https://github.com/TonydLazuto/ft_containers",
     linkName: "code source"
-  },
-  {
-    title: "Portfolio",
-    description: "Vous y êtes !",
-    imgUrl: "/assets/screenshot.png",
-    stack: ["React", "Typescript", "Tailwind", "Vite"],
-    details: [],
-    link: "#",
-    linkName: ""
-  },
+  }
 ];

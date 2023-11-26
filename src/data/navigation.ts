@@ -4,7 +4,7 @@ export default [
 		path: '#timeline',
 	},
 	{
-		name: 'Projects',
+		name: 'Projets',
 		path: '#projects',
 
 	},

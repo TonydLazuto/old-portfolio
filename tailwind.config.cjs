@@ -94,12 +94,11 @@ module.exports = {
         },
       },
       animation: {
-        header: "topToBottom 500ms ease-in forwards",
-        headerDelay: "topToBottom 100ms ease-in forwards",
-        headerDelay2: "topToBottom 200ms ease-in forwards",
-        headerDelay3: "topToBottom 300ms ease-in forwards",
-        headerDelay4: "topToBottom 400ms ease-in forwards",
-        picturePop: "rightToLeft 500ms ease-in forwards",
+        header: "topToBottom 400ms ease-out forwards",
+        headerDelay: "topToBottom 100ms ease-out forwards",
+        headerDelay2: "topToBottom 200ms ease-out forwards",
+        headerDelay3: "topToBottom 300ms ease-out forwards",
+        picturePop: "rightToLeft 400ms ease-out forwards",
 
         arrowPop: "arrowPop 800ms ease-in-out forwards",
         burgerMenu: "rightToLeft 400ms ease-in-out forwards",
