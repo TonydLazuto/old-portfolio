@@ -18,8 +18,8 @@ module.exports = {
       backgroundImage: {
         "intro-bg": "url('/img/intro-bg.png')",
       },
-      FontFace: {
-        "font-family": ["Inter", "serif"],
+      fontFamily: {
+        display: ["Brush Script MT", "serif", "courier", "comic sans ms"],
       },
       keyframes: {
         topToBottom: {
