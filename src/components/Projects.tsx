@@ -22,16 +22,16 @@ const Projects = (props: IsMobile) => {
     >
       <h1
         ref={obsRef}
-        className="h-16 w-2/3 md:w-48
+        className="h-16 w-2/3 md:w-fit
 			m-auto md:m-0 md:ml-36 md:mb-12
-			mb-20 md:pl-8
+			mb-20 md:px-8
 			pt-2
-			text-3xl md:text-5xl
+			text-4xl md:text-5xl
 			text-center md:text-left
 			font-semibold
 			bg-shade2
 			rounded-md
-			shadow-xl md:shadow-sm
+			shadow-xl md:shadow-lg
 			font-display"
       >
         Projets

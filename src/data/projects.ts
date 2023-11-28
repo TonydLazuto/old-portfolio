@@ -2,7 +2,7 @@ export default [
   {
     title: "Acenstream",
     description:
-      "Application de diffusion de flux de médias, vers des écrans connectés à des Raspberry, destinés à l'affichage d'évènements au sein des locaux de l'entreprise.",
+      "Application de diffusion de flux de médias, vers des écrans connectés à des Raspberry.",
     imgUrl: "/assets/raspberry.png",
     stack: [
       "React",

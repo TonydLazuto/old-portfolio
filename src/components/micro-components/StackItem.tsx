@@ -1,6 +1,8 @@
+import { Tooltip } from "@mui/material";
 import { useState } from "react";
+import Fade from '@mui/material/Fade';
 
-interface StackItemProps {
+export interface StackItemProps {
     src: string;
     link: string;
     alt: string;
@@ -23,10 +25,14 @@ const StackItem = (stackItemProps: StackItemProps) => {
     setStackItemClass("animate-stackItemHoverLeave");
   };
   return (
-    <div
+    <Tooltip
       onMouseEnter={handleStackHoverEnter}
       onMouseLeave={handleStackHoverLeave}
       className="mb-4 md:mb-6 mx-1"
+      title={alt}
+      TransitionComponent={Fade}
+      TransitionProps={{ timeout: 600 }}
+
     >
       <a href={link}>
       <img
@@ -35,7 +41,7 @@ const StackItem = (stackItemProps: StackItemProps) => {
         className={`w-12 h-12 md:w-16 md:h-16 md:mx-2 mx-1 ${stackItemClass}`}
       />
       </a>
-    </div>
+    </Tooltip>
   );
 }
 
