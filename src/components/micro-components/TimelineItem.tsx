@@ -7,11 +7,12 @@ export interface Timeline {
 	year: string
 	title: string
 	duration: string
-	details: string[]
+	details: string[],
+  logoUrl: string
 }
 
 const TimelineItem = (timeline: Timeline) => {
-	const { year, title, duration, details } = timeline;
+	const { year, title, duration, details, logoUrl } = timeline;
 
 	const obsRef = useObserver();
 	return (
@@ -43,6 +44,11 @@ const TimelineItem = (timeline: Timeline) => {
             >
               {title}
             </h3>
+            <img
+              src={logoUrl}
+              alt="logo_company"
+              className='h-3 ml-0 pl-0'
+            />
             <div
               className="text-xs md:text-sm font-normal leading-none
 							text-stone-400"
