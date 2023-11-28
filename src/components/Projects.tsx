@@ -52,6 +52,7 @@ const Projects = (props: IsMobile) => {
                 stack={project.stack}
                 details={project.details}
                 link={project.link}
+                logoUrl={project.logoUrl}
                 linkName={project.linkName}
               />
             ))
@@ -63,6 +64,7 @@ const Projects = (props: IsMobile) => {
                 imgUrl={project.imgUrl}
                 stack={project.stack}
                 details={project.details}
+                logoUrl={project.logoUrl}
                 link={project.link}
               />
             ))}

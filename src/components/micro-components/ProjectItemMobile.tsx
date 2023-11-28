@@ -10,13 +10,22 @@ export interface Project {
 	description: string
 	imgUrl: string
 	stack: string[]
-	details: string[],
+	details: string[]
   link: string
   linkName: string
+  logoUrl: string
 }
 const ProjectItemMobile = (project: Project) => {
-	const { title, description, imgUrl, stack, details, link, linkName } =
-    project;
+	const {
+    title,
+    description,
+    imgUrl,
+    stack,
+    details,
+    link,
+    linkName,
+    logoUrl,
+  } = project;
 	const [hidden, setHidden] = useState('hidden');
 	const [projectItemClass, setProjectItemClass] = useState('');
 	const [imgClass, setImgClass] = useState('');
@@ -83,6 +92,11 @@ const ProjectItemMobile = (project: Project) => {
                 </span>
               ))}
             </Box>
+            {<img
+                src={logoUrl}
+                alt={title}
+                className='mt-4 w-12 max-w-fit max-h-6'
+              />}
             <div className={`${hidden} animate-projectDescriptionPop mt-4`}>
               <Link href={link} style={{
                 textDecoration: 'none',

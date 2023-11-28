@@ -7,11 +7,10 @@ export default [
     stack: [
       "React",
       "Node",
+      "Electron.Js",
       "Fastify",
       "Sequelize",
       "Socket.io",
-      "Mui",
-      "Electron.Js",
       "PostgreSQL",
     ],
     details: [
@@ -20,6 +19,7 @@ export default [
       "Une interface est disponible pour les admnistrateurs qui souhaiteraient inspecter l'état de chaque raspberry disponible à l'application.",
     ],
     link: "https://www.acensi.fr/",
+    logoUrl: "/assets/logos/acensi_logo.png",
     linkName: "acensi.fr"
   },
   {
@@ -33,9 +33,7 @@ export default [
       "Fastify",
       "Sequelize",
       "Socket.io",
-      "Mui",
-      "PostgreSQL",
-      "Redis",
+      "PostgreSQL"
     ],
     details: [
       "Permet de visualiser l'état des différentes licences. Les fonctionnalités incluent l'allocation, la suppression et la modification des informations liées aux licences.",
@@ -43,6 +41,7 @@ export default [
       "Syneryx est une plateforme de gestion des différentes machines, serveurs internes et externes. L'objectif principal est de simplifier la gestion des actifs.",
     ],
     link: "https://www.acensi.fr/",
+    logoUrl: "/assets/logos/acensi_logo.png",
     linkName: "acensi.fr"
   },
   {
@@ -52,13 +51,12 @@ export default [
     imgUrl: "/assets/Transcendence-project.jpeg",
     stack: [
       "React",
-      "Typescript",
       "Nest",
+      "Typescript",
       "Express",
-      "PostgreSQL",
       "TypeORM",
-      "Websockets",
-      "API REST",
+      "PostgreSQL",
+      "WebSockets"
     ],
     details: [
       "Connexion par le système OAuth2 de l'Api42. Implémentation de l'authentification à deux facteurs via Google Authenticator.",
@@ -66,6 +64,7 @@ export default [
       "Création d'un chat avec des channels (privés/public) et des rôles pour les utilisateurs.",
     ],
     link: "https://github.com/TonydLazuto/ft_transcendence",
+    logoUrl: "/assets/logos/42_logo.png",
     linkName: "code source"
   },
   {
@@ -81,6 +80,7 @@ export default [
       "Un network établit la connexion entre tous ces services.",
     ],
     link: "https://github.com/TonydLazuto/inception",
+    logoUrl: "/assets/logos/42_logo.png",
     linkName: "code source"
   },
   {
@@ -95,6 +95,7 @@ export default [
       "L'utilisation du client de référence (Irssi) pour ce serveur est similaire à l'utilisation d'un serveur IRC officiel en reprenant les principales fonctionnalités.",
     ],
     link: "https://github.com/TonydLazuto/ft_irc",
+    logoUrl: "/assets/logos/42_logo.png",
     linkName: "code source"
   },
   {
@@ -109,6 +110,7 @@ export default [
       "On a surtout eu l'occasion de mettre en place un arbre binaire automatiquement équilibré",
     ],
     link: "https://github.com/TonydLazuto/ft_containers",
+    logoUrl: "/assets/logos/42_logo.png",
     linkName: "code source"
   }
 ];

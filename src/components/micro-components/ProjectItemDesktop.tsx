@@ -9,12 +9,12 @@ export interface Project {
 	description: string
 	imgUrl: string
 	stack: string[]
-	details: string[],
+	details: string[]
   link: string
+  logoUrl: string
 }
 const ProjectItemDesktop = (project: Project) => {
-	const { title, description, imgUrl, stack, details, link } =
-    project;
+	const { title, description, imgUrl, stack, details, link, logoUrl } = project;
 	const [hidden, setHidden] = useState('hidden');
 	const [projectItemClass, setProjectItemClass] = useState('');
 	const [imgClass, setImgClass] = useState('');
@@ -89,6 +89,12 @@ const ProjectItemDesktop = (project: Project) => {
                 </span>
               ))}
             </Box>
+              {<img
+                src={logoUrl}
+                alt={title}
+                className='absolute bottom-4 right-4
+                w-12 max-w-fit max-h-6'
+              />}
           </Box>
         </Box>
       </Link>

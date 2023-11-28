@@ -13,8 +13,8 @@ const Stack = () => {
       id="stack"
       className="w-screen
         min-h-screen md:min-h-full
-        md:my-40
-				py-40 md:py-4"
+        md:mt-20 mb-10
+				pt-20 md:py-4"
     >
       <h1
 	  	  ref={obsRef}
