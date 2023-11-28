@@ -19,16 +19,17 @@ const StackSection = (props: StackSectionProps) => {
       shadow-md
       w-4/5 md:w-96
       mb-12 md:mb-20
-      py-4
-      rounded-lg">
+      md:px-4
+      rounded-3xl">
        <h2
           className={`
           text-2xl md:text-3xl
           font-semibold text-center md:text-left
           font-display
-          mb-4 md:mb-12
+          mb-6 md:mb-10
           text-transparent bg-clip-text
-          bg-gradient-to-l ${gradientColor}`}
+          bg-gradient-to-l ${gradientColor}
+          border-b-2 border-slate-100 px-2`}
         >{section}</h2>
       <div
         ref={obsRef}

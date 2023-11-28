@@ -40,6 +40,7 @@ const Timeline = () => {
             duration={timeline.duration}
             details={timeline.details}
             logoUrl={timeline.logoUrl}
+            logoLink={timeline.logoLink}
           />
         ))}
       </Box>

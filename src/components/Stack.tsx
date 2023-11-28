@@ -38,8 +38,8 @@ const Stack = () => {
           items-center md:items-stretch
           w-4/5 m-auto"
       >
-        <StackSection section="Frontend" stacks={frontEndStack} gradientColor='from-sky-700 to-slate-400' />
-        <StackSection section="Backend" stacks={backEndStack} gradientColor='from-indigo-700 to-slate-400' />
+        <StackSection section="Frontend" stacks={frontEndStack} gradientColor='from-sky-500 to-slate-400' />
+        <StackSection section="Backend" stacks={backEndStack} gradientColor='from-teal-700 to-slate-400' />
         <StackSection section="More stack" stacks={moreStack} gradientColor='from-violet-700 to-slate-400' />
       </div>
     </div>

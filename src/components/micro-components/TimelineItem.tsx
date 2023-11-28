@@ -1,4 +1,4 @@
-import { Box } from '@mui/material'
+import { Box, Link } from '@mui/material'
 import React, { useRef } from 'react'
 import useObserver from '../../hooks/useObserver'
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
@@ -8,11 +8,12 @@ export interface Timeline {
 	title: string
 	duration: string
 	details: string[],
-  logoUrl: string
+  logoUrl: string,
+  logoLink: string,
 }
 
 const TimelineItem = (timeline: Timeline) => {
-	const { year, title, duration, details, logoUrl } = timeline;
+	const { year, title, duration, details, logoUrl, logoLink } = timeline;
 
 	const obsRef = useObserver();
 	return (
@@ -44,11 +45,17 @@ const TimelineItem = (timeline: Timeline) => {
             >
               {title}
             </h3>
-            <img
-              src={logoUrl}
-              alt="logo_company"
-              className='h-3 ml-0 pl-0'
-            />
+            <Link href={logoLink}
+              className={`transition duration-300 ease-in-out
+                transform hover:scale-110 hover:-translate-y-1
+                ${year === '2020' ? 'w-6' : ''}`} // 2020 is the year I started 42
+            >
+              <img
+                src={logoUrl}
+                alt="logo_company"
+                className="w-16 max-w-fit max-h-6"
+              />
+            </Link>
             <div
               className="text-xs md:text-sm font-normal leading-none
 							text-stone-400"

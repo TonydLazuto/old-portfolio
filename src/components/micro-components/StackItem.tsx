@@ -30,9 +30,10 @@ const StackItem = (stackItemProps: StackItemProps) => {
       onMouseLeave={handleStackHoverLeave}
       className="mb-4 md:mb-6 mx-1"
       title={alt}
+      placement="top-end"
       TransitionComponent={Fade}
-      TransitionProps={{ timeout: 600 }}
-
+      TransitionProps={{ timeout: 400 }}
+      arrow
     >
       <a href={link}>
       <img
