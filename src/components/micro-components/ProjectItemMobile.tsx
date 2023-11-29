@@ -92,11 +92,14 @@ const ProjectItemMobile = (project: Project) => {
                 </span>
               ))}
             </Box>
-            {<img
+            <div className='flex justify-end mt-4'>
+              <img
                 src={logoUrl}
                 alt={title}
-                className='mt-4 w-12 max-w-fit max-h-6'
-              />}
+                className={`max-w-fit max-h-6
+                ${title === 'Acenstream' || title === 'Syneryx' ? 'w-12': 'w-4'} `} // aim at 42logo size
+              />
+            </div>
             <div className={`${hidden} animate-projectDescriptionPop mt-4`}>
               <Link href={link} style={{
                 textDecoration: 'none',

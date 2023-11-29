@@ -89,12 +89,14 @@ const ProjectItemDesktop = (project: Project) => {
                 </span>
               ))}
             </Box>
-              {<img
+            <div className='flex justify-end mt-4'>
+              <img
                 src={logoUrl}
                 alt={title}
-                className='absolute bottom-4 right-4
+                className='
                 w-12 max-w-fit max-h-6'
-              />}
+              />
+            </div>
           </Box>
         </Box>
       </Link>

@@ -48,12 +48,13 @@ const TimelineItem = (timeline: Timeline) => {
             <Link href={logoLink}
               className={`transition duration-300 ease-in-out
                 transform hover:scale-110 hover:-translate-y-1
-                ${year === '2020' ? 'w-6' : ''}`} // 2020 is the year I started 42
+                ${year === '2020' ? 'w-4' : ''}`} // aim at 42logo size
             >
               <img
                 src={logoUrl}
                 alt="logo_company"
-                className="w-16 max-w-fit max-h-6"
+                className={`max-w-fit max-h-6
+                  ${year === '2020' ? 'w-4' : 'w-16'}`} // aim at 42logo size
               />
             </Link>
             <div
