@@ -2,6 +2,7 @@ import { Box, Link } from '@mui/material'
 import React, { useRef } from 'react'
 import useObserver from '../../hooks/useObserver'
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
+import { useMobile } from '../../hooks/useMobile';
 export interface Timeline {
 	key: string
 	year: string
@@ -14,8 +15,9 @@ export interface Timeline {
 
 const TimelineItem = (timeline: Timeline) => {
 	const { year, title, duration, details, logoUrl, logoLink } = timeline;
+  const { isMobile } = useMobile();
 
-	const obsRef = useObserver();
+	const obsRef = useObserver({ isMobile });
 	return (
     <Box
       className="flex flex-col md:flex-row

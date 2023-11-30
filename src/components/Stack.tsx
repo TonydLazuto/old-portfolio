@@ -4,9 +4,11 @@ import backEndStack from "../data/stack/backendStack";
 import moreStack from "../data/stack/moreStack";
 import useObserver from "../hooks/useObserver";
 import StackSection from "./micro-components/StackSection";
+import { useMobile } from "../hooks/useMobile";
 
 const Stack = () => {
-  const obsRef = useObserver();
+  const { isMobile } = useMobile();
+  const obsRef = useObserver({ isMobile });
 
   return (
     <div

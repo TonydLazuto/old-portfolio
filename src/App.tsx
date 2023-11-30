@@ -7,28 +7,26 @@ import { useEffect, useRef, useState } from 'react';
 import arrowObserver from './hooks/arrowObserver';
 import ArrowNavigation from './components/ArrowNavigation'
 import Footer from './components/Footer'
+import { MobileProvider, useMobile } from './hooks/useMobile'
 
 function App() {
 	const obsRef = useRef<HTMLDivElement>(null);
 	const [animation, hidden] = arrowObserver({ obsRef });
-	const [isMobile, setIsMobile] = useState(false);
-
-	useEffect(() => {
-		setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent));
-	}, []);
-
+	const { isMobile } = useMobile();
   return (
+	<MobileProvider>
 		<div className='w-screen h-max font-serif'>
 			<div className="w-full h-full shadow-2xl shadow-black">
 				<Navigation />
-				<Header isMobile={isMobile} obsRef={obsRef} />
+				<Header obsRef={obsRef} />
 				<Timeline />
-				<Projects isMobile={isMobile} />
+				<Projects />
 				<Stack />
 				<Footer />
-				<ArrowNavigation animation={animation} hidden={hidden} />
+				{isMobile ? null : <ArrowNavigation animation={animation} hidden={hidden} />}
 			</div>
 		</div>
+	</MobileProvider>
   )
 }
 

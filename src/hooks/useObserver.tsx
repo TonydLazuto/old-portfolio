@@ -1,11 +1,13 @@
 import React, { RefObject, useEffect, useRef, useState } from 'react'
+import { useMobile } from './useMobile';
 
 export interface UseObserver {
-	animationProps: string
+	isMobile: boolean
 }
 
-const useObserver = () => {
+const useObserver = (props: UseObserver) => {
   const [elementVisibility, setElementVisibility] = useState<boolean>();
+  const { isMobile } = props;
   const obsRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -32,7 +34,9 @@ const useObserver = () => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
       // only observe the first time
-      // if (entry.isIntersecting) observer.unobserve(entry.target);
+      // if (isMobile && entry.isIntersecting) {
+      //   observer.unobserve(entry.target);
+      // }
       setElementVisibility(entry.isIntersecting);
     },
     {

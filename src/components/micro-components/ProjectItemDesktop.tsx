@@ -2,6 +2,7 @@ import { Box, Link } from '@mui/material'
 import { useState } from 'react'
 import useObserver from '../../hooks/useObserver'
 import ProjectDetails from './ProjectDetails'
+import { useMobile } from '../../hooks/useMobile'
 
 export interface Project {
 	key: string
@@ -20,7 +21,8 @@ const ProjectItemDesktop = (project: Project) => {
 	const [imgClass, setImgClass] = useState('');
 
   const imgStyle = title === 'Portfolio' ? 'object-contain' : 'object-cover';
-  const obsRef = useObserver();
+    const { isMobile } = useMobile();
+    const obsRef = useObserver({ isMobile });
 
 	const handleProjectHoverEnter = (e : React.MouseEvent<HTMLDivElement, MouseEvent>) => {
 		e.preventDefault();

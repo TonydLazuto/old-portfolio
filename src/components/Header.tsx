@@ -1,13 +1,14 @@
 import { ArrowObserver } from '../hooks/arrowObserver';
+import { useMobile } from '../hooks/useMobile';
 import HeaderIntro from './micro-components/HeaderIntro';
 
 interface Header {
   obsRef: React.RefObject<HTMLDivElement>
-  isMobile: boolean
 }
 
 const Header = (props: Header) => {
-  const { obsRef, isMobile } = props;
+  const { obsRef } = props;
+  const { isMobile } = useMobile();
 
   const animatePicturePop = isMobile ? '' : 'animate-picturePop';
   return (
@@ -24,7 +25,7 @@ const Header = (props: Header) => {
         justify-center items-center
         text-center md:text-left"
       >
-        <HeaderIntro isMobile={isMobile} />
+        <HeaderIntro />
         <div
           className={`w-3/4 md:w-1/4 md:min-w-[20em]
           h-full mt-4 md:mt-0

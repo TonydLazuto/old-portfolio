@@ -3,6 +3,7 @@ import { useState } from 'react'
 import useObserver from '../../hooks/useObserver'
 import ProjectDetails from './ProjectDetails'
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import { useMobile } from '../../hooks/useMobile';
 
 export interface Project {
 	key: string
@@ -31,7 +32,8 @@ const ProjectItemMobile = (project: Project) => {
 	const [imgClass, setImgClass] = useState('');
 
   const imgStyle = title === 'Portfolio' ? 'object-contain' : 'object-cover';
-  const obsRef = useObserver();
+  const { isMobile } = useMobile();
+  const obsRef = useObserver({ isMobile });
 
 	// const handleProjectDetails = (e : React.MouseEvent<HTMLDivElement, MouseEvent>) => {
 	// 	e.preventDefault();

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import useObserver from "../../hooks/useObserver";
 import StackItem, { StackItemProps } from "./StackItem";
+import { useMobile } from "../../hooks/useMobile";
 
 interface StackSectionProps {
     section: string;
@@ -10,7 +11,8 @@ interface StackSectionProps {
 
 const StackSection = (props: StackSectionProps) => {
     const { section, stacks, gradientColor } = props;
-    const obsRef = useObserver();
+    const { isMobile } = useMobile();
+    const obsRef = useObserver({ isMobile });
 
     return (
     <div className="flex flex-col
