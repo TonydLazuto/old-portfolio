@@ -2,12 +2,10 @@ import React, { Dispatch, ReactNode, SetStateAction, useContext, useEffect, useS
 
 interface IMobile {
 	isMobile: boolean;
-	setIsMobile: Dispatch<SetStateAction<boolean>>;
 };
 
 const MobileContext = React.createContext<IMobile>({
     isMobile: false,
-    setIsMobile: () => {}
 });
 
 interface MobileProviderProps {
@@ -16,13 +14,10 @@ interface MobileProviderProps {
 
 export const MobileProvider = ({ children }: MobileProviderProps) => {
 
-	const [isMobile, setIsMobile] = useState(false);
-    useEffect(() => {
-		setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent));
-	}, []);
+	const isMobile= /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
     return (
-		<MobileContext.Provider value={{ isMobile, setIsMobile }}>
+		<MobileContext.Provider value={{ isMobile }}>
 			{children}
 		</MobileContext.Provider>
 	);
