@@ -17,9 +17,11 @@ const TimelineItem = (timeline: Timeline) => {
 	const { year, title, duration, details, logoUrl, logoLink } = timeline;
   const { isMobile } = useMobile();
 
+	const obsRefContainer = useObserver({ isMobile });
 	const obsRef = useObserver({ isMobile });
 	return (
     <Box
+      ref={obsRefContainer}
       className="flex flex-col md:flex-row
 				border-l border-slate-300 relative pb-8"
     >

@@ -44,7 +44,7 @@ const useObserver = (props: UseObserver) => {
     },
     {
       rootMargin: margin,
-      threshold: 1
+      threshold: 0.8
     })
     if(obsRef.current) observer.observe(obsRef.current);
     return () => {

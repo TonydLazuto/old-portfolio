@@ -12,10 +12,13 @@ interface StackSectionProps {
 const StackSection = (props: StackSectionProps) => {
     const { section, stacks, gradientColor } = props;
     const { isMobile } = useMobile();
+    const obsRefContainer = useObserver({ isMobile });
     const obsRef = useObserver({ isMobile });
 
     return (
-    <div className="flex flex-col
+    <div
+      ref={obsRefContainer}
+      className="flex flex-col
       justify-between md:justify-start
       items-center
       shadow-md

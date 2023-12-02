@@ -37,7 +37,7 @@ const Projects = () => {
         className="w-11/12 md:w-3/4 m-auto flex
 				flex-col md:flex-row
 				items-center md:items-start
-				justify-between flex-wrap"
+				justify-center flex-wrap gap-14"
       >
         {isMobile
           ? projects.map((project) => (
