@@ -12,9 +12,10 @@ const Timeline = ({ isMobile }: IsMobile) => {
       id="timeline"
       className="mt-24
       w-screen
+      h-max
 			md:min-h-full
 			m-auto
-			scroll-mt-32"
+			scroll-mt-12 md:scroll-mt-18"
     >
       <h1
 	  	  ref={obsRef}

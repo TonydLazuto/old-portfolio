@@ -12,7 +12,7 @@ const Stack = ({ isMobile }: IsMobile) => {
     <div
       id="stack"
       className="w-screen
-        min-h-screen md:min-h-full
+        h-max md:min-h-full
         md:mt-20 mb-10
 				pt-20 md:py-4"
     >

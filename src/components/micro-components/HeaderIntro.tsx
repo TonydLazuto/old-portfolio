@@ -11,7 +11,9 @@ const HeaderIntro = ({ isMobile }: IsMobile) => {
   return (
     <div
       className={`flex flex-col justify-center
-          w-4/5 h-full max-w-xl md:pl-8
+          w-4/5 md:h-full md:max-w-xl
+          md:pl-8
+          gap-3 md:gap-0
           items-center md:items-start
           text-slate-100 z-10
           ${animateHeader}`}

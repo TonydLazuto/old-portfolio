@@ -9,7 +9,7 @@ module.exports = {
       },
       height: {
         128: "32rem",
-        200: "40rem",
+        200: "48rem",
       },
       colors: {
         shade0: "#1A1E38",
