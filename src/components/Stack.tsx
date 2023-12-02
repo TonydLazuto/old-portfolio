@@ -1,13 +1,11 @@
-import { useRef, useState } from "react";
 import frontEndStack from "../data/stack/frontendStack";
 import backEndStack from "../data/stack/backendStack";
 import moreStack from "../data/stack/moreStack";
 import useObserver from "../hooks/useObserver";
 import StackSection from "./micro-components/StackSection";
-import { useMobile } from "../hooks/useMobile";
+import { IsMobile } from "../App";
 
-const Stack = () => {
-  const { isMobile } = useMobile();
+const Stack = ({ isMobile }: IsMobile) => {
   const obsRef = useObserver({ isMobile });
 
   return (
@@ -19,7 +17,7 @@ const Stack = () => {
 				pt-20 md:py-4"
     >
       <h1
-	  	  ref={obsRef}
+        ref={obsRef}
         className="h-16 w-2/3 md:w-fit
           m-auto md:m-0 md:ml-36 md:mb-12
           mb-20 md:px-8
@@ -40,12 +38,26 @@ const Stack = () => {
           items-center md:items-stretch
           w-4/5 m-auto"
       >
-        <StackSection section="Frontend" stacks={frontEndStack} gradientColor='from-sky-500 to-slate-400' />
-        <StackSection section="Backend" stacks={backEndStack} gradientColor='from-teal-700 to-slate-400' />
-        <StackSection section="More stack" stacks={moreStack} gradientColor='from-violet-700 to-slate-400' />
+        <StackSection
+          section="Frontend"
+          stacks={frontEndStack}
+          gradientColor="from-sky-500 to-slate-400"
+          isMobile={isMobile}
+        />
+        <StackSection
+          section="Backend"
+          stacks={backEndStack}
+          gradientColor="from-teal-700 to-slate-400"
+          isMobile={isMobile}
+        />
+        <StackSection
+          section="More stack"
+          stacks={moreStack}
+          gradientColor="from-violet-700 to-slate-400"
+          isMobile={isMobile}
+        />
       </div>
     </div>
-
   );
 };
 

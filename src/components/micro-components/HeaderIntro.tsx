@@ -1,11 +1,8 @@
-import React from 'react'
-import { Button, Link } from '@mui/material';
 import SocialsMedia from './SocialsMedia';
-import { useMobile } from '../../hooks/useMobile';
+import { IsMobile } from '../../App';
 
 
-const HeaderIntro = () => {
-  const { isMobile } = useMobile();
+const HeaderIntro = ({ isMobile }: IsMobile) => {
   const animateHeader = isMobile ? '' : 'animate-header';
   const animateHeaderDelay = isMobile ? '' : 'animate-headerDelay';
   const animateHeaderDelay2 = isMobile ? '' : 'animate-headerDelay2';
@@ -45,7 +42,7 @@ const HeaderIntro = () => {
         dynamiques et innovantes avec une solide{" "}
         <span className={`${styleKeyWords}`}>architecture</span>.
       </p>
-      <SocialsMedia />
+      <SocialsMedia isMobile={isMobile}/>
     </div>
   );
 }

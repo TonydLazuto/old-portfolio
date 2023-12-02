@@ -1,12 +1,10 @@
-import React from 'react'
 import projects from '../data/projects';
 import ProjectItemMobile from './micro-components/ProjectItemMobile';
 import ProjectItemDesktop from './micro-components/ProjectItemDesktop';
 import useObserver from '../hooks/useObserver';
-import { useMobile } from '../hooks/useMobile';
+import { IsMobile } from '../App';
 
-const Projects = () => {
-	const { isMobile } = useMobile();
+const Projects = ({ isMobile }: IsMobile) => {
 	const obsRef = useObserver({ isMobile });
 
 	return (
@@ -51,6 +49,7 @@ const Projects = () => {
                 link={project.link}
                 logoUrl={project.logoUrl}
                 linkName={project.linkName}
+                isMobile={isMobile}
               />
             ))
           : projects.map((project) => (
@@ -63,6 +62,7 @@ const Projects = () => {
                 details={project.details}
                 logoUrl={project.logoUrl}
                 link={project.link}
+                isMobile={isMobile}
               />
             ))}
       </div>

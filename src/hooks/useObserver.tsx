@@ -1,5 +1,4 @@
-import React, { RefObject, useEffect, useRef, useState } from 'react'
-import { useMobile } from './useMobile';
+import React, { useEffect, useRef, useState } from 'react'
 
 export interface UseObserver {
 	isMobile: boolean
@@ -9,7 +8,6 @@ const useObserver = (props: UseObserver) => {
   const [elementVisibility, setElementVisibility] = useState<boolean>();
   const { isMobile } = props;
   const obsRef = useRef<HTMLDivElement | null>(null);
-  const margin = isMobile ? '37%' : '7%';
 
   useEffect(() => {
     if (elementVisibility === undefined) return;
@@ -18,7 +16,7 @@ const useObserver = (props: UseObserver) => {
         obsRef.current.style.transition = 'visibility 300ms ease-out, opacity 300ms ease-out, transform 300ms ease-in';
         obsRef.current.style.opacity = '1';
         obsRef.current.style.transform = 'translateX(0)';
-        obsRef.current.style.visibility = 'visible'
+        obsRef.current.style.visibility = 'visible';
       };
 
     }
@@ -28,23 +26,25 @@ const useObserver = (props: UseObserver) => {
         obsRef.current.style.opacity = '0';
         obsRef.current.style.filter = 'drop-shadow(0 0 #0000)';
         obsRef.current.style.transform = 'translateX(-6rem)';
-        obsRef.current.style.visibility = 'hidden'
+        obsRef.current.style.visibility = 'hidden';
       };
     }
-  }, [elementVisibility])
+  }, [elementVisibility]);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
-      // only observe the first time
-      // if (isMobile && entry.isIntersecting) {
-      //   observer.unobserve(entry.target);
-      // }
+      console.log(isMobile, entry.isIntersecting);
+
+      // For Mobile => only observe the first time
+      if (isMobile && entry.isIntersecting) {
+        observer.unobserve(entry.target);
+      }
       setElementVisibility(entry.isIntersecting);
     },
     {
-      rootMargin: margin,
-      threshold: 0.8
+      rootMargin: '7%',
+      threshold: isMobile ? 0.8 : 1
     })
     if(obsRef.current) observer.observe(obsRef.current);
     return () => {
@@ -53,7 +53,7 @@ const useObserver = (props: UseObserver) => {
       }
     };
 
-  }, [obsRef]);
+  }, [obsRef, isMobile]);
 
   return obsRef;
 }

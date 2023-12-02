@@ -1,17 +1,15 @@
-import { useState } from "react";
 import useObserver from "../../hooks/useObserver";
 import StackItem, { StackItemProps } from "./StackItem";
-import { useMobile } from "../../hooks/useMobile";
 
 interface StackSectionProps {
     section: string;
     gradientColor: string;
     stacks: StackItemProps[];
+    isMobile: boolean;
 }
 
 const StackSection = (props: StackSectionProps) => {
-    const { section, stacks, gradientColor } = props;
-    const { isMobile } = useMobile();
+    const { section, stacks, gradientColor, isMobile } = props;
     const obsRefContainer = useObserver({ isMobile });
     const obsRef = useObserver({ isMobile });
 

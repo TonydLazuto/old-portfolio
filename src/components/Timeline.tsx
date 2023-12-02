@@ -1,11 +1,10 @@
+import { IsMobile } from '../App';
 import timeline from '../data/timeline';
-import { useMobile } from '../hooks/useMobile';
 import useObserver from '../hooks/useObserver';
 import TimelineItem from './micro-components/TimelineItem';
 import { Box } from '@mui/material';
 
-const Timeline = () => {
-    const { isMobile } = useMobile();
+const Timeline = ({ isMobile }: IsMobile) => {
     const obsRef = useObserver({ isMobile });
 
 	return (
@@ -43,6 +42,7 @@ const Timeline = () => {
             details={timeline.details}
             logoUrl={timeline.logoUrl}
             logoLink={timeline.logoLink}
+            isMobile={isMobile}
           />
         ))}
       </Box>

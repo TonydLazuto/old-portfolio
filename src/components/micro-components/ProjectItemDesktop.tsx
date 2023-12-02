@@ -2,7 +2,6 @@ import { Box, Link } from '@mui/material'
 import { useState } from 'react'
 import useObserver from '../../hooks/useObserver'
 import ProjectDetails from './ProjectDetails'
-import { useMobile } from '../../hooks/useMobile'
 
 export interface Project {
 	key: string
@@ -12,16 +11,16 @@ export interface Project {
 	stack: string[]
 	details: string[]
   link: string
-  logoUrl: string
+  logoUrl: string,
+  isMobile: boolean
 }
 const ProjectItemDesktop = (project: Project) => {
-	const { title, description, imgUrl, stack, details, link, logoUrl } = project;
+	const { title, description, imgUrl, stack, details, link, logoUrl, isMobile } = project;
 	const [hidden, setHidden] = useState('hidden');
 	const [projectItemClass, setProjectItemClass] = useState('');
 	const [imgClass, setImgClass] = useState('');
 
   const imgStyle = title === 'Portfolio' ? 'object-contain' : 'object-cover';
-    const { isMobile } = useMobile();
     const obsRef = useObserver({ isMobile });
 
 	const handleProjectHoverEnter = (e : React.MouseEvent<HTMLDivElement, MouseEvent>) => {

@@ -1,10 +1,8 @@
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { useState } from 'react';
-import { useMobile } from '../../hooks/useMobile';
+import { IsMobile } from '../../App';
 
-const SocialsMedia = () => {
-  const { isMobile } = useMobile();
+const SocialsMedia = ({ isMobile }: IsMobile) => {
   const animateHeaderDelay3 = isMobile ? '' : 'animate-headerDelay3';
 
 	return (
