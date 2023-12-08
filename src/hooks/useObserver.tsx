@@ -44,7 +44,7 @@ const useObserver = (props: UseObserver) => {
     },
     {
       rootMargin: '7%',
-      threshold: isMobile ? 0.8 : 1
+      threshold: 0.5
     })
     if(obsRef.current) observer.observe(obsRef.current);
     return () => {
