@@ -68,7 +68,7 @@ module.exports = {
           },
           "100%": {},
         },
-        stackItemHoverEnter: {
+        tooltipEnter: {
           "0%": {},
           "100%": {
             backdropFilter: "blur(2em)",
@@ -80,7 +80,7 @@ module.exports = {
             cursor: "pointer",
           },
         },
-        stackItemHoverLeave: {
+        tooltipLeave: {
           "0%": {
             backdropFilter: "blur(2em)",
             backgroundColor: "rgba(255, 255, 255, .3)",
@@ -110,8 +110,8 @@ module.exports = {
         projectImgHoverEnter: "projectImgHoverEnter 200ms ease-in-out forwards",
         projectImgHoverLeave: "projectImgHoverLeave 200ms ease-in-out forwards",
 
-        stackItemHoverEnter: "stackItemHoverEnter 100ms ease-out forwards",
-        stackItemHoverLeave: "stackItemHoverLeave 100ms ease-out forwards",
+        tooltipEnter: "tooltipEnter 100ms ease-out forwards",
+        tooltipLeave: "tooltipLeave 100ms ease-out forwards",
       },
       dropShadow: {
         "3xl": "0 10px 20px rgba(0,0,0,0.35)",

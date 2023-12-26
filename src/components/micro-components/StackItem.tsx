@@ -16,13 +16,13 @@ const StackItem = (stackItemProps: StackItemProps) => {
     e: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
     e.preventDefault();
-    setStackItemClass("animate-stackItemHoverEnter");
+    setStackItemClass("animate-tooltipEnter");
   };
   const handleStackHoverLeave = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
     e.preventDefault();
-    setStackItemClass("animate-stackItemHoverLeave");
+    setStackItemClass("animate-tooltipLeave");
   };
   return (
     <Tooltip
