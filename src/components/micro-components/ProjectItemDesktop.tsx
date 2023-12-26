@@ -63,19 +63,19 @@ const ProjectItemDesktop = (project: Project) => {
 					${imgStyle} ${imgClass}`}
           />
           <Box className="p-2">
-            <h3
+            <h2
               className="text-lg md:text-xl
 							mb-2 md:mb-3 font-semibold"
             >
               {title}
-            </h3>
-            <h4
+            </h2>
+            <h3
               className={`text-base md:text-lg
 							mb-2 md:mb-3
 							animate-projectDescriptionPop ${hidden}`}
             >
               {description}
-            </h4>
+            </h3>
             <Box
               className="flex flex-wrap gap-2
 							flex-row items-center justify-start text-xs md:text-sm"

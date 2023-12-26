@@ -6,7 +6,7 @@ const HeaderIntro = ({ isMobile }: IsMobile) => {
   const animateHeader = isMobile ? '' : 'animate-header';
   const animateHeaderDelay = isMobile ? '' : 'animate-headerDelay';
   const animateHeaderDelay2 = isMobile ? '' : 'animate-headerDelay2';
-  const styleKeyWords = 'text-sky-600 font-semibold';
+  const styleKeyWords = 'text-keyWordIntro font-semibold';
 
   return (
     <div
@@ -24,7 +24,7 @@ const HeaderIntro = ({ isMobile }: IsMobile) => {
         mb-1 md:mb-3
         ${animateHeaderDelay}`}
       >
-        Je suis <span className="text-blue-800 font-semibold">Anthony</span>,<br />
+        Je suis <span className="text-nameIntro font-semibold">Anthony</span>,<br />
         Développeur full-stack
       </h1>
       <p

@@ -42,12 +42,12 @@ const TimelineItem = (timeline: Timeline) => {
             >
               {year}
             </span>
-            <h3
+            <h2
               className="text-base md:text-lg font-semibold text-stone-900
 							drop-shadow-4xl"
             >
               {title}
-            </h3>
+            </h2>
             <Link href={logoLink}
               className={`transition duration-300 ease-in-out
                 transform hover:scale-110 hover:-translate-y-1
@@ -62,7 +62,7 @@ const TimelineItem = (timeline: Timeline) => {
             </Link>
             <div
               className="text-xs md:text-sm font-normal leading-none
-							text-stone-400"
+							text-durationTimeline"
             >
               {duration}
             </div>

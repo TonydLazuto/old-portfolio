@@ -14,6 +14,9 @@ module.exports = {
       colors: {
         shade0: "#1A1E38",
         shade1: "#C0C0F2",
+        nameIntro: "#D4DFE8",
+        keyWordIntro: "#35B7F3",
+        durationTimeline: "#3A4D6E"
       },
       fontFamily: {
         display: ["Brush Script MT", "serif", "courier", "comic sans ms"],
