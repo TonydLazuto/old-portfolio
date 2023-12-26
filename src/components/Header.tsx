@@ -8,7 +8,7 @@ interface Header {
 const Header = ({ obsRef, isMobile }: Header) => {
 
   const animatePicturePop = isMobile ? '' : 'animate-picturePop';
-  const profilePicPath = isMobile ? '/assets/profile-pic-mobile.avif' : '/assets/profile-pic.avif';
+  const profilePicPath = isMobile ? '/assets/profile-pic-mobile.png' : '/assets/profile-pic.png';
   const profilePicWidth = isMobile ? '' : 'md:w-4/5 w-1/2';
   return (
     <div
