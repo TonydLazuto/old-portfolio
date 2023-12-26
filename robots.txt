@@ -1,4 +1,2 @@
-# start of file
-User-agent: *
-Disallow: /private/
-Disallow: /temp/
+user-agent: *
+disallow:
