@@ -31,7 +31,7 @@ const Projects = ({ isMobile }: IsMobile) => {
         Projets
       </h1>
       <div
-        className="w-11/12 md:w-3/4 m-auto flex
+        className="w-11/12 m-auto flex
 				flex-col md:flex-row
 				items-center md:items-start
 				justify-center flex-wrap gap-14"
