@@ -15,9 +15,6 @@ module.exports = {
         shade0: "#1A1E38",
         shade1: "#C0C0F2",
       },
-      backgroundImage: {
-        "intro-bg": "url('/img/intro-bg.png')",
-      },
       fontFamily: {
         display: ["Brush Script MT", "serif", "courier", "comic sans ms"],
       },

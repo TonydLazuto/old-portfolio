@@ -56,26 +56,26 @@ const ProjectItemMobile = (project: Project) => {
     <Box
       ref={obsRef}
       className={`rounded-md overflow drop-shadow-3xl
-				w-4/5 md:w-96 mb-4 ${projectItemClass}`}
+				w-4/5 mb-4 ${projectItemClass}`}
       onClick={toggleProjectDescription}
     >
         <Box>
           <img
             src={imgUrl}
             alt="project"
-            className={`w-full md:min-h-full h-80 md:h-72 rounded-t-lg
+            className={`w-full h-80 rounded-t-lg
 					${imgStyle} ${imgClass}`}
           />
           <Box className="p-2">
             <h3
               className="text-lg md:text-xl
-							mb-2 md:mb-3 font-semibold"
+							mb-2 font-semibold"
             >
               {title}
             </h3>
             <h4
               className={`text-base md:text-lg
-							mb-2 md:mb-3
+							mb-2
 							animate-projectDescriptionPop ${hidden}`}
             >
               {description}

@@ -3,7 +3,7 @@ export default [
     title: "Acenstream",
     description:
       "Application de diffusion de flux de médias, vers des écrans connectés à des Raspberry.",
-    imgUrl: "/assets/raspberry.png",
+    imgUrl: "/assets/raspberry.avif",
     stack: [
       "React",
       "Node",
@@ -19,14 +19,14 @@ export default [
       "Une interface est disponible pour les admnistrateurs qui souhaiteraient inspecter l'état de chaque raspberry disponible à l'application.",
     ],
     link: "https://www.acensi.fr/",
-    logoUrl: "/assets/logos/acensi_logo.png",
+    logoUrl: "/assets/logos/acensi_logo.avif",
     linkName: "acensi.fr"
   },
   {
     title: "Syneryx",
     description:
       "Outil de gestion de parcs (licences, utilisateurs, appareils, boites mails, sms).",
-    imgUrl: "/assets/syneryx.png",
+    imgUrl: "/assets/syneryx.avif",
     stack: [
       "React",
       "Node",
@@ -41,7 +41,7 @@ export default [
       "Syneryx est une plateforme de gestion des différentes machines, serveurs internes et externes. L'objectif principal est de simplifier la gestion des actifs.",
     ],
     link: "https://www.acensi.fr/",
-    logoUrl: "/assets/logos/acensi_logo.png",
+    logoUrl: "/assets/logos/acensi_logo.avif",
     linkName: "acensi.fr"
   },
   {
@@ -64,14 +64,14 @@ export default [
       "Création d'un chat avec des channels (privés/public) et des rôles pour les utilisateurs.",
     ],
     link: "https://github.com/TonydLazuto/ft_transcendence",
-    logoUrl: "/assets/logos/42_logo.png",
+    logoUrl: "/assets/logos/42_logo.avif",
     linkName: "code source"
   },
   {
     title: "Inception",
     description:
       "Mise en place d'une mini-infrastructure de services orchestrés par docker-compose.",
-    imgUrl: "/assets/inception.png",
+    imgUrl: "/assets/inception.avif",
     stack: ["Docker", "Docker-compose", "Nginx", "Wordpress", "Mariadb"],
     details: [
       "Toutes les images Docker ont été build à partir de Dockerfile, sans DockerHub :",
@@ -80,14 +80,14 @@ export default [
       "Un network établit la connexion entre tous ces services.",
     ],
     link: "https://github.com/TonydLazuto/inception",
-    logoUrl: "/assets/logos/42_logo.png",
+    logoUrl: "/assets/logos/42_logo.avif",
     linkName: "code source"
   },
   {
     title: "Irc",
     description:
       "Développement d'un serveur IRC (Internet Relay Chat) incluant la communication instantanée par des channels ou par messages privés.",
-    imgUrl: "/assets/irssi.png",
+    imgUrl: "/assets/irssi.avif",
     stack: ["C++"],
     details: [
       "L'objectif ici est de gérer la connexion TCP/IP entre le client et le serveur.",
@@ -95,14 +95,14 @@ export default [
       "L'utilisation du client de référence (Irssi) pour ce serveur est similaire à l'utilisation d'un serveur IRC officiel en reprenant les principales fonctionnalités.",
     ],
     link: "https://github.com/TonydLazuto/ft_irc",
-    logoUrl: "/assets/logos/42_logo.png",
+    logoUrl: "/assets/logos/42_logo.avif",
     linkName: "code source"
   },
   {
     title: "Containers",
     description:
       "Implémentation de 3 bibliothèques de la STL dont un arbre binaire de recherche automatiquement équilibré.",
-    imgUrl: "/assets/bst.png",
+    imgUrl: "/assets/bst.avif",
     stack: ["C++"],
     details: [
       "Dans ce projet on a ré-implémenter les containers vector stack et map de la STL (Standard Template Library) en C++",
@@ -110,7 +110,7 @@ export default [
       "On a surtout eu l'occasion de mettre en place un arbre binaire automatiquement équilibré",
     ],
     link: "https://github.com/TonydLazuto/ft_containers",
-    logoUrl: "/assets/logos/42_logo.png",
+    logoUrl: "/assets/logos/42_logo.avif",
     linkName: "code source"
   }
 ];
