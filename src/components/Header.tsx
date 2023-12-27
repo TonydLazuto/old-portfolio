@@ -8,7 +8,6 @@ interface Header {
 const Header = ({ obsRef, isMobile }: Header) => {
 
   const animatePicturePop = isMobile ? '' : 'animate-picturePop';
-  const profilePicPath = isMobile ? '/assets/profile-pic-mobile.png' : '/assets/profile-pic.png';
   const profilePicWidth = isMobile ? '' : 'md:w-4/5 w-1/2';
   return (
     <div
@@ -34,7 +33,7 @@ const Header = ({ obsRef, isMobile }: Header) => {
           flex justify-center items-center
           ${animatePicturePop}`}>
           <img
-            src={profilePicPath}
+            src='/assets/profile-pic.png'
             alt="profile-pic"
             className={`drop-shadow-4xl ${profilePicWidth}`}
           />

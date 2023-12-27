@@ -34,8 +34,6 @@ const useObserver = (props: UseObserver) => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
-      console.log(isMobile, entry.isIntersecting);
-
       // For Mobile => only observe the first time
       if (isMobile && entry.isIntersecting) {
         observer.unobserve(entry.target);
