@@ -8,7 +8,6 @@ interface Header {
 
 const Header = ({ obsRef, isMobile }: Header) => {
   const animatePicturePop = isMobile ? "" : "animate-picturePop";
-  const profilePicWidth = isMobile ? "" : "md:w-4/5 w-1/2";
   const { urlEndpoint } = imageKit;
 
   return (
@@ -39,7 +38,7 @@ const Header = ({ obsRef, isMobile }: Header) => {
           <img
             src={`${urlEndpoint}/profile-pic.png`}
             alt="profile-pic"
-            className={`drop-shadow-4xl w-56 md:w-80 ${profilePicWidth}`}
+            className='drop-shadow-2xl w-64 md:w-80'
           />
         </div>
       </div>

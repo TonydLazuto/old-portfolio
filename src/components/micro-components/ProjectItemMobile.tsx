@@ -43,12 +43,12 @@ const ProjectItemMobile = (project: Project) => {
   const toggleProjectDescription = () => {
     if (hidden) {
       setHidden('');
-      setProjectItemClass('animate-projectHoverEnter');
+      setProjectItemClass('animate-projectHoverEnterMobile');
       setImgClass('animate-projectImgHoverEnter');
     }
     else {
       setHidden('hidden');
-      setProjectItemClass('animate-projectHoverLeave');
+      setProjectItemClass('animate-projectHoverLeaveMobile');
       setImgClass('animate-projectImgHoverLeave');
     }
   };
@@ -56,16 +56,18 @@ const ProjectItemMobile = (project: Project) => {
 	return (
     <Box
       ref={obsRef}
-      className={`rounded-md overflow drop-shadow-3xl
-				w-72 mb-4 ${projectItemClass}`}
+      className={`rounded-md
+				w-80 mb-4 ${projectItemClass}`}
       onClick={toggleProjectDescription}
     >
         <Box>
           <img
-            src={`${urlEndpoint}/tr:ar-4-3/${imgUrl}`}
+            src={`${urlEndpoint}/tr:ar-4-3/mobiles/${imgUrl}`}
             alt="project"
             className={`rounded-t-lg object-cover ${imgClass}
-            w-72 h-52`}
+            w-80 h-52`}
+            srcSet={`${urlEndpoint}/tr:ar-4-3/mobiles/${imgUrl}`}
+            sizes='288px'
           />
           <Box className="p-2">
             <h2

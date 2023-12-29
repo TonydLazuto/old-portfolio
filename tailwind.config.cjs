@@ -57,6 +57,24 @@ module.exports = {
           },
           "100%": {},
         },
+        projectHoverEnterMobile: {
+          "0%": {},
+          "100%": {
+            borderRadius: "1rem",
+            backgroundColor: "#fcfbf7",
+            filter: "filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.25))",
+            padding: "0.7rem",
+          },
+        },
+        projectHoverLeaveMobile: {
+          "0%": {
+            borderRadius: "1rem",
+            backgroundColor: "#fcfbf7",
+            filter: "filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.25))",
+            padding: "0.7rem",
+          },
+          "100%": {},
+        },
         projectImgHoverEnter: {
           "0%": {},
           "100%": {
@@ -108,6 +126,8 @@ module.exports = {
 
         projectHoverEnter: "projectHoverEnter 200ms ease-in-out forwards",
         projectHoverLeave: "projectHoverLeave 200ms ease-in-out forwards",
+        projectHoverEnterMobile: "projectHoverEnterMobile 200ms ease-in-out forwards",
+        projectHoverLeaveMobile: "projectHoverLeaveMobile 200ms ease-in-out forwards",
         projectImgHoverEnter: "projectImgHoverEnter 200ms ease-in-out forwards",
         projectImgHoverLeave: "projectImgHoverLeave 200ms ease-in-out forwards",
 
