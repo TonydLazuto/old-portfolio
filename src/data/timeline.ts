@@ -10,7 +10,7 @@ export default [
       "Développement de projets en environnement agile au sein d'équipes composées d'environ six développeurs.",
       "Participation active à la planification/revue de sprints, à la rédaction de spécifications techniques, et à la résolution des problèmes tout au long des cycles.",
     ],
-    logoUrl: "/assets/logos/acensi_logo.png",
+    logoUrl: "acensi_logo.png",
     logoLink: "https://www.acensi.fr/"
   },
   {
@@ -23,7 +23,7 @@ export default [
       "Gestion des processus UNIX et des threads.",
       "Programmation orientée objet, comprenant un projet client-serveur",
     ],
-    logoUrl: "/assets/logos/42_logo.png",
+    logoUrl: "42_logo.png",
     logoLink: "https://42.fr/",
   },
   {
@@ -35,7 +35,7 @@ export default [
       "Mise à jour de schémas électriques unifilaires sur plans 2D (logiciel de CAO MicroStation, équivalent d'AutoCAD).",
       "Exécution de requêtes sur la base de données interne de l'entreprise pour générer des rapports.",
     ],
-    logoUrl: "/assets/logos/enedis_logo.png",
+    logoUrl: "enedis_logo.png",
     logoLink: "https://www.enedis.fr/",
   },
 ];

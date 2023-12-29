@@ -3,6 +3,7 @@ import { useState } from 'react'
 import useObserver from '../../hooks/useObserver'
 import ProjectDetails from './ProjectDetails'
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import imageKit from '../../data/imagekit';
 
 export interface Project {
 	key: string
@@ -32,8 +33,8 @@ const ProjectItemMobile = (project: Project) => {
 	const [projectItemClass, setProjectItemClass] = useState('');
 	const [imgClass, setImgClass] = useState('');
 
-  const imgStyle = title === 'Portfolio' ? 'object-contain' : 'object-cover';
   const obsRef = useObserver({ isMobile });
+  const { urlEndpoint } = imageKit;
 
 	// const handleProjectDetails = (e : React.MouseEvent<HTMLDivElement, MouseEvent>) => {
 	// 	e.preventDefault();
@@ -56,15 +57,15 @@ const ProjectItemMobile = (project: Project) => {
     <Box
       ref={obsRef}
       className={`rounded-md overflow drop-shadow-3xl
-				w-4/5 mb-4 ${projectItemClass}`}
+				w-72 mb-4 ${projectItemClass}`}
       onClick={toggleProjectDescription}
     >
         <Box>
           <img
-            src={imgUrl}
+            src={`${urlEndpoint}/tr:ar-4-3/${imgUrl}`}
             alt="project"
-            className={`w-full h-80 rounded-t-lg
-					${imgStyle} ${imgClass}`}
+            className={`rounded-t-lg object-cover ${imgClass}
+            w-72 h-52`}
           />
           <Box className="p-2">
             <h2
@@ -96,7 +97,7 @@ const ProjectItemMobile = (project: Project) => {
             </Box>
             <div className='flex justify-end mt-4'>
               <img
-                src={logoUrl}
+                src={`${urlEndpoint}/${logoUrl}`}
                 alt={title}
                 className={`max-w-fit max-h-6
                 ${title === 'Acenstream' || title === 'Syneryx' ? 'w-12': 'w-4'} `} // aim at 42logo size

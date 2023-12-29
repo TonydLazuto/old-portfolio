@@ -31,8 +31,8 @@ const Header = ({ obsRef, isMobile }: Header) => {
       >
         <HeaderIntro isMobile={isMobile} />
         <div
-          className={`w-3/4 md:w-96
-          h-auto md:h-full
+          className={`w-60 md:w-96
+          h-auto md:h-96
           flex justify-center items-center
           ${animatePicturePop}`}
         >

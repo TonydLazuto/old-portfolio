@@ -2,6 +2,7 @@ import { Box, Link } from '@mui/material'
 import { useState } from 'react'
 import useObserver from '../../hooks/useObserver'
 import ProjectDetails from './ProjectDetails'
+import imageKit from '../../data/imagekit';
 
 export interface Project {
 	key: string
@@ -20,8 +21,8 @@ const ProjectItemDesktop = (project: Project) => {
 	const [projectItemClass, setProjectItemClass] = useState('');
 	const [imgClass, setImgClass] = useState('');
 
-  const imgStyle = title === 'Portfolio' ? 'object-contain' : 'object-cover';
-    const obsRef = useObserver({ isMobile });
+  const obsRef = useObserver({ isMobile });
+  const { urlEndpoint } = imageKit;
 
 	const handleProjectHoverEnter = (e : React.MouseEvent<HTMLDivElement, MouseEvent>) => {
 		e.preventDefault();
@@ -48,7 +49,7 @@ const ProjectItemDesktop = (project: Project) => {
     <Box
       ref={obsRef}
       className={`rounded-md overflow drop-shadow-3xl
-				w-4/5 md:w-96 mb-4 ${projectItemClass}`}
+				w-112 md:w-96 mb-4 ${projectItemClass}`}
       onMouseEnter={handleProjectHoverEnter}
       onMouseLeave={handleProjectHoverLeave}
     >
@@ -57,10 +58,10 @@ const ProjectItemDesktop = (project: Project) => {
         // onClick={handleProjectDetails}
         >
           <img
-            src={imgUrl}
+            src={`${urlEndpoint}/tr:ar-4-3/${imgUrl}`}
             alt="project"
-            className={`w-full md:min-h-full h-80 md:h-72 rounded-t-lg
-					${imgStyle} ${imgClass}`}
+            className={`rounded-t-lg object-cover ${imgClass}
+              w-112 h-72 md:w-96 md:h-64`}
           />
           <Box className="p-2">
             <h2
@@ -92,7 +93,7 @@ const ProjectItemDesktop = (project: Project) => {
             </Box>
             <div className='flex justify-end mt-4'>
               <img
-                src={logoUrl}
+                src={`${urlEndpoint}/${logoUrl}`}
                 alt={title}
                 className='
                 w-12 max-w-fit max-h-6'
