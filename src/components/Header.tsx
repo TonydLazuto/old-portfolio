@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import HeaderIntro from "./micro-components/HeaderIntro";
+import LazyImg from "./micro-components/lazyImg";
 
 interface Header {
   obsRef: React.RefObject<HTMLDivElement>;
@@ -8,19 +9,12 @@ interface Header {
 
 const Header = ({ obsRef, isMobile }: Header) => {
   const animatePicturePop = isMobile ? "" : "animate-picturePop";
-
-  const [loaded, setLoaded] = useState(false);
-  const [imgClass, setImgClass] = useState('opacity-0');
-  const [containerImgClass, setContainerImgClass] = useState('blur-md');
-  const handleLoading = () => setLoaded(true);
-
-  useEffect(() => {
-    console.log(loaded);
-    if (loaded) {
-      setImgClass('opacity-1');
-      setContainerImgClass('');
-    }
-  }, [loaded]);
+  const lazyBgUrl = "/assets/small/profile-pic.png";
+  const lazyBgClass = "rounded-full w-64 h-64 md:w-80 md:h-80";
+  const lazyImgUrl = "/assets/profile-pic.png"
+  const lazyAltImg = 'profile-pic';
+  const lazyImgClass =
+    "drop-shadow-2xl w-64 h-64 md:h-80 md:w-80 transition duration-200 ease-in";
 
   return (
     <div
@@ -46,22 +40,13 @@ const Header = ({ obsRef, isMobile }: Header) => {
           flex justify-center items-center
           ${animatePicturePop}`}
         >
-          <div
-            className={`bg-[url('/assets/small/profile-pic.png')]
-            bg-no-repeat bg-cover rounded-full
-            w-64 h-64 md:w-80 md:h-80 ${containerImgClass}`}
-          >
-            <img
-              src={`assets/webp/profile-pic.webp`}
-              alt="profile-pic"
-              className={`drop-shadow-2xl
-                w-64 h-64 md:h-80 md:w-80
-                ${imgClass}
-                transition duration-200 ease-in`}
-              onLoad={handleLoading}
-              loading='lazy'
-            />
-          </div>
+          <LazyImg
+            lazyBgUrl={lazyBgUrl}
+            lazyBgClass={lazyBgClass}
+            lazyImgUrl={lazyImgUrl}
+            lazyAltImg={lazyAltImg}
+            lazyImgClass={lazyImgClass}
+          />
         </div>
       </div>
       <div
