@@ -65,9 +65,7 @@ const ProjectItemMobile = (project: Project) => {
             src={`${urlEndpoint}/tr:ar-4-3/mobiles/${imgUrl}`}
             alt="project"
             className={`rounded-t-lg object-cover ${imgClass}
-            w-80 h-52`}
-            srcSet={`${urlEndpoint}/tr:ar-4-3/mobiles/${imgUrl}`}
-            sizes='288px'
+              w-80 h-52`}
           />
           <Box className="p-2">
             <h2
@@ -103,6 +101,7 @@ const ProjectItemMobile = (project: Project) => {
                 alt={title}
                 className={`max-w-fit max-h-6
                 ${title === 'Acenstream' || title === 'Syneryx' ? 'w-12': 'w-4'} `} // aim at 42logo size
+                loading='lazy'
               />
             </div>
             <div className={`${hidden} animate-projectDescriptionPop mt-4`}>

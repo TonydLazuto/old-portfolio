@@ -1,4 +1,4 @@
-import imageKit from "../data/imagekit";
+import { useEffect, useState } from "react";
 import HeaderIntro from "./micro-components/HeaderIntro";
 
 interface Header {
@@ -8,7 +8,19 @@ interface Header {
 
 const Header = ({ obsRef, isMobile }: Header) => {
   const animatePicturePop = isMobile ? "" : "animate-picturePop";
-  const { urlEndpoint } = imageKit;
+
+  const [loaded, setLoaded] = useState(false);
+  const [imgClass, setImgClass] = useState('opacity-0');
+  const [containerImgClass, setContainerImgClass] = useState('blur-md');
+  const handleLoading = () => setLoaded(true);
+
+  useEffect(() => {
+    console.log(loaded);
+    if (loaded) {
+      setImgClass('opacity-1');
+      setContainerImgClass('');
+    }
+  }, [loaded]);
 
   return (
     <div
@@ -30,16 +42,26 @@ const Header = ({ obsRef, isMobile }: Header) => {
       >
         <HeaderIntro isMobile={isMobile} />
         <div
-          className={`w-60 md:w-96
-          h-auto md:h-96
+          className={`w-64 h-64 md:w-96 md:h-96
           flex justify-center items-center
           ${animatePicturePop}`}
         >
-          <img
-            src={`${urlEndpoint}/profile-pic.png`}
-            alt="profile-pic"
-            className='drop-shadow-2xl w-64 md:w-80'
-          />
+          <div
+            className={`bg-[url('/assets/small/profile-pic.png')]
+            bg-no-repeat bg-cover rounded-full
+            w-64 h-64 md:w-80 md:h-80 ${containerImgClass}`}
+          >
+            <img
+              src={`assets/profile-pic.png`}
+              alt="profile-pic"
+              className={`drop-shadow-2xl
+                w-64 h-64 md:h-80 md:w-80
+                ${imgClass}
+                transition duration-200 ease-in`}
+              onLoad={handleLoading}
+              loading='lazy'
+            />
+          </div>
         </div>
       </div>
       <div
