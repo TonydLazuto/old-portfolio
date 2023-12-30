@@ -52,7 +52,7 @@ const Header = ({ obsRef, isMobile }: Header) => {
             w-64 h-64 md:w-80 md:h-80 ${containerImgClass}`}
           >
             <img
-              src={`assets/profile-pic.png`}
+              src={`assets/webp/profile-pic.webp`}
               alt="profile-pic"
               className={`drop-shadow-2xl
                 w-64 h-64 md:h-80 md:w-80
