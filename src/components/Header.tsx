@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import HeaderIntro from "./micro-components/HeaderIntro";
-import LazyImg from "./micro-components/lazyImg";
+import LazyImg from "./micro-components/LazyImg";
+
 
 interface Header {
   obsRef: React.RefObject<HTMLDivElement>;
@@ -9,12 +10,6 @@ interface Header {
 
 const Header = ({ obsRef, isMobile }: Header) => {
   const animatePicturePop = isMobile ? "" : "animate-picturePop";
-  const lazyBgUrl = "/assets/small/profile-pic.png";
-  const lazyBgClass = "rounded-full w-64 h-64 md:w-80 md:h-80";
-  const lazyImgUrl = "/assets/profile-pic.png"
-  const lazyAltImg = 'profile-pic';
-  const lazyImgClass =
-    "drop-shadow-2xl w-64 h-64 md:h-80 md:w-80 transition duration-200 ease-in";
 
   return (
     <div
@@ -41,11 +36,11 @@ const Header = ({ obsRef, isMobile }: Header) => {
           ${animatePicturePop}`}
         >
           <LazyImg
-            lazyBgUrl={lazyBgUrl}
-            lazyBgClass={lazyBgClass}
-            lazyImgUrl={lazyImgUrl}
-            lazyAltImg={lazyAltImg}
-            lazyImgClass={lazyImgClass}
+            lazyBgUrl="bg-[url('/assets/small/profile-pic.webp')]"
+            lazyBgClass="rounded-full w-64 h-64 md:w-80 md:h-80"
+            lazyImgUrl="/assets/webp/profile-pic.webp"
+            lazyAltImg="profile-pic"
+            lazyImgClass="drop-shadow-2xl w-64 h-64 md:h-80 md:w-80 transition duration-200 ease-in"
           />
         </div>
       </div>

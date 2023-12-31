@@ -4,6 +4,7 @@ import useObserver from '../../hooks/useObserver'
 import ProjectDetails from './ProjectDetails'
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import imageKit from '../../data/imagekit';
+import LazyImg from './LazyImg';
 
 export interface Project {
 	key: string
@@ -15,7 +16,8 @@ export interface Project {
   link: string
   linkName: string
   logoUrl: string
-  isMobile: boolean
+  isMobile: boolean,
+  bgLazy: string
 }
 const ProjectItemMobile = (project: Project) => {
 	const {
@@ -27,15 +29,16 @@ const ProjectItemMobile = (project: Project) => {
     link,
     linkName,
     logoUrl,
-    isMobile
+    isMobile,
+    bgLazy
   } = project;
 	const [hidden, setHidden] = useState('hidden');
 	const [projectItemClass, setProjectItemClass] = useState('');
 	const [imgClass, setImgClass] = useState('');
+	const [projectContainerClass, setProjectContainerClass] = useState('');
 
   const obsRef = useObserver({ isMobile });
   const { urlEndpoint } = imageKit;
-
 	// const handleProjectDetails = (e : React.MouseEvent<HTMLDivElement, MouseEvent>) => {
 	// 	e.preventDefault();
 	// }
@@ -44,11 +47,13 @@ const ProjectItemMobile = (project: Project) => {
     if (hidden) {
       setHidden('');
       setProjectItemClass('animate-projectHoverEnterMobile');
+      setProjectContainerClass('animate-projectContainerHoverEnter');
       setImgClass('animate-projectImgHoverEnter');
     }
     else {
       setHidden('hidden');
       setProjectItemClass('animate-projectHoverLeaveMobile');
+      setProjectContainerClass('animate-projectContainerHoverLeave');
       setImgClass('animate-projectImgHoverLeave');
     }
   };
@@ -56,18 +61,20 @@ const ProjectItemMobile = (project: Project) => {
 	return (
     <Box
       ref={obsRef}
-      className={`rounded-md
-				w-80 mb-4 ${projectItemClass}`}
+      className={`rounded-md w-80 mb-4 ${projectItemClass}`}
       onClick={toggleProjectDescription}
     >
         <Box>
-          <img
-            src={`${urlEndpoint}/tr:ar-4-3/mobiles/${imgUrl}`}
-            alt="project"
-            className={`rounded-t-lg object-cover ${imgClass}
+          <LazyImg
+            lazyBgUrl={bgLazy}
+            lazyBgClass={`${projectContainerClass}
+              w-80 h-52`}
+            lazyImgUrl={`/assets/webp/${imgUrl}`}
+            lazyAltImg={title}
+            lazyImgClass={`rounded-t-lg object-cover ${imgClass}
               w-80 h-52`}
           />
-          <Box className="p-2">
+          <Box className={`p-2 ${projectContainerClass}`}>
             <h2
               className="text-lg md:text-xl
 							mb-2 font-semibold"

@@ -49,6 +49,7 @@ const Projects = ({ isMobile }: IsMobile) => {
                 logoUrl={project.logoUrl}
                 linkName={project.linkName}
                 isMobile={isMobile}
+                bgLazy={project.bgLazy}
               />
             ))
           : projects.map((project) => (
@@ -62,6 +63,7 @@ const Projects = ({ isMobile }: IsMobile) => {
                 logoUrl={project.logoUrl}
                 link={project.link}
                 isMobile={isMobile}
+                bgLazy={project.bgLazy}
               />
             ))}
       </div>

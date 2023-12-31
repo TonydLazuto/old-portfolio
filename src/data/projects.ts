@@ -3,7 +3,7 @@ export default [
     title: "Acenstream",
     description:
       "Application de diffusion de flux de médias, vers des écrans connectés à des Raspberry.",
-    imgUrl: "raspberry.png",
+    imgUrl: "raspberry.webp",
     stack: [
       "React",
       "Node",
@@ -20,13 +20,14 @@ export default [
     ],
     link: "https://www.acensi.fr/",
     logoUrl: "acensi_logo.png",
-    linkName: "acensi.fr"
+    linkName: "acensi.fr",
+    bgLazy: 'bg-small-raspberry'
   },
   {
     title: "Syneryx",
     description:
       "Outil de gestion de parcs (licences, utilisateurs, appareils, boites mails, sms).",
-    imgUrl: "syneryx.png",
+    imgUrl: "syneryx.webp",
     stack: [
       "React",
       "Node",
@@ -42,13 +43,14 @@ export default [
     ],
     link: "https://www.acensi.fr/",
     logoUrl: "acensi_logo.png",
-    linkName: "acensi.fr"
+    linkName: "acensi.fr",
+    bgLazy: 'bg-small-syneryx'
   },
   {
     title: "Transcendence",
     description:
       "Jeu PONG revisité intégrant un système de MatchMaking pour défier d'autres utilisateurs et un chat en temps réel.",
-    imgUrl: "Transcendence-project.jpg",
+    imgUrl: "Transcendence-project.webp",
     stack: [
       "React",
       "Nest",
@@ -65,13 +67,14 @@ export default [
     ],
     link: "https://github.com/TonydLazuto/ft_transcendence",
     logoUrl: "42_logo.png",
-    linkName: "code source"
+    linkName: "code source",
+    bgLazy: 'bg-small-Transcendence-project'
   },
   {
     title: "Inception",
     description:
       "Mise en place d'une mini-infrastructure de services orchestrés par docker-compose.",
-    imgUrl: "inception.png",
+    imgUrl: "inception.webp",
     stack: ["Docker", "Docker-compose", "Nginx", "Wordpress", "Mariadb"],
     details: [
       "Toutes les images Docker ont été build à partir de Dockerfile, sans DockerHub :",
@@ -81,13 +84,14 @@ export default [
     ],
     link: "https://github.com/TonydLazuto/inception",
     logoUrl: "42_logo.png",
-    linkName: "code source"
+    linkName: "code source",
+    bgLazy: 'bg-small-inception'
   },
   {
     title: "Irc",
     description:
       "Développement d'un serveur IRC (Internet Relay Chat) incluant la communication instantanée par des channels ou par messages privés.",
-    imgUrl: "irc_irssi.png",
+    imgUrl: "irc_irssi.webp",
     stack: ["C++"],
     details: [
       "L'objectif ici est de gérer la connexion TCP/IP entre le client et le serveur.",
@@ -96,13 +100,14 @@ export default [
     ],
     link: "https://github.com/TonydLazuto/ft_irc",
     logoUrl: "42_logo.png",
-    linkName: "code source"
+    linkName: "code source",
+    bgLazy: 'bg-small-irc_irssi'
   },
   {
     title: "Containers",
     description:
       "Implémentation de 3 bibliothèques de la STL dont un arbre binaire de recherche automatiquement équilibré.",
-    imgUrl: "bst.png",
+    imgUrl: "bst.webp",
     stack: ["C++"],
     details: [
       "Dans ce projet on a ré-implémenter les containers vector stack et map de la STL (Standard Template Library) en C++",
@@ -111,6 +116,7 @@ export default [
     ],
     link: "https://github.com/TonydLazuto/ft_containers",
     logoUrl: "42_logo.png",
-    linkName: "code source"
+    linkName: "code source",
+    bgLazy: 'bg-small-bst'
   }
 ];

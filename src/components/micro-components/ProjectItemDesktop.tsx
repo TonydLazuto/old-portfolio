@@ -3,7 +3,7 @@ import { useState } from 'react'
 import useObserver from '../../hooks/useObserver'
 import ProjectDetails from './ProjectDetails'
 import imageKit from '../../data/imagekit';
-
+import LazyImg from './LazyImg';
 export interface Project {
 	key: string
 	title: string
@@ -12,14 +12,26 @@ export interface Project {
 	stack: string[]
 	details: string[]
   link: string
-  logoUrl: string,
+  logoUrl: string
   isMobile: boolean
+  bgLazy: string
 }
 const ProjectItemDesktop = (project: Project) => {
-	const { title, description, imgUrl, stack, details, link, logoUrl, isMobile } = project;
+	const {
+    title,
+    description,
+    imgUrl,
+    stack,
+    details,
+    link,
+    logoUrl,
+    isMobile,
+    bgLazy,
+  } = project;
 	const [hidden, setHidden] = useState('hidden');
 	const [projectItemClass, setProjectItemClass] = useState('');
 	const [imgClass, setImgClass] = useState('');
+	const [projectContainerClass, setProjectContainerClass] = useState('');
 
   const obsRef = useObserver({ isMobile });
   const { urlEndpoint } = imageKit;
@@ -29,6 +41,7 @@ const ProjectItemDesktop = (project: Project) => {
 		if (hidden) {
 			setHidden('');
 			setProjectItemClass('animate-projectHoverEnter');
+      setProjectContainerClass('animate-projectContainerHoverEnter');
 			setImgClass('animate-projectImgHoverEnter');
 		}
 	}
@@ -37,6 +50,7 @@ const ProjectItemDesktop = (project: Project) => {
 		if (!hidden) {
 			setHidden('hidden');
 			setProjectItemClass('animate-projectHoverLeave');
+      setProjectContainerClass('animate-projectContainerHoverLeave');
 			setImgClass('animate-projectImgHoverLeave');
 		}
 	}
@@ -48,8 +62,7 @@ const ProjectItemDesktop = (project: Project) => {
 	return (
     <Box
       ref={obsRef}
-      className={`rounded-md overflow drop-shadow-3xl
-				w-112 md:w-96 mb-4 ${projectItemClass}`}
+      className={`rounded-md w-112 md:w-96 mb-4 ${projectItemClass}`}
       onMouseEnter={handleProjectHoverEnter}
       onMouseLeave={handleProjectHoverLeave}
     >
@@ -57,13 +70,16 @@ const ProjectItemDesktop = (project: Project) => {
         <Box
         // onClick={handleProjectDetails}
         >
-          <img
-            src={`${urlEndpoint}/tr:ar-4-3/${imgUrl}`}
-            alt="project"
-            className={`rounded-t-lg object-cover ${imgClass}
+           <LazyImg
+            lazyBgUrl={bgLazy}
+            lazyBgClass={`${projectContainerClass}
+              w-112 h-72 md:w-96 md:h-64`}
+            lazyImgUrl={`/assets/webp/${imgUrl}`}
+            lazyAltImg={title}
+            lazyImgClass={`rounded-t-lg object-cover ${imgClass}
               w-112 h-72 md:w-96 md:h-64`}
           />
-          <Box className="p-2">
+          <Box className={`p-2 ${projectContainerClass}`}>
             <h2
               className="text-lg md:text-xl
 							mb-2 md:mb-3 font-semibold"

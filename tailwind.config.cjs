@@ -22,6 +22,15 @@ module.exports = {
       fontFamily: {
         display: ["Brush Script MT", "serif", "courier", "comic sans ms"],
       },
+      backgroundImage: {
+        'small-bst': "url('/assets/small/bst.webp')",
+        'small-inception': "url('/assets/small/inception.webp')",
+        'small-irc_irssi': "url('/assets/small/irc_irssi.webp')",
+        'small-profile-pic': "url('/assets/small/profile-pic.webp')",
+        'small-raspberry': "url('/assets/small/raspberry.webp')",
+        'small-syneryx': "url('/assets/small/syneryx.webp')",
+        'small-Transcendence-project': "url('/assets/small/Transcendence-project.webp')",
+      },
       keyframes: {
         topToBottom: {
           "0%": { transform: "translateY(-30rem)", filter: "blur(2em)" },
@@ -45,7 +54,6 @@ module.exports = {
             borderRadius: "1rem",
             backgroundColor: "#fcfbf7",
             filter: "drop-shadow(0 25px 35px rgba(0,0,0,0.55))",
-            padding: "0.7rem",
           },
         },
         projectHoverLeave: {
@@ -53,7 +61,18 @@ module.exports = {
             borderRadius: "1rem",
             backgroundColor: "#fcfbf7",
             filter: "drop-shadow(0 25px 35px rgba(0,0,0,0.55))",
-            padding: "0.7rem",
+          },
+          "100%": {},
+        },
+        projectContainerHoverEnter: {
+          "0%": {},
+          "100%": {
+            padding: "1rem"
+          },
+        },
+        projectContainerHoverLeave: {
+          "0%": {
+            padding: "1rem"
           },
           "100%": {},
         },
@@ -126,6 +145,8 @@ module.exports = {
 
         projectHoverEnter: "projectHoverEnter 200ms ease-in-out forwards",
         projectHoverLeave: "projectHoverLeave 200ms ease-in-out forwards",
+        projectContainerHoverEnter: "projectContainerHoverEnter 200ms ease-in-out forwards",
+        projectContainerHoverLeave: "projectContainerHoverLeave 200ms ease-in-out forwards",
         projectHoverEnterMobile: "projectHoverEnterMobile 200ms ease-in-out forwards",
         projectHoverLeaveMobile: "projectHoverLeaveMobile 200ms ease-in-out forwards",
         projectImgHoverEnter: "projectImgHoverEnter 200ms ease-in-out forwards",

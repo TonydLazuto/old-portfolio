@@ -27,10 +27,16 @@ const LazyImg = ({
     }
   }, [loaded]);
 
+  useEffect(() => {
+    if (containerImgClass === "") {
+      setContainerImgClass("bg-none");
+    }
+  }, [containerImgClass]);
+
+
   return (
     <div
-      className={`bg-[url('${lazyBgUrl}')] ${lazyBgClass}
-        bg-no-repeat bg-cover ${containerImgClass}`}
+      className={`${lazyBgUrl} bg-no-repeat bg-cover ${lazyBgClass} ${containerImgClass}`}
     >
       <img
         src={`${lazyImgUrl}`}
@@ -43,4 +49,4 @@ const LazyImg = ({
   );
 };
 
-export default LazyImg
+export default LazyImg;
