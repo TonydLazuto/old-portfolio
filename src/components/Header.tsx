@@ -10,7 +10,7 @@ interface Header {
 
 const Header = ({ obsRef, isMobile }: Header) => {
   const animatePicturePop = isMobile ? "" : "animate-picturePop";
-
+  const lazyImgUrl = isMobile ? "/assets/mobiles/profile-pic.webp" : "/assets/webp/profile-pic.webp";
   return (
     <div
       ref={obsRef}
@@ -38,7 +38,7 @@ const Header = ({ obsRef, isMobile }: Header) => {
           <LazyImg
             lazyBgUrl="bg-[url('/assets/small/profile-pic.webp')]"
             lazyBgClass="rounded-full w-64 h-64 md:w-80 md:h-80"
-            lazyImgUrl="/assets/webp/profile-pic.webp"
+            lazyImgUrl={lazyImgUrl}
             lazyAltImg="profile-pic"
             lazyImgClass="drop-shadow-2xl w-64 h-64 md:h-80 md:w-80 transition duration-200 ease-in"
           />
