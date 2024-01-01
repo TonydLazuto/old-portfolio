@@ -1,4 +1,4 @@
-import React, { RefObject, useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export interface ArrowObserver {
   obsRef: React.RefObject<HTMLDivElement>

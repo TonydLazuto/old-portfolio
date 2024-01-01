@@ -1,7 +1,6 @@
 import { Box, Link } from '@mui/material'
 import { useState } from 'react'
 import useObserver from '../../hooks/useObserver'
-import ProjectDetails from './ProjectDetails'
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import imageKit from '../../data/imagekit';
 import LazyImg from './LazyImg';

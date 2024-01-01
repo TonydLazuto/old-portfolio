@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import HeaderIntro from "./micro-components/HeaderIntro";
 import LazyImg from "./micro-components/LazyImg";
 
@@ -31,16 +30,16 @@ const Header = ({ obsRef, isMobile }: Header) => {
       >
         <HeaderIntro isMobile={isMobile} />
         <div
-          className={`w-64 h-64 md:w-96 md:h-96
+          className={`w-48 h-48 md:w-96 md:h-96
           flex justify-center items-center
           ${animatePicturePop}`}
         >
           <LazyImg
             lazyBgUrl="bg-[url('/assets/small/profile-pic.webp')]"
-            lazyBgClass="rounded-full w-64 h-64 md:w-80 md:h-80"
+            lazyBgClass="rounded-full w-48 h-48 md:w-80 md:h-80"
             lazyImgUrl={lazyImgUrl}
             lazyAltImg="profile-pic"
-            lazyImgClass="drop-shadow-2xl w-64 h-64 md:h-80 md:w-80 transition duration-200 ease-in"
+            lazyImgClass="drop-shadow-2xl w-48 h-48 md:h-80 md:w-80 transition duration-200 ease-in"
           />
         </div>
       </div>
