@@ -1,7 +1,7 @@
 import { Box, Link } from '@mui/material'
 import { useState } from 'react'
 import useObserver from '../../hooks/useObserver'
-import imageKit from '../../data/imagekit';
+
 import LazyImg from './LazyImg';
 export interface Project {
 	key: string
@@ -33,7 +33,6 @@ const ProjectItemDesktop = (project: Project) => {
 	const [projectContainerClass, setProjectContainerClass] = useState('');
 
   const obsRef = useObserver({ isMobile });
-  const { urlEndpoint } = imageKit;
 
 	const handleProjectHoverEnter = (e : React.MouseEvent<HTMLDivElement, MouseEvent>) => {
 		e.preventDefault();
@@ -108,10 +107,10 @@ const ProjectItemDesktop = (project: Project) => {
             </Box>
             <div className='flex justify-end mt-4'>
               <img
-                src={`${urlEndpoint}/${logoUrl}`}
+                src={`/assets/logos/${logoUrl}`}
                 alt={title}
-                className='
-                w-12 max-w-fit max-h-6'
+                className={`max-w-fit
+                  ${logoUrl === 'acensi_logo.png' ? 'w-12 h-2' : 'w-4 h-4'}`}
               />
             </div>
           </Box>

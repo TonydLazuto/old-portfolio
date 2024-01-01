@@ -1,7 +1,6 @@
 import { Box, Link } from '@mui/material'
 import useObserver from '../../hooks/useObserver'
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
-import imageKit from '../../data/imagekit';
 export interface Timeline {
 	key: string
 	year: string
@@ -19,8 +18,7 @@ const TimelineItem = (timeline: Timeline) => {
 
 	const obsRefContainer = useObserver({ isMobile });
 	const obsRef = useObserver({ isMobile });
-  const { urlEndpoint } = imageKit;
-  
+
 	return (
     <Box
       ref={obsRefContainer}
@@ -57,10 +55,10 @@ const TimelineItem = (timeline: Timeline) => {
                 ${year === '2020' ? 'w-4' : ''}`} // aim at 42logo size
             >
               <img
-                src={`${urlEndpoint}/${logoUrl}`}
+                src={`/assets/logos/${logoUrl}`}
                 alt="logo_company"
-                className={`max-w-fit max-h-6
-                  ${year === '2020' ? 'w-4' : 'w-16'}`} // aim at 42logo size
+                className={`max-w-fit
+                  ${year === '2020' ? 'w-4 h-4' : 'w-12 h-2'}`} // aim at 42logo size
               />
             </Link>
             <div

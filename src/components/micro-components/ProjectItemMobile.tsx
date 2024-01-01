@@ -2,7 +2,6 @@ import { Box, Link } from '@mui/material'
 import { useState } from 'react'
 import useObserver from '../../hooks/useObserver'
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
-import imageKit from '../../data/imagekit';
 import LazyImg from './LazyImg';
 
 export interface Project {
@@ -37,7 +36,6 @@ const ProjectItemMobile = (project: Project) => {
 	const [projectContainerClass, setProjectContainerClass] = useState('');
 
   const obsRef = useObserver({ isMobile });
-  const { urlEndpoint } = imageKit;
 	// const handleProjectDetails = (e : React.MouseEvent<HTMLDivElement, MouseEvent>) => {
 	// 	e.preventDefault();
 	// }
@@ -103,10 +101,10 @@ const ProjectItemMobile = (project: Project) => {
             </Box>
             <div className='flex justify-end mt-4'>
               <img
-                src={`${urlEndpoint}/${logoUrl}`}
+                src={`/assets/logos/${logoUrl}`}
                 alt={title}
-                className={`max-w-fit max-h-6
-                ${title === 'Acenstream' || title === 'Syneryx' ? 'w-12': 'w-4'} `} // aim at 42logo size
+                className={`max-w-fit
+                ${logoUrl === 'acensi_logo.png' ? 'w-12 h-2': 'w-4 h-4'} `} // aim at 42logo size
                 loading='lazy'
               />
             </div>
