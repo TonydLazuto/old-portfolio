@@ -1,6 +1,4 @@
 import HeaderIntro from "./micro-components/HeaderIntro";
-import LazyImg from "./micro-components/LazyImg";
-
 
 interface Header {
   obsRef: React.RefObject<HTMLDivElement>;
@@ -9,7 +7,7 @@ interface Header {
 
 const Header = ({ obsRef, isMobile }: Header) => {
   const animatePicturePop = isMobile ? "" : "animate-picturePop";
-  const lazyImgUrl = isMobile ? "/assets/mobiles/profile-pic.webp" : "/assets/webp/profile-pic.webp";
+  const imgUrl = isMobile ? "/assets/mobiles/profile-pic.webp" : "/assets/webp/profile-pic.webp";
   return (
     <div
       ref={obsRef}
@@ -34,12 +32,10 @@ const Header = ({ obsRef, isMobile }: Header) => {
           flex justify-center items-center
           ${animatePicturePop}`}
         >
-          <LazyImg
-            lazyBgUrl="bg-[url('/assets/small/profile-pic.webp')]"
-            lazyBgClass="rounded-full w-48 h-48 md:w-80 md:h-80"
-            lazyImgUrl={lazyImgUrl}
-            lazyAltImg="profile-pic"
-            lazyImgClass="drop-shadow-2xl w-48 h-48 md:h-80 md:w-80 transition duration-200 ease-in"
+          <img
+            src={imgUrl}
+            alt="profile-pic"
+            className="drop-shadow-2xl w-48 h-48 md:h-80 md:w-80 transition duration-200 ease-in"
           />
         </div>
       </div>
