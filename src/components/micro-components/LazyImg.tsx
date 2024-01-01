@@ -33,18 +33,22 @@ const LazyImg = ({
     }
   }, [containerImgClass]);
 
-
   return (
     <div
       className={`${lazyBgUrl} bg-no-repeat bg-cover ${lazyBgClass} ${containerImgClass}`}
     >
-      <img
-        src={`${lazyImgUrl}`}
-        alt={lazyAltImg}
-        className={`${lazyImgClass} ${imgClass}`}
-        onLoad={handleLoading}
-        loading="lazy"
-      />
+      <picture>
+        <source
+          type="image/webp"
+        />
+        <img
+          src={`${lazyImgUrl}`}
+          alt={lazyAltImg}
+          className={`${lazyImgClass} ${imgClass}`}
+          onLoad={handleLoading}
+          loading="lazy"
+        />
+      </picture>
     </div>
   );
 };
