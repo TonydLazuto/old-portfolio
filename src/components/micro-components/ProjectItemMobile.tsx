@@ -69,9 +69,9 @@ const ProjectItemMobile = (project: Project) => {
             lazyBgUrl={bgLazy}
             lazyBgClass={`${projectContainerClass}
               w-80 h-52`}
-            lazyImgUrl={`/assets/webp/${imgUrl}`}
+            lazyImgUrl={`/assets/mobiles/${imgUrl}`}
             lazyAltImg={title}
-            lazyImgClass={`rounded-t-lg object-cover ${imgClass}
+            lazyImgClass={`rounded-t-lg object-fit ${imgClass}
               w-80 h-52`}
           />
           <Box className={`p-2 ${projectContainerClass}`}>

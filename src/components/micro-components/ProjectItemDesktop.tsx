@@ -76,7 +76,7 @@ const ProjectItemDesktop = (project: Project) => {
               w-112 h-72 md:w-96 md:h-64`}
             lazyImgUrl={`/assets/webp/${imgUrl}`}
             lazyAltImg={title}
-            lazyImgClass={`rounded-t-lg object-cover ${imgClass}
+            lazyImgClass={`rounded-t-lg object-fit ${imgClass}
               w-112 h-72 md:w-96 md:h-64`}
           />
           <Box className={`p-2 ${projectContainerClass}`}>

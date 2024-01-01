@@ -67,12 +67,14 @@ module.exports = {
         projectContainerHoverEnter: {
           "0%": {},
           "100%": {
-            padding: "1rem"
+            padding: "1rem",
+            marginBottom: "1rem"
           },
         },
         projectContainerHoverLeave: {
           "0%": {
-            padding: "1rem"
+            padding: "1rem",
+            marginBottom: "1rem"
           },
           "100%": {},
         },
@@ -82,7 +84,6 @@ module.exports = {
             borderRadius: "1rem",
             backgroundColor: "#fcfbf7",
             filter: "filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.25))",
-            padding: "0.7rem",
           },
         },
         projectHoverLeaveMobile: {
@@ -90,7 +91,6 @@ module.exports = {
             borderRadius: "1rem",
             backgroundColor: "#fcfbf7",
             filter: "filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.25))",
-            padding: "0.7rem",
           },
           "100%": {},
         },
