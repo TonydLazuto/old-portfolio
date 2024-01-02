@@ -47,6 +47,7 @@ const LazyImg = ({
           className={`${lazyImgClass} ${imgClass}`}
           onLoad={handleLoading}
           loading="lazy"
+          fetchpriority="low"
         />
       </picture>
     </div>

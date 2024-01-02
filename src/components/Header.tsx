@@ -8,6 +8,7 @@ interface Header {
 const Header = ({ obsRef, isMobile }: Header) => {
   const animatePicturePop = isMobile ? "" : "animate-picturePop";
   const imgUrl = isMobile ? "/assets/mobiles/profile-pic.webp" : "/assets/webp/profile-pic.webp";
+  const imgClass = isMobile ? "" : "drop-shadow-2xl transition-all duration-200 ease-in";
   return (
     <div
       ref={obsRef}
@@ -35,7 +36,7 @@ const Header = ({ obsRef, isMobile }: Header) => {
           <img
             src={imgUrl}
             alt="profile-pic"
-            className="drop-shadow-2xl w-48 h-48 md:h-80 md:w-80 transition duration-200 ease-in"
+            className="w-48 h-48 md:h-80 md:w-80 md:max-w-fit"
           />
         </div>
       </div>
