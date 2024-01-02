@@ -19,7 +19,7 @@ export default [
       "Une interface est disponible pour les admnistrateurs qui souhaiteraient inspecter l'état de chaque raspberry disponible à l'application.",
     ],
     link: "https://www.acensi.fr/",
-    logoUrl: "acensi_logo.png",
+    logoUrl: "acensi_logo.webp",
     linkName: "acensi.fr",
     bgLazy: 'bg-small-raspberry'
   },
@@ -42,7 +42,7 @@ export default [
       "Syneryx est une plateforme de gestion des différentes machines, serveurs internes et externes. L'objectif principal est de simplifier la gestion des actifs.",
     ],
     link: "https://www.acensi.fr/",
-    logoUrl: "acensi_logo.png",
+    logoUrl: "acensi_logo.webp",
     linkName: "acensi.fr",
     bgLazy: 'bg-small-syneryx'
   },
@@ -66,7 +66,7 @@ export default [
       "Création d'un chat avec des channels (privés/public) et des rôles pour les utilisateurs.",
     ],
     link: "https://github.com/TonydLazuto/ft_transcendence",
-    logoUrl: "42_logo.png",
+    logoUrl: "42_logo.webp",
     linkName: "code source",
     bgLazy: 'bg-small-Transcendence-project'
   },
@@ -83,7 +83,7 @@ export default [
       "Un network établit la connexion entre tous ces services.",
     ],
     link: "https://github.com/TonydLazuto/inception",
-    logoUrl: "42_logo.png",
+    logoUrl: "42_logo.webp",
     linkName: "code source",
     bgLazy: 'bg-small-inception'
   },
@@ -99,7 +99,7 @@ export default [
       "L'utilisation du client de référence (Irssi) pour ce serveur est similaire à l'utilisation d'un serveur IRC officiel en reprenant les principales fonctionnalités.",
     ],
     link: "https://github.com/TonydLazuto/ft_irc",
-    logoUrl: "42_logo.png",
+    logoUrl: "42_logo.webp",
     linkName: "code source",
     bgLazy: 'bg-small-irc_irssi'
   },
@@ -115,7 +115,7 @@ export default [
       "On a surtout eu l'occasion de mettre en place un arbre binaire automatiquement équilibré",
     ],
     link: "https://github.com/TonydLazuto/ft_containers",
-    logoUrl: "42_logo.png",
+    logoUrl: "42_logo.webp",
     linkName: "code source",
     bgLazy: 'bg-small-bst'
   }

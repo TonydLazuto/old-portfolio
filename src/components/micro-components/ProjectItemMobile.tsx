@@ -104,7 +104,7 @@ const ProjectItemMobile = (project: Project) => {
                 src={`/assets/logos/${logoUrl}`}
                 alt={title}
                 className={`max-w-fit
-                ${logoUrl === 'acensi_logo.png' ? 'w-12 h-2': 'w-4 h-4'} `} // aim at 42logo size
+                ${logoUrl === 'acensi_logo.webp' ? 'w-12 h-2': 'w-4 h-4'} `} // aim at 42logo size
                 loading='lazy'
               />
             </div>

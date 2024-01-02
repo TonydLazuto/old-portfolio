@@ -110,7 +110,7 @@ const ProjectItemDesktop = (project: Project) => {
                 src={`/assets/logos/${logoUrl}`}
                 alt={title}
                 className={`max-w-fit
-                  ${logoUrl === 'acensi_logo.png' ? 'w-12 h-2' : 'w-4 h-4'}`}
+                  ${logoUrl === 'acensi_logo.webp' ? 'w-12 h-2' : 'w-4 h-4'}`}
               />
             </div>
           </Box>
