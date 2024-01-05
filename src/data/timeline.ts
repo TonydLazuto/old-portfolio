@@ -1,5 +1,3 @@
-import { LogoDev } from "@mui/icons-material";
-
 export default [
   {
     year: "2023",
