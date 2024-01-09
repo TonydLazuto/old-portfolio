@@ -15,7 +15,7 @@ module.exports = {
       colors: {
         shade0: "#1A1E38",
         shade1: "#C0C0F2",
-        shade2: "#F9FAFF",
+        shade2: "#EFF1FD",
         nameIntro: "#D4DFE8",
         keyWordIntro: "#35B7F3",
         durationTimeline: "#3A4D6E"
@@ -176,7 +176,7 @@ module.exports = {
           left: "0",
           width: "100%",
           height: "100%",
-          background: "linear-gradient(to right, #D4DFE8, white)",
+          background: "linear-gradient(to right, #D4D8EA, #EFF1FD)",
           zIndex: "-1",
           transformOrigin: "right",
           transform: "scaleX(0)",
