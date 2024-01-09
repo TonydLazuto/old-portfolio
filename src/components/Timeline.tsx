@@ -10,12 +10,13 @@ const Timeline = ({ isMobile }: IsMobile) => {
 	return (
     <Box
       id="timeline"
-      className="mt-24
+      className="mt-24 py-12
       w-screen
       h-max
 			md:min-h-full
 			m-auto
-			scroll-mt-12 md:scroll-mt-18"
+			scroll-mt-12 md:scroll-mt-18
+      bg-shade2"
     >
       <h1
 	  	  ref={obsRef}
@@ -26,7 +27,7 @@ const Timeline = ({ isMobile }: IsMobile) => {
 					text-4xl md:text-5xl
 					text-center md:text-left
 					font-semibold
-					bg-shade2
+          bg-white
 					rounded-md
           shadow-xl md:shadow-lg
           font-display"

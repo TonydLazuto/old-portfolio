@@ -1,12 +1,12 @@
 export default [
 	{
-		name: 'Timeline',
-		path: '#timeline',
-	},
-	{
 		name: 'Projets',
 		path: '#projects',
 
+	},
+	{
+		name: 'Timeline',
+		path: '#timeline',
 	},
 	{
 		name: 'Stack',

@@ -25,7 +25,6 @@ const Stack = ({ isMobile }: IsMobile) => {
 					text-4xl md:text-5xl
 					text-center md:text-left
 					font-semibold
-					bg-shade2
 					rounded-md
           shadow-xl md:shadow-lg
           font-display"

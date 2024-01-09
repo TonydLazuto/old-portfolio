@@ -25,8 +25,8 @@ function App() {
       <div className="w-full h-full shadow-2xl shadow-black">
         <Navigation />
         <Header isMobile={isMobile} obsRef={obsRef} />
-        <Timeline isMobile={isMobile} />
         <Projects isMobile={isMobile} />
+        <Timeline isMobile={isMobile} />
         <Stack isMobile={isMobile} />
         <Footer />
         {isMobile ? null : (
