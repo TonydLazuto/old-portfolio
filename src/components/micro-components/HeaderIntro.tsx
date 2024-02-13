@@ -4,8 +4,6 @@ import { IsMobile } from '../../App';
 
 const HeaderIntro = ({ isMobile }: IsMobile) => {
   const animateHeader = isMobile ? '' : 'animate-header';
-  const animateHeaderDelay = isMobile ? '' : 'animate-headerDelay';
-  const animateHeaderDelay2 = isMobile ? '' : 'animate-headerDelay2';
   const styleKeyWords = 'text-keyWordIntro font-semibold';
 
   return (
@@ -21,16 +19,14 @@ const HeaderIntro = ({ isMobile }: IsMobile) => {
       <h1
         className={`
         text-2xl md:text-3xl
-        mb-1 md:mb-3
-        ${animateHeaderDelay}`}
+        mb-1 md:mb-3`}
       >
         Je suis <span className="text-nameIntro font-semibold">Anthony</span>,<br />
         Développeur full-stack
       </h1>
       <p
         className={`text-sm md:text-lg w-11/12
-        mb-5 md:mb-3 font-light mt-2
-        ${animateHeaderDelay2}`}
+        mb-5 md:mb-3 font-light mt-2`}
       >
         Passionné par le{" "}
         <span className={`${styleKeyWords}`}>développement web</span>, je me

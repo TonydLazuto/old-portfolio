@@ -46,7 +46,7 @@ const BurgerMenuNavigation = () => {
         ${burgerAnimation}
         hover:cursor-pointer hover:scale-125`}
         onClick={toggleMenu}
-        onAnimationEnd={() => setBurgerAnimation('transition-all duration-200 ease-in-out')}
+        onAnimationEnd={() => setBurgerAnimation('transition-all duration-200 ease-out')}
       >
         <MenuIcon fontSize='large' sx ={{ color: 'white' }}/>
       </div>
@@ -69,7 +69,7 @@ const BurgerMenuNavigation = () => {
 					flex items-center justify-center
 					hover:shadow-[0_10px_20px_2px_rgba(0,0,0,0.25)]
           hover:bg-gradient-to-br
-					transition-all duration-200 ease-in-out"
+					transition-all duration-200 ease-out"
               key={nav.name}
               href={nav.path}
               onClick={hideMenu}

@@ -32,7 +32,7 @@ const StackItem = (stackItemProps: StackItemProps) => {
       title={alt}
       placement="top-end"
       TransitionComponent={Fade}
-      TransitionProps={{ timeout: 400 }}
+      TransitionProps={{ timeout: 200 }}
       arrow
     >
       <a href={link}>

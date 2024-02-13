@@ -11,6 +11,11 @@ export default [
         alt: 'Redux'
 	},
 	{
+		src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg',
+		link: 'https://www.figma.com/',
+        alt: 'Figma'
+	},
+	{
 		src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
 		link: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
         alt: 'HTML'
@@ -21,7 +26,7 @@ export default [
         alt: 'CSS'
 	},
 	{
-		src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg',
+		src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
 		link: 'https://tailwindcss.com/',
         alt: 'Tailwindcss'
 	},

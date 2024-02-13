@@ -50,7 +50,7 @@ const TimelineItem = (timeline: Timeline) => {
               {title}
             </h2>
             <Link href={logoLink}
-              className={`transition duration-300 ease-in-out
+              className={`transition-all duration-100 ease-in
                 transform hover:scale-110 hover:-translate-y-1
                 ${year === '2020' ? 'w-4' : ''}`} // aim at 42logo size
             >
@@ -76,7 +76,9 @@ const TimelineItem = (timeline: Timeline) => {
               <p
                 key={detail}
                 className="flex justify-start items-start mb-1
-                  pb-2 background-gradient-expand"
+                  pb-2
+                transition-all duration-200 ease-in
+                hover:text-timelineDetails"
               >
                 <TaskAltIcon
                   sx={{

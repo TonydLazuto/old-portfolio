@@ -6,7 +6,6 @@ import { useState } from 'react';
 import Fade from '@mui/material/Fade';
 
 const SocialsMedia = ({ isMobile }: IsMobile) => {
-  const animateHeaderDelay3 = isMobile ? '' : 'animate-headerDelay3';
   const [socialMediaHoverClass, setSocialMediaHoverClass] = useState("");
 
   const handleStackHoverEnter = (
@@ -25,7 +24,7 @@ const SocialsMedia = ({ isMobile }: IsMobile) => {
 	return (
     <div
       className={`flex justify-around items-center
-        w-24 h-12 ${animateHeaderDelay3}`}
+        w-24 h-12`}
     >
       <Tooltip
         onMouseEnter={handleStackHoverEnter}
@@ -33,7 +32,7 @@ const SocialsMedia = ({ isMobile }: IsMobile) => {
         title="GitHub"
         placement="left"
         TransitionComponent={Fade}
-        TransitionProps={{ timeout: 400 }}
+        TransitionProps={{ timeout: 200 }}
         arrow
       >
         <a
@@ -43,7 +42,7 @@ const SocialsMedia = ({ isMobile }: IsMobile) => {
           text-gray-100
           hover:text-gray-400
           hover:border-b-8 hover:border-sky-600
-          transition-all duration-300 ease-out"
+          transition-all duration-200 ease-out"
         >
           <GitHubIcon fontSize="large" />
         </a>
@@ -54,7 +53,7 @@ const SocialsMedia = ({ isMobile }: IsMobile) => {
         title="LinkedIn"
         placement="right"
         TransitionComponent={Fade}
-        TransitionProps={{ timeout: 400 }}
+        TransitionProps={{ timeout: 200 }}
         arrow
       >
         <a
@@ -64,7 +63,7 @@ const SocialsMedia = ({ isMobile }: IsMobile) => {
           text-gray-100
           hover:text-gray-400
           hover:border-b-8 hover:border-sky-600
-          transition-all duration-300 ease-out"
+          transition-all duration-100 ease-out"
         >
           <LinkedInIcon fontSize="large" />
         </a>

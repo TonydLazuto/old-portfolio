@@ -10,10 +10,10 @@ const Timeline = ({ isMobile }: IsMobile) => {
 	return (
     <Box
       id="timeline"
-      className="mt-24 py-12
+      className="pt-24 py-12
       w-screen
       h-max
-			md:min-h-full
+			md:h-200vh
 			m-auto
 			scroll-mt-12 md:scroll-mt-18
       bg-shade2"

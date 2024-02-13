@@ -11,10 +11,9 @@ const Stack = ({ isMobile }: IsMobile) => {
   return (
     <div
       id="stack"
-      className="w-screen
-        h-max md:min-h-full
-        md:mt-20 mb-10
-				pt-20 md:py-4"
+      className="w-screen bg-slate-100
+        h-max md:h-150vh
+        pb-10 pt-20"
     >
       <h1
         ref={obsRef}

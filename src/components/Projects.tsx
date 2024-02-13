@@ -10,9 +10,9 @@ const Projects = ({ isMobile }: IsMobile) => {
 	return (
     <div
       id="projects"
-      className="m-auto
-			h-max md:min-h-[calc(100vh_-_5rem)]
-			scroll-mt-12 mt-24"
+      className="m-auto bg-slate-100
+			h-max md:h-270vh
+			scroll-mt-12 pt-24"
     >
       <h1
         ref={obsRef}
