@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useState } from 'react'
 
 export interface ArrowObserver {
   obsRef: React.RefObject<HTMLDivElement>
@@ -10,7 +10,7 @@ const arrowObserver = (props : ArrowObserver) => {
   const [animation, setAnimation] = useState('');
   const [hidden, setHidden] = useState('hidden');
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (elementVisibility === undefined) return;
     if (elementVisibility) {
       setHidden('hidden');

@@ -6,20 +6,6 @@ import { useState } from 'react';
 import Fade from '@mui/material/Fade';
 
 const SocialsMedia = ({ isMobile }: IsMobile) => {
-  const [socialMediaHoverClass, setSocialMediaHoverClass] = useState("");
-
-  const handleStackHoverEnter = (
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>
-  ) => {
-    e.preventDefault();
-    setSocialMediaHoverClass("animate-tooltipEnter");
-  };
-  const handleStackHoverLeave = (
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>
-  ) => {
-    e.preventDefault();
-    setSocialMediaHoverClass("animate-tooltipLeave");
-  };
 
 	return (
     <div
@@ -27,8 +13,6 @@ const SocialsMedia = ({ isMobile }: IsMobile) => {
         w-24 h-12`}
     >
       <Tooltip
-        onMouseEnter={handleStackHoverEnter}
-        onMouseLeave={handleStackHoverLeave}
         title="GitHub"
         placement="left"
         TransitionComponent={Fade}
@@ -48,8 +32,6 @@ const SocialsMedia = ({ isMobile }: IsMobile) => {
         </a>
       </Tooltip>
       <Tooltip
-        onMouseEnter={handleStackHoverEnter}
-        onMouseLeave={handleStackHoverLeave}
         title="LinkedIn"
         placement="right"
         TransitionComponent={Fade}

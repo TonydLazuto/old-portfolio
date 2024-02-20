@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 
 export interface UseObserver {
 	isMobile: boolean
@@ -9,11 +9,11 @@ const useObserver = (props: UseObserver) => {
   const { isMobile } = props;
   const obsRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (elementVisibility === undefined) return;
     if (elementVisibility) {
       if (obsRef.current) {
-        obsRef.current.style.transition = 'visibility 300ms ease-out, opacity 300ms ease-out, transform 300ms ease-in';
+        obsRef.current.style.transition = 'visibility 200ms ease-out, opacity 200ms ease-out, transform 200ms ease-in';
         obsRef.current.style.opacity = '1';
         obsRef.current.style.transform = 'translateX(0)';
         obsRef.current.style.visibility = 'visible';
@@ -22,10 +22,9 @@ const useObserver = (props: UseObserver) => {
     }
     else {
       if (obsRef.current) {
-        obsRef.current.style.transition = 'visibility 500ms ease-out, opacity 500ms ease-out, transform 500ms ease-in';
+        obsRef.current.style.transition = 'visibility 300ms ease-out, opacity 300ms ease-out, transform 300ms ease-in';
         obsRef.current.style.opacity = '0';
-        obsRef.current.style.filter = 'drop-shadow(0 0 #0000)';
-        obsRef.current.style.transform = 'translateX(-6rem)';
+        obsRef.current.style.transform = 'translateX(-2rem)';
         obsRef.current.style.visibility = 'hidden';
       };
     }

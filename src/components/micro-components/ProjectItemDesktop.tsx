@@ -58,65 +58,67 @@ const ProjectItemDesktop = (project: Project) => {
 	// }
 
 	return (
-    <Box
-      ref={obsRef}
-      className={`rounded-md w-112 md:w-96 mb-4 ${projectItemClass}`}
-      onMouseEnter={handleProjectHoverEnter}
-      onMouseLeave={handleProjectHoverLeave}
-    >
-      <Link href={link} style={{ textDecoration: 'none', color: 'black' }}>
-        <Box
-        // onClick={handleProjectDetails}
-        >
-           <LazyImg
-            lazyBgUrl={bgLazy}
-            lazyBgClass={`${projectContainerClass}
+    <div className="h-128">
+      <Box
+        ref={obsRef}
+        className={`rounded-md w-112 md:w-96 ${projectItemClass}`}
+        onMouseEnter={handleProjectHoverEnter}
+        onMouseLeave={handleProjectHoverLeave}
+      >
+        <Link href={link} style={{ textDecoration: "none", color: "black" }}>
+          <Box
+          // onClick={handleProjectDetails}
+          >
+            <LazyImg
+              lazyBgUrl={bgLazy}
+              lazyBgClass={`${projectContainerClass}
               w-112 h-72 md:w-96 md:h-64`}
-            lazyImgUrl={`/assets/webp/${imgUrl}`}
-            lazyAltImg={title}
-            lazyImgClass={`rounded-t-lg object-fit ${imgClass}
+              lazyImgUrl={`/assets/webp/${imgUrl}`}
+              lazyAltImg={title}
+              lazyImgClass={`rounded-t-lg object-fit ${imgClass}
               w-112 h-72 md:w-96 md:h-64`}
-          />
-          <Box className={`p-2 ${projectContainerClass}`}>
-            <h2
-              className={`text-lg md:text-xl
+            />
+            <Box className={`p-2 ${projectContainerClass}`}>
+              <h2
+                className={`text-lg md:text-xl
 							mb-2 md:mb-3 font-semibold text-center`}
-            >
-              {title}
-            </h2>
-            <h3
-              className={`text-base md:text-lg
+              >
+                {title}
+              </h2>
+              <h3
+                className={`text-base md:text-lg
 							mb-2 md:mb-3 text-center
 							animate-projectDescriptionPop ${hidden}`}
-            >
-              {description}
-            </h3>
-            <Box
-              className="flex flex-wrap gap-2
+              >
+                {description}
+              </h3>
+              <Box
+                className="flex flex-wrap gap-2
 							flex-row items-center justify-center text-xs md:text-sm"
-            >
-              {stack.map((item) => (
-                <span
-                  key={item}
-                  className="inline-block px-2 py-1
+              >
+                {stack.map((item) => (
+                  <span
+                    key={item}
+                    className="inline-block px-2 py-1
 									font-semi-bold border-2 border-stone-900 rounded-md"
-                >
-                  {item}
-                </span>
-              ))}
+                  >
+                    {item}
+                  </span>
+                ))}
+              </Box>
+              <div className="flex justify-end mt-4">
+                <img
+                  src={`/assets/logos/${logoUrl}`}
+                  alt={title}
+                  className={`max-w-fit
+                  ${logoUrl === "acensi_logo.webp" ? "w-12 h-2" : "w-4 h-4"}`}
+                />
+              </div>
             </Box>
-            <div className='flex justify-end mt-4'>
-              <img
-                src={`/assets/logos/${logoUrl}`}
-                alt={title}
-                className={`max-w-fit
-                  ${logoUrl === 'acensi_logo.webp' ? 'w-12 h-2' : 'w-4 h-4'}`}
-              />
-            </div>
           </Box>
-        </Box>
-      </Link>
-    </Box>
+        </Link>
+      </Box>
+    </div>
   );
 }
 

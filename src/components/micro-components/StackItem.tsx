@@ -12,22 +12,21 @@ const StackItem = (stackItemProps: StackItemProps) => {
     const [stackItemClass, setStackItemClass] = useState("");
     const { src, link, alt } = stackItemProps;
 
-  const handleStackHoverEnter = (
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>
-  ) => {
-    e.preventDefault();
-    setStackItemClass("animate-tooltipEnter");
-  };
-  const handleStackHoverLeave = (
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>
-  ) => {
-    e.preventDefault();
-    setStackItemClass("animate-tooltipLeave");
-  };
+    const handleStackHoverEnter = (
+      e: React.MouseEvent<HTMLDivElement, MouseEvent>
+    ) => {
+      e.preventDefault();
+      setStackItemClass("animate-stackItemEnter");
+    };
+    const handleStackHoverLeave = (
+      e: React.MouseEvent<HTMLDivElement, MouseEvent>
+    ) => {
+      e.preventDefault();
+      setStackItemClass("animate-stackItemLeave");
+    };
+
   return (
     <Tooltip
-      onMouseEnter={handleStackHoverEnter}
-      onMouseLeave={handleStackHoverLeave}
       className="mb-4 md:mb-6 mx-1"
       title={alt}
       placement="top-end"
@@ -37,6 +36,8 @@ const StackItem = (stackItemProps: StackItemProps) => {
     >
       <a href={link}>
       <img
+        onMouseEnter={handleStackHoverEnter}
+        onMouseLeave={handleStackHoverLeave}
         src={src}
         alt={alt}
         className={`w-12 h-12 md:w-16 md:h-16 md:mx-2 mx-1 ${stackItemClass}`}

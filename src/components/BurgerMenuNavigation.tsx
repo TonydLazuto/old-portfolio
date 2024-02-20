@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import { useState } from 'react';
 import MenuIcon from "@mui/icons-material/Menu";
 import navList from '../data/navigation';
@@ -26,7 +26,7 @@ const BurgerMenuNavigation = () => {
       setIsMenuOpen(false);
       };
 
-    useEffect(() => {
+    useLayoutEffect(() => {
       if (isMenuOpen) {
         setNavigationClass("flex");
         document.addEventListener('click', handleClickOutside);

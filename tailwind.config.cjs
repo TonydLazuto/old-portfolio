@@ -35,11 +35,11 @@ module.exports = {
       },
       keyframes: {
         topToBottom: {
-          "0%": { transform: "translateY(-30rem)", opacity: 0 },
+          "0%": { transform: "translateY(-5rem)", opacity: 0 },
           "100%": { transform: "translateY(0)", opacity: 1 },
         },
         rightToLeft: {
-          "0%": { transform: "translateX(30rem)", opacity: 0 },
+          "0%": { transform: "translateX(5rem)", opacity: 0 },
           "100%": { transform: "translateX(0)", opacity: 1 },
         },
         arrowPop: {
@@ -55,14 +55,14 @@ module.exports = {
           "100%": {
             borderRadius: "1rem",
             backgroundColor: "#fcfbf7",
-            filter: "drop-shadow(0 25px 35px rgba(0,0,0,0.55))",
+            filter: "drop-shadow(0 25px 25px rgba(0,0,0,0.15))",
           },
         },
         projectHoverLeave: {
           "0%": {
             borderRadius: "1rem",
             backgroundColor: "#fcfbf7",
-            filter: "drop-shadow(0 25px 35px rgba(0,0,0,0.55))",
+            filter: "drop-shadow(0 25px 25px rgba(0,0,0,0.15))",
           },
           "100%": {},
         },
@@ -108,26 +108,26 @@ module.exports = {
           },
           "100%": {},
         },
-        tooltipEnter: {
+        stackItemEnter: {
           "0%": {},
           "100%": {
-            backdropFilter: "blur(2em)",
+            backdropFilter: "blur(1rem)",
             backgroundColor: "rgba(255, 255, 255, .3)",
-            filter: "drop-shadow(0 5px 15px rgba(0,0,0,0.45))",
+            filter: "drop-shadow(0 25px 25px rgba(0,0,0,0.25))",
             borderRadius: "1em",
             transform: "scale(1.5)",
-            padding: "0.5em",
+            padding: "0.5rem",
             cursor: "pointer",
           },
         },
-        tooltipLeave: {
+        stackItemLeave: {
           "0%": {
-            backdropFilter: "blur(2em)",
+            backdropFilter: "blur(1rem)",
             backgroundColor: "rgba(255, 255, 255, .3)",
-            filter: "drop-shadow(0 5px 15px rgba(0,0,0,0.45))",
+            filter: "drop-shadow(0 25px 25px rgba(0,0,0,0.25))",
             borderRadius: "1em",
             transform: "scale(1.5)",
-            padding: "0.5em",
+            padding: "0.5rem",
             cursor: "pointer",
           },
           "100%": {},
@@ -151,8 +151,8 @@ module.exports = {
         projectImgHoverEnter: "projectImgHoverEnter 100ms ease-in-out forwards",
         projectImgHoverLeave: "projectImgHoverLeave 100ms ease-in-out forwards",
 
-        tooltipEnter: "tooltipEnter 100ms ease-out forwards",
-        tooltipLeave: "tooltipLeave 100ms ease-out forwards",
+        stackItemEnter: "stackItemEnter 100ms ease-out forwards",
+        stackItemLeave: "stackItemLeave 100ms ease-out forwards",
       },
       dropShadow: {
         "3xl": "0 10px 20px rgba(0,0,0,0.35)",
